@@ -1,0 +1,8 @@
+{
+  "name": "Remix GIA Experiences - Turismo Auténtico en El Salvador",
+  "description": "Plataforma digital para descubrir, comparar y reservar experiencias turísticas auténticas de cultura, gastronomía, naturaleza y aventura en El Salvador.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
