@@ -31,69 +31,57 @@ export const AboutUsPage: React.FC = () => {
     {
       titleEs: 'RESPONSABILIDAD',
       titleEn: 'RESPONSIBILITY',
-      titlePt: 'RESPONSABILIDADE',
       descEs: 'Actuar de manera responsable con los clientes, aliados y destinos turísticos.',
       descEn: 'Act responsibly with travelers, local partners, and travel destinations.',
-      descPt: 'Atuar com responsabilidade com clientes, parceiros e destinos turísticos.',
       icon: ShieldCheck,
       color: 'text-teal-600 bg-teal-50 border-teal-100',
     },
     {
       titleEs: 'CALIDAD',
       titleEn: 'QUALITY',
-      titlePt: 'QUALIDADE',
       descEs: 'Ofrecer experiencias que cumplan con las expectativas de los clientes.',
       descEn: 'Deliver curated travel experiences that meet and exceed traveler expectations.',
-      descPt: 'Oferecer experiências que atendam e superem as expectativas dos clientes.',
       icon: Award,
       color: 'text-amber-600 bg-amber-50 border-amber-100',
     },
     {
       titleEs: 'INNOVACIÓN',
       titleEn: 'INNOVATION',
-      titlePt: 'INOVAÇÃO',
       descEs: 'Buscar nuevas formas de crear y presentar experiencias turísticas.',
       descEn: 'Pioneer creative ways to design, present, and personalize authentic tourism.',
-      descPt: 'Buscar novas formas de criar e apresentar experiências turísticas.',
       icon: Lightbulb,
       color: 'text-cyan-600 bg-cyan-50 border-cyan-100',
     },
     {
       titleEs: 'RESPETO',
       titleEn: 'RESPECT',
-      titlePt: 'RESPEITO',
       descEs: 'Valorar a las personas, comunidades, culturas y espacios naturales.',
       descEn: 'Deeply value host communities, culture, traditions, and natural environments.',
-      descPt: 'Valorizar as pessoas, comunidades, culturas e espaços naturais.',
       icon: HeartHandshake,
       color: 'text-rose-600 bg-rose-50 border-rose-100',
     },
     {
       titleEs: 'COMPROMISO',
       titleEn: 'COMMITMENT',
-      titlePt: 'COMPROMISSO',
       descEs: 'Cumplir con lo ofrecido y brindar una atención adecuada al cliente.',
       descEn: 'Deliver faithfully on promises with responsive, dedicated customer support.',
-      descPt: 'Cumprir com o oferecido e oferecer um atendimento dedicado ao cliente.',
       icon: CheckCircle,
       color: 'text-emerald-600 bg-emerald-50 border-emerald-100',
     },
     {
       titleEs: 'AUTENTICIDAD',
       titleEn: 'AUTHENTICITY',
-      titlePt: 'AUTENTICIDADE',
       descEs: 'Promover experiencias que permitan conocer la esencia y diversidad de El Salvador.',
       descEn: 'Promote true encounters that unveil the authentic soul and diversity of El Salvador.',
-      descPt: 'Promover experiências que revelem a essência e diversidade de El Salvador.',
       icon: Gem,
       color: 'text-indigo-600 bg-indigo-50 border-indigo-100',
     },
   ];
 
   return (
-    <div className="bg-neutral-50/70 min-h-screen pb-24">
+    <div className="bg-[#FFFDF8] min-h-screen pb-24">
       {/* Top Breadcrumbs */}
-      <div className="bg-white border-b border-neutral-200/80">
+      <div className="bg-white border-b border-amber-100/90">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
           <Breadcrumbs
             items={[
@@ -108,18 +96,18 @@ export const AboutUsPage: React.FC = () => {
       </div>
 
       {/* Hero Visual Section */}
-      <section className="relative bg-[#063A5B] text-white overflow-hidden py-20 sm:py-28">
+      <section className="relative bg-[#173B59] text-white overflow-hidden py-20 sm:py-28">
         <div className="absolute inset-0 z-0">
           <img
             src={heroCoatepeque}
             alt="El Salvador paisajes"
             className="w-full h-full object-cover opacity-25"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#063A5B] via-[#063A5B]/90 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#173B59] via-[#173B59]/90 to-[#00B8C8]/60" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-[#FDBA2D] text-xs font-mono font-bold border border-white/15">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-[#FFC857] text-xs font-mono font-bold border border-white/15">
             <Sparkles className="w-3.5 h-3.5" />
             <span>{l('El Salvador diseñado para ti', 'El Salvador, designed for you', 'El Salvador desenhado para você')}</span>
           </div>
@@ -143,13 +131,13 @@ export const AboutUsPage: React.FC = () => {
         {/* Misión y Visión */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Misión */}
-          <div className="bg-white rounded-3xl border border-neutral-200/90 p-8 sm:p-10 shadow-xs space-y-4 hover:shadow-md transition-shadow relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-teal-50 rounded-bl-full pointer-events-none" />
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-[#00A6A6] text-xs font-mono font-extrabold tracking-wider uppercase">
+          <div className="bg-white rounded-3xl border border-amber-100/90 p-8 sm:p-10 shadow-xs space-y-4 hover:shadow-md transition-shadow relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#00B8C8]/10 rounded-bl-full pointer-events-none" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00B8C8]/10 text-[#00B8C8] text-xs font-mono font-extrabold tracking-wider uppercase">
               <Compass className="w-3.5 h-3.5" />
               <span>{l('Nuestra Misión', 'Our Mission', 'Nossa Missão')}</span>
             </div>
-            <h2 className="text-2xl font-black text-[#063A5B] font-display">
+            <h2 className="text-2xl font-black text-[#173B59] font-display">
               {l('MISIÓN', 'MISSION', 'MISSÃO')}
             </h2>
             <p className="text-sm sm:text-base text-neutral-700 leading-relaxed font-medium">
@@ -162,13 +150,13 @@ export const AboutUsPage: React.FC = () => {
           </div>
 
           {/* Visión */}
-          <div className="bg-white rounded-3xl border border-neutral-200/90 p-8 sm:p-10 shadow-xs space-y-4 hover:shadow-md transition-shadow relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-amber-50 rounded-bl-full pointer-events-none" />
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 text-[#F47B3A] text-xs font-mono font-extrabold tracking-wider uppercase">
-              <Sparkles className="w-3.5 h-3.5" />
+          <div className="bg-white rounded-3xl border border-amber-100/90 p-8 sm:p-10 shadow-xs space-y-4 hover:shadow-md transition-shadow relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFC857]/20 rounded-bl-full pointer-events-none" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFC857]/25 text-[#173B59] text-xs font-mono font-extrabold tracking-wider uppercase">
+              <Sparkles className="w-3.5 h-3.5 text-[#FF6B57]" />
               <span>{l('Nuestra Visión', 'Our Vision', 'Nossa Visão')}</span>
             </div>
-            <h2 className="text-2xl font-black text-[#063A5B] font-display">
+            <h2 className="text-2xl font-black text-[#173B59] font-display">
               {l('VISIÓN', 'VISION', 'VISÃO')}
             </h2>
             <p className="text-sm sm:text-base text-neutral-700 leading-relaxed font-medium">
@@ -181,12 +169,12 @@ export const AboutUsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Sección destacada: Nuestras Fundadoras (Foto de las fundadoras de GIA) */}
-        <section className="bg-white rounded-3xl border border-neutral-200/90 p-8 sm:p-12 shadow-xs hover:shadow-md transition-all relative overflow-hidden">
+        {/* Sección destacada: Nuestras Fundadoras */}
+        <section className="bg-white rounded-3xl border border-amber-100/90 p-8 sm:p-12 shadow-xs hover:shadow-md transition-all relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            {/* Foto de las fundadoras de GIA - Encuadre limpio, completo y sin recortes */}
+            {/* Foto de las fundadoras */}
             <div className="lg:col-span-6 relative">
-              <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 sm:border-8 border-white bg-white group ring-1 ring-neutral-200/80">
+              <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 sm:border-8 border-white bg-white group ring-1 ring-amber-100">
                 <img
                   src={fotoFundadoras}
                   alt={l('Foto de las fundadoras de GIA Experiences', 'Founders of GIA Experiences', 'Foto das fundadoras da GIA Experiences')}
@@ -194,10 +182,10 @@ export const AboutUsPage: React.FC = () => {
                 />
               </div>
 
-              {/* Pie de foto limpio debajo de la imagen (sin obstruir nada de la fotografía) */}
+              {/* Pie de foto limpio debajo de la imagen */}
               <div className="mt-3.5 flex items-center justify-between px-2 text-xs text-neutral-500">
-                <span className="font-semibold text-[#063A5B] flex items-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5 text-[#FDBA2D]" />
+                <span className="font-semibold text-[#173B59] flex items-center gap-1.5">
+                  <Sparkles className="w-3.5 h-3.5 text-[#FFC857]" />
                   {l('Fundadoras de GIA Experiences', 'Founders of GIA Experiences', 'Fundadoras da GIA Experiences')}
                 </span>
                 <span className="text-[11px] font-mono text-neutral-400">
@@ -208,12 +196,12 @@ export const AboutUsPage: React.FC = () => {
 
             {/* Texto de las fundadoras y visión */}
             <div className="lg:col-span-6 space-y-6">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-[#F47B3A] text-xs font-mono font-bold uppercase tracking-wider">
-                <Sparkles className="w-3.5 h-3.5 text-[#FDBA2D]" />
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FF6B57]/10 border border-[#FF6B57]/30 text-[#FF6B57] text-xs font-mono font-bold uppercase tracking-wider">
+                <Sparkles className="w-3.5 h-3.5 text-[#FFC857]" />
                 <span>{l('Liderazgo & Emprendimiento', 'Leadership & Vision', 'Liderança & Empreendedorismo')}</span>
               </div>
 
-              <h2 className="text-2xl sm:text-4xl font-black text-[#063A5B] font-display tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-4xl font-black text-[#173B59] font-display tracking-tight leading-tight">
                 {l('Fundadoras de GIA Experiences', 'Founders of GIA Experiences', 'Fundadoras da GIA Experiences')}
               </h2>
 
@@ -267,15 +255,15 @@ export const AboutUsPage: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => navigate('/experiencias')}
-                  className="px-6 py-3 bg-[#063A5B] hover:bg-[#00A6A6] text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm flex items-center gap-2 cursor-pointer"
+                  className="px-6 py-3 bg-[#FF6B57] hover:bg-[#E85541] text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm flex items-center gap-2 cursor-pointer"
                 >
                   <span>{l('Explorar experiencias', 'Explore experiences', 'Explorar experiências')}</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 text-[#FFC857]" />
                 </button>
                 <button
                   type="button"
                   onClick={() => navigate('/contacto')}
-                  className="px-5 py-3 border border-neutral-300 hover:border-[#00A6A6] text-[#063A5B] hover:text-[#00A6A6] font-bold text-xs uppercase tracking-wider rounded-xl transition-colors cursor-pointer"
+                  className="px-5 py-3 border border-amber-200 hover:border-[#00B8C8] text-[#173B59] hover:text-[#00B8C8] font-bold text-xs uppercase tracking-wider rounded-xl transition-colors cursor-pointer"
                 >
                   <span>{l('Hablar con un asesor', 'Talk with an advisor', 'Falar com um consultor')}</span>
                 </button>
@@ -287,11 +275,11 @@ export const AboutUsPage: React.FC = () => {
         {/* 6 Valores */}
         <section className="space-y-10">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-[#00A6A6] text-xs font-mono font-bold uppercase tracking-wider">
-              <Gem className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#00B8C8]/10 border border-[#00B8C8]/30 text-[#00B8C8] text-xs font-mono font-bold uppercase tracking-wider">
+              <Gem className="w-3.5 h-3.5 text-[#FFC857]" />
               <span>{l('Principios que nos guían', 'Core Principles', 'Princípios que nos guiam')}</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#063A5B] font-display tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#173B59] font-display tracking-tight">
               {l('Nuestros valores', 'Our Values', 'Nossos valores')}
             </h2>
             <p className="text-xs sm:text-sm text-neutral-500">
@@ -309,16 +297,16 @@ export const AboutUsPage: React.FC = () => {
               return (
                 <div
                   key={idx}
-                  className="bg-white rounded-3xl border border-neutral-200/90 p-7 shadow-xs hover:shadow-md transition-all space-y-4 group"
+                  className="bg-white rounded-3xl border border-amber-100/90 p-7 shadow-xs hover:shadow-md transition-all space-y-4 group"
                 >
                   <div className={`w-12 h-12 rounded-2xl flex items-center justify-center border ${val.color}`}>
                     <Icon className="w-6 h-6" />
                   </div>
-                  <h3 className="text-base font-extrabold text-[#063A5B] font-display tracking-wide">
-                    {l(val.titleEs, val.titleEn, val.titlePt)}
+                  <h3 className="text-base font-extrabold text-[#173B59] font-display tracking-wide">
+                    {l(val.titleEs, val.titleEn)}
                   </h3>
                   <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed">
-                    "{l(val.descEs, val.descEn, val.descPt)}"
+                    "{l(val.descEs, val.descEn)}"
                   </p>
                 </div>
               );
@@ -327,14 +315,14 @@ export const AboutUsPage: React.FC = () => {
         </section>
 
         {/* Cómo queremos que descubras El Salvador */}
-        <section className="bg-white rounded-3xl border border-neutral-200/90 p-8 sm:p-12 shadow-xs space-y-8">
+        <section className="bg-white rounded-3xl border border-amber-100/90 p-8 sm:p-12 shadow-xs space-y-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-7 space-y-5">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 text-[#00A6A6] text-xs font-mono font-bold uppercase">
-                <Mountain className="w-3.5 h-3.5" />
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#39B98A]/10 text-[#1B6D4C] text-xs font-mono font-bold uppercase">
+                <Mountain className="w-3.5 h-3.5 text-[#39B98A]" />
                 <span>{l('Turismo Auténtico y Responsable', 'Authentic & Responsible Tourism', 'Turismo Autêntico e Responsável')}</span>
               </div>
-              <h2 className="text-2xl sm:text-4xl font-black text-[#063A5B] font-display tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-4xl font-black text-[#173B59] font-display tracking-tight leading-tight">
                 {l(
                   'Cómo queremos que descubras El Salvador',
                   'How we want you to experience El Salvador',
@@ -373,12 +361,12 @@ export const AboutUsPage: React.FC = () => {
         </section>
 
         {/* Dual CTAs Final */}
-        <section className="bg-gradient-to-r from-[#063A5B] via-[#04283f] to-[#063A5B] text-white rounded-3xl p-8 sm:p-12 text-center space-y-6 shadow-xl relative overflow-hidden">
+        <section className="bg-gradient-to-r from-[#173B59] via-[#103450] to-[#00B8C8] text-white rounded-3xl p-8 sm:p-12 text-center space-y-6 shadow-xl relative overflow-hidden">
           <div className="relative z-10 max-w-2xl mx-auto space-y-4">
             <h2 className="text-2xl sm:text-4xl font-black font-display tracking-tight text-white">
               {l('¿Listo para descubrir El Salvador?', 'Ready to discover El Salvador?', 'Pronto para descobrir El Salvador?')}
             </h2>
-            <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-100 leading-relaxed">
               {l(
                 'Elige entre nuestras experiencias individuales curadas o utiliza nuestra herramienta inteligente para diseñar tu viaje a medida.',
                 'Choose from our curated individual experiences or use our smart trip planner to design your custom itinerary.',
@@ -389,18 +377,18 @@ export const AboutUsPage: React.FC = () => {
               <button
                 type="button"
                 onClick={() => navigate('/experiencias')}
-                className="w-full sm:w-auto px-7 py-3.5 bg-[#00A6A6] hover:bg-[#009191] text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full sm:w-auto px-7 py-3.5 bg-[#FF6B57] hover:bg-[#E85541] text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
               >
-                <Compass className="w-4 h-4" />
+                <Compass className="w-4 h-4 text-[#FFC857]" />
                 <span>{l('Descubre nuestras experiencias', 'Explore our experiences', 'Descubra nossas experiências')}</span>
               </button>
 
               <button
                 type="button"
                 onClick={() => navigate('/planea-con-gia')}
-                className="w-full sm:w-auto px-7 py-3.5 bg-[#FDBA2D] hover:bg-[#f5b124] text-slate-950 font-extrabold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full sm:w-auto px-7 py-3.5 bg-[#39B98A] hover:bg-[#2fa076] text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
               >
-                <Sparkles className="w-4 h-4 text-slate-950" />
+                <Sparkles className="w-4 h-4 text-[#FFC857]" />
                 <span>{l('Planea tu viaje', 'Plan your trip', 'Planeje sua viagem')}</span>
               </button>
             </div>

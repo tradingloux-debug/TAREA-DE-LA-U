@@ -5,8 +5,9 @@ import { useLanguage } from '../../context/LanguageContext';
 import { useBookingDraft } from '../../context/BookingDraftContext';
 import { trackEvent } from '../../services/analytics';
 import { AutoReserveModal } from '../booking/AutoReserveModal';
+import { QuoteRequestModal } from '../booking/QuoteRequestModal';
 import { useLiveBookedCount } from '../../hooks/useLiveBookedCount';
-import { Calendar, Users, Minus, Plus, ShieldCheck, ArrowRight, Flame } from 'lucide-react';
+import { Calendar, Users, Minus, Plus, ShieldCheck, ArrowRight, Flame, Sparkles, Car, Check } from 'lucide-react';
 
 interface BookingCardProps {
   experience: Experience;
@@ -14,7 +15,7 @@ interface BookingCardProps {
 
 export const BookingCard: React.FC<BookingCardProps> = ({ experience }) => {
   const { navigate } = useRouter();
-  const { language, t } = useLanguage();
+  const { language, t, loc } = useLanguage();
   const { setDraft } = useBookingDraft();
 
   // Tomorrow as default date
@@ -27,6 +28,7 @@ export const BookingCard: React.FC<BookingCardProps> = ({ experience }) => {
   const [children, setChildren] = useState<number>(0);
   const [dateError, setDateError] = useState(false);
   const [showAutoReserve, setShowAutoReserve] = useState(false);
+  const [showQuoteModal, setShowQuoteModal] = useState(false);
 
   const liveBookedCount = useLiveBookedCount(experience);
   const maxAllowedPeople = experience.isUnlimitedCapacity ? 99 : experience.maxPeople;
@@ -83,6 +85,11 @@ export const BookingCard: React.FC<BookingCardProps> = ({ experience }) => {
             ? 'Tarifa oficial de tour operadora · Verificación directa'
             : 'Official tour operator rate · Direct verification'}
         </p>
+
+        <div className="flex items-center gap-1.5 text-xs font-bold text-teal-900 bg-teal-50 px-2.5 py-1.5 rounded-lg border border-teal-200/80 mt-2.5">
+          <Car className="w-3.5 h-3.5 text-[#00A6A6] shrink-0" />
+          <span>{loc('Transporte privado incluido en la tarifa', 'Private transport included in rate')}</span>
+        </div>
       </div>
 
       {/* Live Unlimited Capacity & Dynamic Reservations Counter */}
@@ -231,14 +238,29 @@ export const BookingCard: React.FC<BookingCardProps> = ({ experience }) => {
         </div>
       </div>
 
-      {/* Primary CTA: Reservar Automáticamente */}
+      {/* Primary CTAs */}
       <div className="space-y-2">
+        {experience.isPriceOnQuote || experience.isPackage ? (
+          <button
+            type="button"
+            onClick={() => setShowQuoteModal(true)}
+            className="w-full py-3.5 bg-[#063A5B] hover:bg-[#04283f] text-white font-black text-xs uppercase tracking-wider rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer border border-[#063A5B]"
+          >
+            <Sparkles className="w-4 h-4 text-[#FDBA2D]" />
+            <span>{loc('Solicitar cotización personalizada', 'Request customized quote proposal')}</span>
+          </button>
+        ) : null}
+
         <button
           type="button"
           onClick={() => setShowAutoReserve(true)}
-          className="w-full py-3.5 bg-[#00A6A6] hover:bg-[#009191] text-white font-black text-xs uppercase tracking-wider rounded-xl shadow-md transition-colors flex items-center justify-center gap-2 cursor-pointer"
+          className={`w-full py-3.5 text-white font-black text-xs uppercase tracking-wider rounded-xl shadow-md transition-colors flex items-center justify-center gap-2 cursor-pointer ${
+            experience.isPriceOnQuote
+              ? 'bg-neutral-800 hover:bg-neutral-900 text-neutral-100'
+              : 'bg-[#00A6A6] hover:bg-[#009191]'
+          }`}
         >
-          <span>Reservar ahora (Reserva automática)</span>
+          <span>{experience.isPriceOnQuote ? loc('Reservar con tarifa base', 'Book with base rate') : loc('Reservar ahora (Reserva automática)', 'Book now (Instant reservation)')}</span>
           <ArrowRight className="w-4 h-4" />
         </button>
 
@@ -247,7 +269,7 @@ export const BookingCard: React.FC<BookingCardProps> = ({ experience }) => {
           onClick={handleContinueBooking}
           className="w-full py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 font-bold text-[11px] rounded-xl transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
         >
-          <span>Configurar con código promocional o créditos</span>
+          <span>{loc('Configurar con código promocional o créditos', 'Configure with promo code or credits')}</span>
         </button>
       </div>
 
@@ -279,6 +301,13 @@ export const BookingCard: React.FC<BookingCardProps> = ({ experience }) => {
         initialDate={date}
         initialAdults={adults}
         initialChildren={children}
+      />
+
+      {/* QuoteRequestModal instance */}
+      <QuoteRequestModal
+        isOpen={showQuoteModal}
+        onClose={() => setShowQuoteModal(false)}
+        experience={experience}
       />
     </div>
   );

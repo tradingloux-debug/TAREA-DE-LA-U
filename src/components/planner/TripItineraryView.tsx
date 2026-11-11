@@ -24,6 +24,7 @@ import {
   Eye,
   RefreshCw,
   Compass,
+  MessageSquare,
 } from 'lucide-react';
 
 interface TripItineraryViewProps {
@@ -44,7 +45,7 @@ export const TripItineraryView: React.FC<TripItineraryViewProps> = ({
   isSaved = false,
 }) => {
   const { navigate } = useRouter();
-  const { language } = useLanguage();
+  const { language, loc } = useLanguage();
   const [selectedDayToSwap, setSelectedDayToSwap] = useState<number | null>(null);
   const [customPrompt, setCustomPrompt] = useState<string>('');
   const [copiedLink, setCopiedLink] = useState(false);
@@ -106,6 +107,25 @@ export const TripItineraryView: React.FC<TripItineraryViewProps> = ({
   // Estimated logistics/routes allocation
   const activitiesSubtotal = Math.round(experiencesSubtotal * 0.35);
   const totalEstimated = experiencesSubtotal + activitiesSubtotal;
+
+  const generateItineraryWhatsAppLink = () => {
+    const daysSummary = trip.days
+      .map(
+        (d) =>
+          `Día ${d.dayNumber} (${d.destination}): ` +
+          d.experiences.map((e) => (language === 'es' ? e.titleEs : e.titleEn)).join(', ')
+      )
+      .join('%0A');
+    const text =
+      `Hola GIA Experiences, tengo listo mi itinerario personalizado:%0A` +
+      `*${trip.title}*%0A` +
+      `*Duración:* ${trip.daysCount} días%0A` +
+      `*Viajeros:* ${trip.travelersCount} (${trip.travelerType})%0A` +
+      `*Presupuesto Estimado:* $${totalEstimated} USD%0A%0A` +
+      `*Itinerario Detallado:*%0A${daysSummary}%0A%0A` +
+      `¿Podrían confirmarme disponibilidad y preparar la propuesta formal?`;
+    return `https://wa.me/50371234567?text=${text}`;
+  };
 
   return (
     <div className="space-y-8 animate-in fade-in duration-300">
@@ -495,26 +515,37 @@ export const TripItineraryView: React.FC<TripItineraryViewProps> = ({
             }`}
           >
             <BookmarkCheck className="w-4 h-4" />
-            <span>{isSaved ? '¡Viaje guardado en tu cuenta!' : 'Guardar mi viaje'}</span>
+            <span>{isSaved ? loc('¡Viaje guardado en tu cuenta!', 'Trip saved to your account!', 'Viagem salva na sua conta!') : loc('Guardar mi viaje', 'Save my trip', 'Salvar minha viagem')}</span>
           </button>
 
-          {/* CTA Secundario */}
+          {/* CTA Secundario: WhatsApp */}
+          <a
+            href={generateItineraryWhatsAppLink()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-3.5 bg-[#39B98A] hover:bg-[#2fa076] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors cursor-pointer w-full sm:w-auto text-center flex items-center justify-center gap-1.5 shadow-md"
+          >
+            <MessageSquare className="w-4 h-4" />
+            <span>{loc('Cotizar por WhatsApp', 'Quote via WhatsApp', 'Cotar por WhatsApp')}</span>
+          </a>
+
+          {/* CTA Terciario: Consultar */}
           <button
             type="button"
             onClick={() => setInquiryModalOpen(true)}
-            className="px-5 py-3.5 bg-[#FDBA2D] hover:bg-[#f5b124] text-slate-950 text-xs font-bold uppercase tracking-wider rounded-xl transition-colors cursor-pointer w-full sm:w-auto text-center"
+            className="px-5 py-3.5 bg-[#FFC857] hover:bg-[#e6b44e] text-[#173B59] text-xs font-bold uppercase tracking-wider rounded-xl transition-colors cursor-pointer w-full sm:w-auto text-center"
           >
-            Consultar disponibilidad
+            {loc('Consultar disponibilidad', 'Check availability', 'Consultar disponibilidade')}
           </button>
 
-          {/* CTA Terciario */}
+          {/* CTA Cuaternario: Compartir */}
           <button
             type="button"
             onClick={handleShare}
-            className="px-4 py-3.5 bg-white hover:bg-neutral-100 text-[#063A5B] border border-neutral-300 text-xs font-bold rounded-xl transition-colors flex items-center justify-center gap-1.5 cursor-pointer w-full sm:w-auto"
+            className="px-4 py-3.5 bg-white hover:bg-neutral-100 text-[#173B59] border border-neutral-300 text-xs font-bold rounded-xl transition-colors flex items-center justify-center gap-1.5 cursor-pointer w-full sm:w-auto"
           >
             <Share2 className="w-4 h-4" />
-            <span>{copiedLink ? '¡Enlace copiado!' : 'Compartir'}</span>
+            <span>{copiedLink ? loc('¡Enlace copiado!', 'Link copied!', 'Link copiado!') : loc('Compartir', 'Share', 'Compartilhar')}</span>
           </button>
         </div>
 

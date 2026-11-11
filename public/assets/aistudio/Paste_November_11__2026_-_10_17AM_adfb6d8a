@@ -1,0 +1,850 @@
+# PROMPT MAESTRO PARA GOOGLE AI STUDIO — GIA EXPERIENCES
+
+## 1. CONTEXTO GENERAL DEL PROYECTO
+
+Quiero que actúes como un equipo profesional integrado por especialistas en desarrollo web, diseño UX/UI, turismo receptivo, tour operación, marketing turístico, inteligencia artificial, experiencia del usuario y diseño de plataformas digitales de viajes.
+
+Tu tarea es **mejorar, reorganizar, modernizar y ampliar mi sitio web actual de GIA Experiences**, sin eliminar las funcionalidades existentes que ya funcionan correctamente.
+
+GIA Experiences es una tour operadora salvadoreña cuyo eslogan es:
+
+**«Descubre El Salvador a tu manera».**
+
+Nuestra propuesta de valor es permitir que turistas nacionales e internacionales descubran El Salvador mediante rutas y experiencias turísticas auténticas, personalizadas y organizadas según sus intereses, preferencias, presupuesto y tiempo disponible.
+
+No queremos ser solamente un catálogo de tours ni una plataforma que redirige clientes a otros proveedores. Queremos ofrecer experiencias turísticas que GIA pueda organizar, coordinar y operar mediante alianzas con prestadores de servicios turísticos.
+
+El sitio debe transmitir innovación, confianza, autenticidad, facilidad de uso, profesionalismo y entusiasmo por descubrir El Salvador.
+
+Nuestra prioridad comercial inicial son los turistas internacionales, pero también queremos atraer familias, parejas, grupos de amigos, viajeros individuales y turistas nacionales.
+
+La plataforma debe permitir descubrir destinos, comparar experiencias, personalizar itinerarios y solicitar o realizar reservas, dependiendo de las funcionalidades que realmente estén disponibles.
+
+IMPORTANTE: trabaja sobre el proyecto existente. Antes de modificarlo, revisa su estructura, componentes, funcionalidades, base de datos y diseño. Conserva los elementos útiles y mejora lo que sea necesario. No reconstruyas todo desde cero innecesariamente.
+
+---
+
+## 2. OBJETIVO PRINCIPAL DEL REDISEÑO
+
+Quiero que GIA Experiences se convierta en una plataforma turística moderna en la que el visitante pueda:
+
+1. Descubrir destinos turísticos conocidos de El Salvador.
+2. Explorar lugares menos promocionados y experiencias diferentes.
+3. Encontrar rutas organizadas de 2, 3 y 5 días.
+4. Conocer Surf City 1 y Surf City 2 mediante experiencias integradas.
+5. Encontrar actividades para viajar en familia y con niños.
+6. Descubrir experiencias que estén generando interés actualmente.
+7. Crear itinerarios personalizados mediante inteligencia artificial.
+8. Adaptar rutas existentes a sus necesidades.
+9. Explorar destinos mediante mapas interactivos, fotografías, videos y contenido 360°.
+10. Conocer qué incluye cada experiencia, su duración y las condiciones de reserva.
+11. Solicitar cotizaciones y gestionar su interés de reserva de forma sencilla.
+12. Navegar por toda la plataforma en español, inglés o portugués.
+
+La prioridad debe ser una experiencia intuitiva y sencilla. No quiero un sitio saturado con demasiadas fotografías, botones, textos o secciones repetidas.
+
+---
+
+## 3. REDISEÑO COMPLETO DEL INICIO
+
+Actualmente considero que el inicio del sitio puede resultar demasiado cargado.
+
+Quiero una página principal mucho más limpia, moderna, llamativa y organizada.
+
+Al ingresar, el turista debe comprender inmediatamente qué es GIA Experiences y cómo puede comenzar a explorar El Salvador.
+
+### Pantalla principal
+
+Mostrar:
+
+**GIA EXPERIENCES**
+
+**Descubre El Salvador a tu manera**
+
+Texto breve:
+
+«Explora destinos increíbles, vive experiencias auténticas y crea un viaje diseñado especialmente para ti».
+
+Debajo, mostrar únicamente tres opciones principales, representadas mediante tarjetas visuales atractivas:
+
+**1. EXPLORA NUESTRAS RUTAS**
+
+Para conocer itinerarios organizados, recorridos de varios días y paquetes turísticos.
+
+**2. DESCUBRE EXPERIENCIAS**
+
+Para conocer actividades, destinos emblemáticos, experiencias populares y lugares menos conocidos.
+
+**3. CREA CON GIA**
+
+Para que el turista construya su propio viaje utilizando las herramientas de personalización y asistencia inteligente.
+
+Cada tarjeta debe tener una fotografía real y representativa de El Salvador, un título claro y una breve descripción.
+
+Evita colocar debajo del inicio todo el catálogo de tours y experiencias. Cada contenido debe estar ubicado dentro de la sección que le corresponda.
+
+Mantén un menú de navegación sencillo con acceso a Inicio, Rutas, Experiencias, Crea con GIA, Nosotros y Contacto.
+
+Los demás elementos, como blog, información práctica y políticas, pueden ubicarse donde resulten más apropiados sin sobrecargar la navegación.
+
+El diseño debe estar optimizado especialmente para teléfonos móviles.
+
+---
+
+## 4. NUEVA ORGANIZACIÓN DE RUTAS TURÍSTICAS
+
+Reorganiza la sección «Rutas» para que el turista pueda explorar itinerarios por duración y tipo de experiencia.
+
+Incluir filtros de:
+
+- 1 día.
+- 2 días.
+- 3 días.
+- 5 días.
+- Duración personalizada.
+- Rutas culturales.
+- Rutas de naturaleza.
+- Rutas de aventura.
+- Rutas gastronómicas.
+- Rutas de playa.
+- Rutas familiares.
+- Rutas combinadas.
+
+Los filtros deben funcionar conjuntamente, sin crear secciones duplicadas.
+
+Cada ruta debe tener una ficha completa con nombre comercial, fotografías reales, descripción, destinos incluidos, duración, nivel de actividad, itinerario por día, servicios incluidos, servicios opcionales y condiciones de reserva.
+
+También debe permitir que el turista seleccione «Personalizar esta ruta» para enviar el itinerario directamente a Crea con GIA.
+
+### Nueva ruta destacada: SURF CITY 1 + SURF CITY 2
+
+Quiero crear un producto turístico que conecte las dos zonas de Surf City de El Salvador.
+
+Nombre comercial sugerido:
+
+**«Surf City Experience: descubre las dos costas del surf salvadoreño».**
+
+Este tour debe ser atractivo tanto para surfistas como para turistas interesados en playas, paisajes, gastronomía costera y cultura local.
+
+Tomar como referencia:
+
+**Surf City 1 — La Libertad**
+- Playa El Tunco.
+- Playa El Zonte.
+- El Sunzal.
+- Punta Roca.
+- Otros lugares que se puedan integrar logísticamente.
+
+**Surf City 2 — Oriente**
+- Playa Las Flores.
+- Playa El Cuco.
+- Punta Mango.
+- Otros atractivos compatibles de la zona oriental.
+
+Diseñar propuestas de itinerarios de 3 y 5 días, considerando distancias, tiempos de traslado, descansos y actividades.
+
+La duración debe ser realista. No se deben incorporar demasiados destinos si eso compromete la experiencia.
+
+El usuario podrá seleccionar una modalidad:
+
+- Surf y aventura.
+- Playas y relajación.
+- Playas y gastronomía.
+- Experiencia combinada.
+- Versión familiar cuando existan actividades apropiadas.
+
+Agregar opciones de clases de surf, hospedaje, transporte, gastronomía y otras actividades, siempre que existan proveedores disponibles.
+
+Mostrar un mapa interactivo con el recorrido entre Surf City 1 y Surf City 2.
+
+No inventar precios, horarios, disponibilidad ni servicios confirmados. Si estos datos todavía no existen, utilizar el estado «Por cotizar» o «Disponibilidad por confirmar».
+
+---
+
+## 5. REORGANIZACIÓN DE LA SECCIÓN EXPERIENCIAS
+
+Quiero que la sección «Experiencias» sea mucho más innovadora y permita descubrir El Salvador de diferentes maneras.
+
+Organízala en cuatro categorías principales:
+
+### A. LOS IMPERDIBLES DE EL SALVADOR
+
+Mostrar destinos emblemáticos que un turista podría querer conocer en su primera visita al país.
+
+Utilizar como referencia los destinos presentados en el Congreso Anual de Turismo 2026:
+
+- Centro Histórico de San Salvador.
+- Volcán de San Salvador.
+- Puerta del Diablo y atractivos cercanos.
+- Suchitoto.
+- Ruta Panorámica de Ilopango.
+- Costa del Sol.
+- Surf City 1: La Libertad.
+- Los Volcanes y lago de Coatepeque.
+- Ruta Fresca: Chalatenango.
+- Ruta de la Paz: Morazán.
+- Ruta de las Flores.
+- Ruta Mil Cumbres: Usulután.
+- Bahía de Jiquilisco.
+- Surf City 2: Oriente.
+- Playas de La Unión y Conchagua.
+- Turismo de compras.
+
+Estos destinos son una referencia para diseñar la oferta turística, no un ranking confirmado de visitantes.
+
+No es obligatorio convertir cada destino en un tour independiente. Primero identifica cuáles pueden integrarse en rutas viables y cuáles funcionan mejor como experiencias individuales.
+
+Organizar las tarjetas de forma atractiva, mostrando distintos tipos de actividades.
+
+### B. EN TENDENCIA
+
+Crear una sección dinámica llamada:
+
+**«En tendencia: experiencias que están llamando la atención».**
+
+Esta sección no debe ser una lista permanente de todos los destinos conocidos.
+
+Debe mostrar tours, lugares, actividades o eventos que estén generando interés turístico actualmente.
+
+La clasificación deberá basarse en criterios verificables, como:
+
+- Reservas de GIA.
+- Consultas de los usuarios.
+- Experiencias más guardadas.
+- Búsquedas realizadas en el sitio.
+- Eventos turísticos confirmados.
+- Información pública actualizada.
+- Tendencias identificadas a partir de fuentes confiables.
+
+Si no existe información suficiente para afirmar que un destino está en tendencia, no mostrarlo como tal.
+
+Mientras no existan estadísticas reales, utilizar una sección editorial de «Experiencias destacadas» sin inventar popularidad.
+
+Incluir la posibilidad de actualizar estas recomendaciones desde un panel administrativo.
+
+Cada experiencia mostrará fotografía, nombre, duración y una breve razón por la cual aparece destacada, cuando esa razón esté respaldada por datos.
+
+### C. EL SALVADOR QUE POCOS CONOCEN
+
+Crear una categoría dedicada a experiencias diferentes, lugares menos promocionados y actividades que permitan descubrir otras facetas del país.
+
+Título sugerido:
+
+**«El Salvador que pocos conocen».**
+
+Mensaje:
+
+«Descubre lugares sorprendentes, conecta con nuestras comunidades y vive experiencias que van más allá de las rutas tradicionales».
+
+Esta sección puede incluir experiencias de:
+
+- Turismo comunitario.
+- Talleres artesanales.
+- Gastronomía tradicional.
+- Experiencias con productores locales.
+- Turismo rural.
+- Naturaleza.
+- Senderismo.
+- Observación de fauna.
+- Experiencias culturales.
+- Actividades en destinos de menor exposición turística.
+
+Explorar oportunidades en zonas como la bahía de Jiquilisco, la Ruta de la Paz, Ruta Mil Cumbres y otros destinos que cuenten con condiciones apropiadas para recibir visitantes.
+
+No presentar un lugar como desconocido o poco visitado sin información suficiente. El concepto comercial puede utilizarse para promocionar experiencias menos tradicionales.
+
+No inventar comunidades participantes, alianzas, tours disponibles ni actividades operativas. Diferenciar entre experiencias confirmadas y propuestas en desarrollo.
+
+Priorizar experiencias que aporten beneficios a prestadores de servicios y comunidades locales.
+
+### D. EXPERIENCIAS PARA TODA LA FAMILIA
+
+Crear una categoría:
+
+**«GIA en familia: aventuras para grandes y pequeños».**
+
+Su objetivo es facilitar que las familias encuentren experiencias apropiadas para viajar con niños y adolescentes.
+
+Incluir opciones como:
+
+- Parques recreativos.
+- Actividades de naturaleza.
+- Experiencias educativas.
+- Talleres culturales.
+- Actividades gastronómicas.
+- Playas adecuadas para visitas familiares.
+- Experiencias de aventura con requisitos de edad claramente definidos.
+- Recorridos con espacios de descanso.
+
+Considerar como posibles atractivos, sujetos a verificación de condiciones, Sunset Park, parque Saburo Hirao, parque recreativo Apulo y otros espacios apropiados.
+
+Cada experiencia debe indicar las edades para las cuales resulta adecuada, accesibilidad, duración, nivel de esfuerzo físico y posibles restricciones.
+
+Crear itinerarios familiares completos, pero también permitir que cualquier ruta existente pueda adaptarse a las necesidades de una familia.
+
+No todos los tours deben incluir obligatoriamente actividades infantiles. El sistema deberá seleccionar las más adecuadas según las edades e intereses del grupo.
+
+---
+
+## 6. TRANSFORMAR «CREA CON GIA» EN EL CENTRO DE LA PERSONALIZACIÓN
+
+Esta es una de las funcionalidades más importantes de todo el sitio.
+
+Quiero que «Crea con GIA» sea un asistente inteligente, visual e interactivo que permita al turista construir un viaje personalizado.
+
+No quiero un formulario largo y aburrido ni un chatbot que se limite a responder preguntas frecuentes.
+
+Quiero una experiencia guiada, sencilla y atractiva, donde el turista sienta que GIA está diseñando su viaje con él.
+
+### Paso 1. ¿Cuántos días quieres explorar El Salvador?
+
+Opciones:
+
+- 1 día.
+- 2 días.
+- 3 días.
+- 5 días.
+- Otra duración.
+
+### Paso 2. ¿Con quién viajas?
+
+Opciones:
+
+- Solo.
+- En pareja.
+- Con amigos.
+- En familia.
+- Grupo organizado.
+
+Si selecciona «En familia», preguntar si viajan menores y cuáles son sus edades.
+
+Permitir agregar diferentes edades y número de menores.
+
+### Paso 3. ¿Qué te gustaría descubrir?
+
+Permitir selección múltiple:
+
+- Playas.
+- Surf.
+- Naturaleza.
+- Volcanes.
+- Gastronomía.
+- Cultura.
+- Historia.
+- Aventura.
+- Vida nocturna.
+- Compras.
+- Lugares emblemáticos.
+- Destinos menos conocidos.
+- Parques y actividades infantiles.
+- Experiencias comunitarias.
+- Relajación.
+
+### Paso 4. ¿Qué tipo de experiencia buscas?
+
+- Relajada.
+- Equilibrada.
+- Llena de actividades.
+- Romántica.
+- Familiar.
+- Cultural.
+- Aventurera.
+- Una mezcla de varias.
+
+### Paso 5. ¿Cuál es tu presupuesto?
+
+Permitir ingresar un presupuesto aproximado por persona o por grupo.
+
+Mostrar claramente la moneda y permitir distinguir entre presupuesto total y presupuesto por persona.
+
+El sistema no debe inventar precios reales. Debe trabajar con tarifas verificadas y, cuando no existan, indicar que se requiere cotización.
+
+### Paso 6. ¿Qué servicios necesitas?
+
+- Hospedaje.
+- Transporte.
+- Traslado desde el aeropuerto.
+- Alimentación.
+- Guía turístico.
+- Actividades especiales.
+- Seguro, cuando exista oferta disponible.
+- Otros servicios.
+
+### Paso 7. Preferencias y necesidades especiales
+
+Incluir preguntas opcionales relacionadas con:
+
+- Viaje con niños.
+- Necesidad de silla infantil en transporte.
+- Accesibilidad.
+- Movilidad reducida.
+- Restricciones alimentarias.
+- Preferencia de idioma del guía.
+- Viaje con mascotas.
+- Otras necesidades relevantes.
+
+La opción pet-friendly solamente podrá recomendar alojamientos, transporte y actividades que hayan confirmado aceptar mascotas.
+
+No solicitar información personal sensible que no sea necesaria para prestar el servicio.
+
+### Paso 8. Generación del itinerario
+
+Con las respuestas anteriores, el sistema debe crear una propuesta organizada que contenga:
+
+- Nombre del viaje.
+- Duración.
+- Destinos recomendados.
+- Actividades.
+- Itinerario día por día.
+- Mapa interactivo.
+- Servicios incluidos y opcionales.
+- Tiempo aproximado para cada actividad.
+- Traslados estimados cuando estén respaldados por datos.
+- Observaciones importantes.
+- Presupuesto o precio estimado únicamente cuando existan datos suficientes.
+
+La inteligencia artificial debe considerar la ubicación geográfica de los destinos y evitar rutas poco realistas.
+
+No debe recomendar actividades incompatibles con las edades, necesidades o condiciones declaradas.
+
+### Paso 9. Permitir modificar el itinerario
+
+El viajero debe poder:
+
+- Eliminar una actividad.
+- Cambiar una actividad.
+- Añadir otro destino.
+- Modificar la duración.
+- Cambiar la categoría de hospedaje.
+- Añadir servicios.
+- Ajustar el presupuesto.
+- Cambiar el ritmo del viaje.
+
+Después de cada modificación, el sistema debe revisar la viabilidad del recorrido.
+
+### Paso 10. Guardar y solicitar reserva
+
+Agregar opciones para:
+
+- Guardar el itinerario.
+- Compartirlo.
+- Descargarlo en PDF, si la funcionalidad está disponible.
+- Solicitar cotización.
+- Contactar a GIA por WhatsApp.
+- Solicitar disponibilidad.
+
+No confirmar automáticamente una reserva sin disponer de un mecanismo real de inventario, disponibilidad y confirmación.
+
+---
+
+## 7. INTELIGENCIA ARTIFICIAL Y PLANIFICACIÓN MULTIFUENTE
+
+Tomar en cuenta la tendencia de planificación multifuentе presentada en Travel Trends 2026 de Amadeus y Globetrender.
+
+Quiero que el turista pueda comenzar a planificar desde sus intereses, no necesariamente desde el nombre de un destino.
+
+Por ejemplo:
+
+«Quiero desconectarme de la rutina».
+
+«Quiero conocer los lugares más representativos de El Salvador».
+
+«Viajo con mis hijos y quiero actividades para todos».
+
+«Quiero conocer las dos Surf City».
+
+«Tengo tres días y me gusta la gastronomía y la naturaleza».
+
+«Quiero visitar lugares que no aparecen en todos los tours».
+
+El asistente de GIA deberá interpretar esas solicitudes y recomendar experiencias pertinentes del catálogo.
+
+Evitar respuestas genéricas o destinos inexistentes.
+
+Las recomendaciones deberán construirse a partir de información estructurada y verificada de los productos turísticos disponibles en GIA.
+
+Cuando el asistente no tenga suficiente información, deberá solicitar los datos necesarios o aclarar que la disponibilidad está pendiente de confirmación.
+
+---
+
+## 8. MAPAS INTERACTIVOS E ITINERARIOS VISUALES
+
+Quiero que los mapas formen parte importante de la experiencia.
+
+Cada ruta deberá mostrar un mapa interactivo de El Salvador con los destinos incluidos.
+
+Al seleccionar un día del itinerario, el mapa deberá resaltar sus paradas.
+
+Al seleccionar un destino, mostrar:
+
+- Nombre del lugar.
+- Fotografía real.
+- Descripción.
+- Actividad propuesta.
+- Duración aproximada.
+- Información práctica.
+
+Mostrar los puntos conectados mediante rutas reales cuando exista integración con un servicio cartográfico.
+
+No dibujar líneas que representen carreteras inexistentes.
+
+Si una ruta depende de Google Maps u otro servicio, implementar correctamente su API y manejar los casos en los que no esté configurada.
+
+Permitir que el itinerario pueda visualizarse fácilmente desde el celular.
+
+---
+
+## 9. CONTENIDO INMERSIVO: FOTOS, VIDEOS Y 360°
+
+Incorporar la tendencia de turismo de innovación y experiencias inmersivas.
+
+Quiero que GIA permita al visitante conocer visualmente los destinos antes de reservar.
+
+Crear una funcionalidad:
+
+**«Explora antes de viajar».**
+
+Cuando existan recursos disponibles, incorporar:
+
+- Fotografías reales.
+- Videos cortos.
+- Galerías visuales.
+- Imágenes panorámicas 360° interactivas.
+- Recorridos virtuales.
+- Videos de experiencias reales.
+- Contenido educativo sobre destinos.
+
+Las imágenes 360° deberán permitir una interacción real, no ser fotografías panorámicas estáticas presentadas como experiencias inmersivas.
+
+No utilizar imágenes falsas para representar características específicas de un hotel, atractivo o actividad.
+
+No incorporar videos ni fotografías que no tengan permisos de uso.
+
+Priorizar la velocidad de carga y no permitir que los recursos audiovisuales ralenticen el sitio.
+
+---
+
+## 10. EXPERIENCIAS INSPIRADAS EN CULTURA POP Y EVENTOS
+
+Considerar la tendencia de viajes inspirados en cultura popular, eventos y contenidos digitales.
+
+Quiero que GIA pueda mostrar experiencias relacionadas con acontecimientos turísticos o culturales que generen interés en El Salvador.
+
+Por ejemplo:
+
+- Festivales culturales.
+- Celebraciones tradicionales.
+- Ferias gastronómicas.
+- Eventos musicales.
+- Competencias deportivas.
+- Temporadas de surf.
+- Actividades especiales.
+- Experiencias vinculadas con lugares que estén generando interés en redes sociales.
+
+Estas ofertas deberán estar respaldadas por eventos reales y fechas verificadas.
+
+Crear una funcionalidad que permita agregar experiencias temporales y retirarlas automáticamente de la promoción una vez finalizado el evento, sin borrar el registro histórico.
+
+No inventar conciertos, festivales ni eventos futuros.
+
+---
+
+## 11. EXPERIENCIA DE VIAJE INTEGRAL
+
+Tomar en cuenta que GIA funciona como tour operadora y puede coordinar distintos servicios turísticos mediante proveedores.
+
+Incorporar en la web el mensaje:
+
+**«Tú disfrutas El Salvador. GIA organiza tu experiencia».**
+
+Mostrar claramente los servicios que puedan coordinarse:
+
+- Itinerarios turísticos.
+- Transporte.
+- Traslados de aeropuerto.
+- Hospedaje.
+- Actividades.
+- Guías turísticos.
+- Experiencias complementarias.
+
+No presentar todos los servicios como incluidos en cada paquete.
+
+Diferenciar servicios incluidos, opcionales, disponibles bajo solicitud y no disponibles.
+
+Permitir que el viajero indique su aeropuerto de llegada, fecha y necesidades de traslado.
+
+No mostrar conexiones aéreas o vuelos directos sin datos actualizados y verificables.
+
+---
+
+## 12. SISTEMA DE RESERVAS, COTIZACIONES Y CONFIANZA
+
+Quiero que el proceso para solicitar una experiencia sea sencillo y transparente.
+
+Cada tour debe incluir:
+
+- Descripción.
+- Duración.
+- Dificultad o nivel de actividad.
+- Destinos.
+- Servicios incluidos.
+- Servicios no incluidos.
+- Requisitos.
+- Restricciones.
+- Política de cancelación.
+- Condiciones de reserva.
+- Precio, si está confirmado.
+- Disponibilidad, si está conectada a datos reales.
+
+Diferenciar claramente entre:
+
+**Reservar:** cuando exista capacidad real de confirmar la operación.
+
+**Solicitar disponibilidad:** cuando GIA necesite verificar proveedores.
+
+**Solicitar cotización:** cuando se trate de un paquete personalizado.
+
+Los botones deben realizar acciones reales.
+
+Cuando un cliente solicite cotización, generar un resumen estructurado de su solicitud que GIA pueda recibir y gestionar.
+
+El contacto por WhatsApp deberá incluir automáticamente, cuando sea posible, el nombre de la experiencia, fechas, cantidad de viajeros y servicios solicitados, sin incluir información innecesaria.
+
+Mantener también una alternativa de contacto para quienes no utilicen WhatsApp.
+
+Incluir testimonios reales cuando estén disponibles, sin generar reseñas ficticias.
+
+---
+
+## 13. DISEÑO VISUAL E IDENTIDAD DE MARCA
+
+Quiero una página alegre, moderna y atractiva, pero no infantil ni saturada.
+
+Conservar el logotipo de GIA Experiences y su eslogan.
+
+La identidad visual debe inspirarse en la diversidad de El Salvador: playas, naturaleza, volcanes, cultura y experiencias auténticas.
+
+Mantener una relación visual con los tonos azules y turquesas de la identidad actual, pero incorporar acentos cálidos cuando contribuyan al diseño.
+
+No modificar definitivamente el logotipo sin autorización.
+
+Utilizar:
+
+- Fotografías de calidad.
+- Espacios en blanco.
+- Tarjetas limpias.
+- Tipografía moderna.
+- Textos cortos.
+- Botones claramente visibles.
+- Navegación intuitiva.
+- Animaciones discretas.
+- Iconografía consistente.
+- Buen contraste.
+- Diseño adaptable a dispositivos móviles.
+
+Evitar carruseles interminables, fondos excesivamente cargados, animaciones innecesarias o textos demasiado extensos.
+
+Mantener consistencia visual entre todas las secciones.
+
+---
+
+## 14. PLATAFORMA MULTILINGÜE
+
+El sitio deberá funcionar en:
+
+- Español.
+- Inglés.
+- Portugués.
+
+La traducción debe aplicarse a toda la experiencia:
+
+- Menús.
+- Botones.
+- Descripciones.
+- Filtros.
+- Formularios.
+- Itinerarios.
+- Mensajes del chatbot.
+- Condiciones.
+- Información de reservas.
+- Mensajes de error.
+
+Evitar una traducción parcial donde cambie el idioma del menú, pero permanezcan secciones en español.
+
+Conservar los nombres propios de los destinos cuando corresponda.
+
+Utilizar una arquitectura de internacionalización que facilite mantener las traducciones actualizadas.
+
+---
+
+## 15. PANEL DE ADMINISTRACIÓN Y CONTENIDO DINÁMICO
+
+Quiero que las nuevas experiencias no dependan de modificar manualmente el código cada vez que necesitemos agregar un tour.
+
+Si el proyecto todavía no cuenta con un sistema de administración, preparar una estructura escalable para gestionar:
+
+- Destinos.
+- Rutas.
+- Experiencias.
+- Categorías.
+- Fotografías y videos.
+- Tarifas.
+- Servicios incluidos.
+- Restricciones.
+- Edad mínima.
+- Disponibilidad.
+- Estados de publicación.
+- Experiencias destacadas.
+- Tendencias.
+- Eventos temporales.
+- Solicitudes de cotización.
+
+Una misma experiencia debe poder aparecer en varias categorías sin duplicar sus datos.
+
+Por ejemplo, Surf City puede aparecer en Rutas, en Los imperdibles y, si los datos lo justifican, en En tendencia.
+
+No publicar experiencias incompletas como si fueran servicios listos para reservar.
+
+---
+
+## 16. EXPERIENCIA DEL USUARIO, RENDIMIENTO Y ACCESIBILIDAD
+
+Asegúrate de que el nuevo diseño sea:
+
+- Mobile-first.
+- Rápido.
+- Accesible.
+- Fácil de navegar.
+- Compatible con los navegadores principales.
+- Visualmente consistente.
+- Optimizado para buscadores.
+
+Implementar carga diferida de fotografías y recursos multimedia, botones accesibles, etiquetas adecuadas y formularios con validación.
+
+No introducir funciones visuales que perjudiquen el rendimiento.
+
+Permitir que el turista navegue por las experiencias sin estar obligado a crear una cuenta.
+
+La creación de perfil puede ofrecer beneficios adicionales, como guardar rutas y consultar solicitudes, pero no debe convertirse en un obstáculo para explorar el catálogo.
+
+---
+
+## 17. FUNCIONALIDADES DE FIDELIZACIÓN
+
+Si ya existen mecanismos de fidelización, consérvalos y mejora su integración.
+
+Considerar beneficios como:
+
+- Guardar experiencias favoritas.
+- Consultar itinerarios anteriores.
+- Acceder a recomendaciones basadas en intereses.
+- Recibir un código promocional después de una reserva completada, sujeto a las políticas reales de GIA.
+- Compartir rutas con amigos o familiares.
+
+No ofrecer descuentos automáticos que no hayan sido autorizados.
+
+---
+
+## 18. RECOMENDACIONES ESTRATÉGICAS DE IMPLEMENTACIÓN
+
+Quiero que evalúes las funcionalidades actuales y propongas mejoras realistas.
+
+Prioriza el trabajo en este orden:
+
+**FASE 1 — Organización y diseño**
+
+- Simplificar Inicio.
+- Reorganizar Rutas.
+- Reorganizar Experiencias.
+- Crear las nuevas categorías.
+- Mejorar diseño móvil.
+- Mantener la identidad de GIA.
+
+**FASE 2 — Oferta turística**
+
+- Crear la propuesta Surf City 1 + Surf City 2.
+- Incorporar las rutas familiares.
+- Clasificar los destinos emblemáticos.
+- Crear la sección de experiencias diferentes.
+- Preparar la sección dinámica En tendencia.
+
+**FASE 3 — Personalización**
+
+- Mejorar Crea con GIA.
+- Incorporar preferencias familiares y edades.
+- Permitir personalizar rutas existentes.
+- Generar itinerarios viables.
+- Integrar mapas interactivos.
+- Incorporar solicitudes de cotización.
+
+**FASE 4 — Innovación y escalabilidad**
+
+- Incorporar experiencias 360° reales.
+- Mejorar la integración de IA.
+- Implementar funciones de administración.
+- Incorporar tendencias respaldadas por datos.
+- Mejorar el sistema de fidelización.
+- Revisar SEO, accesibilidad y rendimiento.
+
+Estas fases no deben significar eliminar el contenido o las funcionalidades existentes.
+
+---
+
+## 19. RESTRICCIONES IMPORTANTES
+
+No quiero una demostración visual que parezca funcional, pero cuyos botones, filtros o formularios no hagan nada.
+
+No generes precios, testimonios, alianzas, reservas, disponibilidad, eventos, estadísticas ni ubicaciones ficticias.
+
+Cuando falten datos comerciales, utiliza estados explícitos como:
+
+- Precio por confirmar.
+- Consultar disponibilidad.
+- Experiencia en desarrollo.
+- Solicitar cotización.
+
+Cuando una integración requiera API, credenciales, base de datos o servicios externos, identifica claramente esa dependencia. No simules que la integración ya funciona.
+
+No elimines contenido existente sin revisar su utilidad.
+
+No dupliques rutas y experiencias innecesariamente.
+
+No cambies la identidad comercial de GIA.
+
+No conviertas la plataforma en un marketplace abierto donde cualquier proveedor publique libremente sus servicios. GIA debe conservar el control de su oferta como tour operadora.
+
+El objetivo es construir una plataforma funcional, sostenible y escalable, no solamente un diseño atractivo.
+
+---
+
+## 20. RESULTADO FINAL ESPERADO
+
+Quiero que el turista, al entrar a GIA Experiences, perciba inmediatamente que está frente a una plataforma diferente para conocer El Salvador.
+
+Debe poder elegir entre explorar rutas organizadas, descubrir experiencias o crear su propio viaje.
+
+Si visita el país por primera vez, debe encontrar fácilmente los destinos emblemáticos.
+
+Si ya conoce El Salvador, debe descubrir experiencias diferentes.
+
+Si viaja con niños, debe obtener recomendaciones adecuadas.
+
+Si le interesa Surf City, debe poder explorar ambas zonas de la costa salvadoreña.
+
+Si no sabe qué hacer, la inteligencia artificial debe ayudarlo a descubrir experiencias apropiadas.
+
+Si tiene intereses específicos, debe poder personalizar su itinerario.
+
+Y cuando encuentre una experiencia que le interese, debe tener un camino sencillo para solicitar información, disponibilidad o cotización.
+
+**La idea central es que GIA Experiences no solo ofrezca tours: debe ayudar a cada viajero a descubrir y construir su propia manera de conocer El Salvador.**
+
+Antes de realizar cambios, analiza cómo está construido el proyecto actual, identifica qué funcionalidades ya existen y cuáles necesitan mejorarse.
+
+Después, implementa progresivamente las mejoras priorizadas, respetando la arquitectura y el diseño existente cuando sean adecuados.
+
+Verifica que cada nueva funcionalidad esté conectada correctamente, que el sitio siga funcionando y que todas las secciones mantengan coherencia.
+
+Al finalizar, explica qué cambios realizaste, qué funcionalidades están operativas, cuáles necesitan datos o integraciones adicionales y qué mejoras quedarían pendientes.
+
+**No te limites a describir cómo debería verse el sitio. Implementa las modificaciones que sean técnicamente posibles dentro del proyecto actual.**

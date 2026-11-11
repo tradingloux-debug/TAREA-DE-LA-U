@@ -68,280 +68,112 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-white border-b border-neutral-200/80 shadow-2xs">
+    <header className="sticky top-0 z-40 bg-[#FFFDF8]/95 backdrop-blur-md border-b border-amber-100/90 shadow-2xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
         {/* Left: Official GIA Experiences Logo */}
         <button
           type="button"
           onClick={() => handleNav('/')}
-          className="flex items-center text-left focus-visible:outline-teal-600 rounded-md cursor-pointer transition-opacity hover:opacity-95 shrink-0"
+          className="flex items-center text-left focus-visible:outline-[#00B8C8] rounded-md cursor-pointer transition-opacity hover:opacity-95 shrink-0"
           aria-label={`GIA Experiences — ${l('Inicio', 'Home', 'Início')}`}
         >
           <GiaLogo size="navbar" />
         </button>
 
-        {/* Center: Simplified Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-semibold text-[#063A5B]">
+        {/* Center: Simplified Clean Desktop Navigation */}
+        <nav className="hidden lg:flex items-center gap-5 xl:gap-7 text-xs xl:text-sm font-semibold text-[#173B59]">
+          {/* 1. Inicio */}
           <button
             type="button"
             onClick={() => handleNav('/')}
-            className={`py-2 flex items-center gap-1.5 transition-colors cursor-pointer ${
+            className={`py-2 transition-colors cursor-pointer ${
               isActive('/')
-                ? 'text-[#00A6A6] font-bold border-b-2 border-[#00A6A6]'
-                : 'hover:text-[#00A6A6]'
+                ? 'text-[#00B8C8] font-bold border-b-2 border-[#00B8C8]'
+                : 'hover:text-[#00B8C8]'
             }`}
             aria-current={isActive('/') ? 'page' : undefined}
           >
-            <Home className="w-4 h-4" />
             <span>{l('Inicio', 'Home', 'Início')}</span>
           </button>
 
-          {/* 1. Menú "Explorar" con Dropdown Organizado */}
-          <div
-            ref={exploreRef}
-            className="relative"
-            onMouseEnter={() => setExploreDropdownOpen(true)}
-            onMouseLeave={() => setExploreDropdownOpen(false)}
+          {/* 2. Experiencias */}
+          <button
+            type="button"
+            onClick={() => handleNav('/experiencias')}
+            className={`py-2 transition-colors cursor-pointer ${
+              isActive('/experiencias') && !isActive('/experiencias-locales')
+                ? 'text-[#FF6B57] font-bold border-b-2 border-[#FF6B57]'
+                : 'hover:text-[#FF6B57]'
+            }`}
           >
-            <button
-              type="button"
-              onClick={() => handleNav('/experiencias')}
-              className={`flex items-center gap-1.5 py-2 transition-colors cursor-pointer ${
-                isActive('/experiencias') && !isActive('/experiencias-locales')
-                  ? 'text-[#00A6A6] font-bold'
-                  : 'hover:text-[#00A6A6]'
-              }`}
-            >
-              <span>{l('Explorar', 'Explore', 'Explorar')}</span>
-              <ChevronDown
-                className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                  exploreDropdownOpen ? 'rotate-180 text-[#00A6A6]' : 'text-neutral-400'
-                }`}
-              />
-            </button>
+            <span>{l('Experiencias', 'Experiences', 'Experiências')}</span>
+          </button>
 
-            {/* Dropdown Menu Explorar */}
-            {exploreDropdownOpen && (
-              <div className="absolute top-full -left-4 w-72 bg-white rounded-2xl border border-neutral-200/90 shadow-xl p-3 space-y-1 animate-in fade-in zoom-in-95 duration-150">
-                <div className="px-3 py-1.5 text-[10.5px] font-mono font-bold text-neutral-400 uppercase tracking-wider">
-                  {l('Experiencias', 'Experiences', 'Experiências')}
-                </div>
-
-                <button
-                  type="button"
-                  onClick={() => handleNav('/experiencias')}
-                  className="w-full text-left p-2.5 rounded-xl hover:bg-neutral-50 flex items-center justify-between transition-colors cursor-pointer group"
-                >
-                  <div className="flex items-center gap-2.5">
-                    <Compass className="w-4 h-4 text-[#00A6A6]" />
-                    <span className="text-xs font-bold text-[#063A5B] group-hover:text-[#00A6A6]">
-                      {l('Todas las experiencias', 'All experiences', 'Todas as experiências')}
-                    </span>
-                  </div>
-                  <span className="text-[10px] text-neutral-400 font-mono">24 {l('activas', 'active', 'ativas')}</span>
-                </button>
-
-                <div className="px-3 pt-2 pb-1 text-[10px] font-mono font-bold text-neutral-400 uppercase tracking-wider border-t border-neutral-100">
-                  {l('Categorías principales', 'Main categories', 'Categorias principais')}
-                </div>
-
-                <div className="grid grid-cols-2 gap-1 px-1">
-                  {[
-                    { id: 'cultura', label: l('Cultura', 'Culture', 'Cultura'), icon: '🎨' },
-                    { id: 'gastronomia', label: l('Gastronomía', 'Food', 'Gastronomia'), icon: '🍽' },
-                    { id: 'naturaleza', label: l('Naturaleza', 'Nature', 'Natureza'), icon: '🌿' },
-                    { id: 'aventura', label: l('Aventura', 'Adventure', 'Aventura'), icon: '🧗' },
-                  ].map((cat) => (
-                    <button
-                      key={cat.id}
-                      type="button"
-                      onClick={() => handleNav(`/experiencias?category=${cat.id}`)}
-                      className="text-left px-2.5 py-1.5 rounded-lg hover:bg-neutral-50 text-xs text-neutral-700 hover:text-[#063A5B] transition-colors cursor-pointer flex items-center gap-1.5"
-                    >
-                      <span>{cat.icon}</span>
-                      <span className="font-medium">{cat.label}</span>
-                    </button>
-                  ))}
-                </div>
-
-                <div className="pt-2 border-t border-neutral-100 space-y-1">
-                  <button
-                    type="button"
-                    onClick={() => handleNav('/experiencias-locales')}
-                    className="w-full text-left p-2.5 rounded-xl hover:bg-emerald-50/60 flex items-center gap-2.5 transition-colors cursor-pointer group"
-                  >
-                    <Heart className="w-4 h-4 text-[#55A94B]" />
-                    <div>
-                      <span className="text-xs font-bold text-[#063A5B] group-hover:text-[#55A94B] block">
-                        {l('Experiencias locales', 'Local experiences', 'Experiências locais')}
-                      </span>
-                      <span className="text-[10.5px] text-neutral-500 block">
-                        {l('Comunidades y tradiciones', 'Communities and traditions', 'Comunidades e tradições')}
-                      </span>
-                    </div>
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => handleNav('/experiencias?tour360=true')}
-                    className="w-full text-left p-2.5 rounded-xl hover:bg-teal-50/60 flex items-center gap-2.5 transition-colors cursor-pointer group"
-                  >
-                    <Compass className="w-4 h-4 text-[#00A6A6]" />
-                    <div>
-                      <span className="text-xs font-bold text-[#063A5B] group-hover:text-[#00A6A6] block">
-                        {l('Experiencias con imágenes 360°', 'Experiences with 360° images', 'Experiências com imagens 360°')}
-                      </span>
-                      <span className="text-[10.5px] text-neutral-500 block">
-                        {l('Exploración inmersiva', 'Immersive exploration', 'Exploração imersiva')}
-                      </span>
-                    </div>
-                  </button>
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* 2. Rutas GIA */}
+          {/* 3. Rutas */}
           <button
             type="button"
             onClick={() => handleNav('/rutas')}
             className={`py-2 transition-colors cursor-pointer ${
-              isActive('/rutas') ? 'text-[#00A6A6] font-bold border-b-2 border-[#00A6A6]' : 'hover:text-[#00A6A6]'
+              isActive('/rutas')
+                ? 'text-[#00B8C8] font-bold border-b-2 border-[#00B8C8]'
+                : 'hover:text-[#00B8C8]'
             }`}
           >
-            {l('Rutas GIA', 'GIA Routes', 'Rotas GIA')}
+            <span>{l('Rutas', 'Routes', 'Rotas')}</span>
           </button>
 
-          {/* 3. Planea con GIA */}
+          {/* 4. Planifica tu viaje */}
           <button
             type="button"
             onClick={() => handleNav('/planea-con-gia')}
-            className={`py-2 flex items-center gap-1.5 transition-colors cursor-pointer ${
+            className={`py-2 transition-colors cursor-pointer ${
               isActive('/planea-con-gia')
-                ? 'text-[#00A6A6] font-bold border-b-2 border-[#00A6A6]'
-                : 'hover:text-[#00A6A6]'
+                ? 'text-[#39B98A] font-bold border-b-2 border-[#39B98A]'
+                : 'hover:text-[#39B98A]'
             }`}
           >
-            <Sparkles className="w-3.5 h-3.5 text-[#FDBA2D]" />
-            <span>{l('Planea con GIA', 'Plan with GIA', 'Planeje com a GIA')}</span>
+            <span>{l('Crea con GIA', 'Create with GIA', 'Crie com a GIA')}</span>
           </button>
 
-          {/* 4. Quiénes somos (Botón principal en el menú) */}
+          {/* 5. GIA Premia (Visible & highlighted in main nav) */}
+          <button
+            type="button"
+            onClick={() => handleNav('/gia-premia')}
+            className={`py-2 flex items-center gap-1.5 transition-colors cursor-pointer ${
+              isActive('/gia-premia')
+                ? 'text-[#FFC857] font-bold border-b-2 border-[#FFC857]'
+                : 'hover:text-[#FFC857]'
+            }`}
+          >
+            <Sparkles className="w-3.5 h-3.5 text-[#FFC857]" />
+            <span>GIA Premia</span>
+          </button>
+
+          {/* 6. Sobre GIA */}
           <button
             type="button"
             onClick={() => handleNav('/quienes-somos')}
             className={`py-2 transition-colors cursor-pointer whitespace-nowrap ${
               isActive('/quienes-somos')
-                ? 'text-[#00A6A6] font-bold border-b-2 border-[#00A6A6]'
-                : 'hover:text-[#00A6A6]'
+                ? 'text-[#00B8C8] font-bold border-b-2 border-[#00B8C8]'
+                : 'hover:text-[#00B8C8]'
             }`}
           >
-            <span>{l('Quiénes somos', 'About us', 'Quem somos')}</span>
+            <span>{l('Sobre GIA', 'About GIA', 'Sobre a GIA')}</span>
           </button>
 
-          {/* 5. Menú "Más" */}
-          <div
-            ref={moreRef}
-            className="relative"
-            onMouseEnter={() => setMoreDropdownOpen(true)}
-            onMouseLeave={() => setMoreDropdownOpen(false)}
+          {/* 7. Contacto */}
+          <button
+            type="button"
+            onClick={() => handleNav('/contacto')}
+            className={`py-2 transition-colors cursor-pointer ${
+              isActive('/contacto')
+                ? 'text-[#00B8C8] font-bold border-b-2 border-[#00B8C8]'
+                : 'hover:text-[#00B8C8]'
+            }`}
           >
-            <button
-              type="button"
-              className="flex items-center gap-1 py-2 text-neutral-600 hover:text-[#063A5B] transition-colors cursor-pointer"
-            >
-              <span>{l('Más', 'More', 'Mais')}</span>
-              <ChevronDown
-                className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                  moreDropdownOpen ? 'rotate-180 text-[#00A6A6]' : 'text-neutral-400'
-                }`}
-              />
-            </button>
-
-            {/* Dropdown Menu Más */}
-            {moreDropdownOpen && (
-              <div className="absolute top-full -left-4 w-64 bg-white rounded-2xl border border-neutral-200/90 shadow-xl p-2 space-y-1 animate-in fade-in zoom-in-95 duration-150">
-                <button
-                  type="button"
-                  onClick={() => handleNav('/quienes-somos')}
-                  className="w-full text-left p-2.5 rounded-xl hover:bg-neutral-50 flex items-center gap-2.5 text-xs font-semibold text-[#063A5B] hover:text-[#00A6A6] transition-colors cursor-pointer"
-                >
-                  <Compass className="w-4 h-4 text-[#00A6A6]" />
-                  <span>{l('Quiénes somos', 'About us', 'Quem somos')}</span>
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => handleNav('/experiencias-locales')}
-                  className="w-full text-left p-2.5 rounded-xl hover:bg-neutral-50 flex items-center gap-2.5 text-xs font-semibold text-[#063A5B] hover:text-[#00A6A6] transition-colors cursor-pointer"
-                >
-                  <Heart className="w-4 h-4 text-[#55A94B]" />
-                  <span>{l('Experiencias locales', 'Local experiences', 'Experiências locais')}</span>
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => handleNav('/experiencias?tour360=true')}
-                  className="w-full text-left p-2.5 rounded-xl hover:bg-neutral-50 flex items-center gap-2.5 text-xs font-semibold text-[#063A5B] hover:text-[#00A6A6] transition-colors cursor-pointer"
-                >
-                  <Compass className="w-4 h-4 text-[#00A6A6]" />
-                  <span>{l('Experiencias inmersivas', 'Immersive experiences', 'Experiências imersivas')}</span>
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => handleNav('/mi-cuenta/referidos')}
-                  className="w-full text-left p-2.5 rounded-xl hover:bg-neutral-50 flex items-center gap-2.5 text-xs font-semibold text-[#063A5B] hover:text-[#00A6A6] transition-colors cursor-pointer"
-                >
-                  <Share2 className="w-4 h-4 text-[#FDBA2D]" />
-                  <span>{l('Comparte GIA', 'Share GIA', 'Compartilhe a GIA')}</span>
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => handleNav('/mis-favoritos')}
-                  className="w-full text-left p-2.5 rounded-xl hover:bg-neutral-50 flex items-center justify-between text-xs font-semibold text-[#063A5B] hover:text-[#00A6A6] transition-colors cursor-pointer"
-                >
-                  <div className="flex items-center gap-2.5">
-                    <Heart className="w-4 h-4 text-rose-500 fill-rose-500" />
-                    <span>{l('Mis favoritos', 'My favorites', 'Meus favoritos')}</span>
-                  </div>
-                  {favorites.length > 0 && (
-                    <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-rose-100 text-rose-700">
-                      {favorites.length}
-                    </span>
-                  )}
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => handleNav('/mis-reservas')}
-                  className="w-full text-left p-2.5 rounded-xl hover:bg-neutral-50 flex items-center gap-2.5 text-xs font-semibold text-[#063A5B] hover:text-[#00A6A6] transition-colors cursor-pointer"
-                >
-                  <BookmarkCheck className="w-4 h-4 text-[#063A5B]" />
-                  <span>{l('Mis reservas', 'My bookings', 'Minhas reservas')}</span>
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => handleNav('/contacto')}
-                  className="w-full text-left p-2.5 rounded-xl hover:bg-neutral-50 flex items-center gap-2.5 text-xs font-semibold text-[#063A5B] hover:text-[#00A6A6] transition-colors cursor-pointer border-t border-neutral-100"
-                >
-                  <Phone className="w-4 h-4 text-[#00A6A6]" />
-                  <span>{l('Contacto (+503 7011-9564)', 'Contact (+503 7011-9564)', 'Contato (+503 7011-9564)')}</span>
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => handleNav('/ayuda')}
-                  className="w-full text-left p-2.5 rounded-xl hover:bg-neutral-50 flex items-center gap-2.5 text-xs font-semibold text-[#063A5B] hover:text-[#00A6A6] transition-colors cursor-pointer"
-                >
-                  <HelpCircle className="w-4 h-4 text-neutral-400" />
-                  <span>{l('Centro de Ayuda & FAQ', 'Help Center & FAQ', 'Central de Ajuda & FAQ')}</span>
-                </button>
-              </div>
-            )}
-          </div>
+            <span>{l('Contacto', 'Contact', 'Contato')}</span>
+          </button>
         </nav>
 
         {/* Right: ES / EN, Favoritos, Cuenta & CTA destacado "Crear mi viaje" */}
@@ -407,13 +239,13 @@ export const Navbar: React.FC = () => {
             </button>
           )}
 
-          {/* CTA Destacado: PRIMARY Turquesa #00A6A6 */}
+          {/* CTA Destacado: PRIMARY Coral Tropical #FF6B57 */}
           <button
             type="button"
             onClick={() => handleNav('/planea-con-gia')}
-            className="px-5 py-2.5 bg-[#00A6A6] hover:bg-[#009191] active:scale-98 text-white font-extrabold text-xs uppercase tracking-wider rounded-xl shadow-xs transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer hover:shadow-md"
+            className="px-5 py-2.5 bg-[#FF6B57] hover:bg-[#E85541] active:scale-98 text-white font-extrabold text-xs uppercase tracking-wider rounded-xl shadow-md shadow-[#FF6B57]/20 transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer hover:shadow-lg hover:-translate-y-0.5"
           >
-            <Sparkles className="w-4 h-4 text-[#FDBA2D]" />
+            <Sparkles className="w-4 h-4 text-[#FFC857]" />
             <span>{l('Crear mi viaje', 'Create my trip', 'Criar minha viagem')}</span>
           </button>
         </div>
@@ -468,17 +300,17 @@ export const Navbar: React.FC = () => {
 
       {/* 4. MOBILE NAVIGATION DRAWER */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-neutral-200/80 bg-white px-5 pt-4 pb-8 space-y-5 shadow-2xl animate-in slide-in-from-top-2 duration-200">
-          <nav className="flex flex-col space-y-1.5 text-sm font-semibold text-[#063A5B]">
+        <div className="lg:hidden border-t border-amber-100/90 bg-[#FFFDF8] px-5 pt-4 pb-8 space-y-5 shadow-2xl animate-in slide-in-from-top-2 duration-200">
+          <nav className="flex flex-col space-y-1.5 text-sm font-semibold text-[#173B59]">
             <button
               type="button"
               onClick={() => handleNav('/')}
               className={`text-left py-3 px-3.5 rounded-xl transition-colors cursor-pointer flex items-center justify-between ${
-                isActive('/') ? 'bg-teal-50 text-[#00A6A6] font-bold' : 'hover:bg-neutral-50'
+                isActive('/') ? 'bg-[#00B8C8]/10 text-[#00B8C8] font-bold' : 'hover:bg-amber-50/50'
               }`}
             >
               <span>{l('Inicio', 'Home', 'Início')}</span>
-              <Home className="w-4 h-4 text-[#00A6A6]" />
+              <Home className="w-4 h-4 text-[#00B8C8]" />
             </button>
 
             <button
@@ -486,55 +318,61 @@ export const Navbar: React.FC = () => {
               onClick={() => handleNav('/experiencias')}
               className={`text-left py-3 px-3.5 rounded-xl transition-colors cursor-pointer flex items-center justify-between ${
                 isActive('/experiencias') && !isActive('/experiencias-locales')
-                  ? 'bg-teal-50 text-[#00A6A6] font-bold'
-                  : 'hover:bg-neutral-50'
+                  ? 'bg-[#FF6B57]/10 text-[#FF6B57] font-bold'
+                  : 'hover:bg-amber-50/50'
               }`}
             >
               <span>{l('Explorar experiencias', 'Explore experiences', 'Explorar experiências')}</span>
-              <Compass className="w-4 h-4 text-[#00A6A6]" />
+              <Compass className="w-4 h-4 text-[#FF6B57]" />
             </button>
 
             <button
               type="button"
               onClick={() => handleNav('/rutas')}
               className={`text-left py-3 px-3.5 rounded-xl transition-colors cursor-pointer flex items-center justify-between ${
-                isActive('/rutas') ? 'bg-teal-50 text-[#00A6A6] font-bold' : 'hover:bg-neutral-50'
+                isActive('/rutas') ? 'bg-[#00B8C8]/10 text-[#00B8C8] font-bold' : 'hover:bg-amber-50/50'
               }`}
             >
               <span>{l('Rutas GIA', 'GIA Routes', 'Rotas GIA')}</span>
-              <Route className="w-4 h-4 text-[#063A5B]" />
+              <Route className="w-4 h-4 text-[#173B59]" />
             </button>
 
             <button
               type="button"
               onClick={() => handleNav('/planea-con-gia')}
               className={`text-left py-3 px-3.5 rounded-xl transition-colors cursor-pointer flex items-center justify-between ${
-                isActive('/planea-con-gia') ? 'bg-teal-50 text-[#00A6A6] font-bold' : 'hover:bg-neutral-50'
+                isActive('/planea-con-gia') ? 'bg-[#39B98A]/10 text-[#39B98A] font-bold' : 'hover:bg-amber-50/50'
               }`}
             >
-              <span>{l('Planea con GIA', 'Plan with GIA', 'Planeje com a GIA')}</span>
-              <Sparkles className="w-4 h-4 text-[#FDBA2D]" />
+              <span>{l('Crea con GIA', 'Create with GIA', 'Crie com a GIA')}</span>
+              <Sparkles className="w-4 h-4 text-[#FFC857]" />
             </button>
 
             <button
               type="button"
-              onClick={() => handleNav('/experiencias-locales')}
+              onClick={() => handleNav('/gia-premia')}
               className={`text-left py-3 px-3.5 rounded-xl transition-colors cursor-pointer flex items-center justify-between ${
-                isActive('/experiencias-locales') ? 'bg-teal-50 text-[#00A6A6] font-bold' : 'hover:bg-neutral-50'
+                isActive('/gia-premia') ? 'bg-[#FFC857]/20 text-[#B87C00] font-bold border border-[#FFC857]/40' : 'hover:bg-amber-50/50'
               }`}
             >
-              <span>{l('Experiencias locales', 'Local experiences', 'Experiências locais')}</span>
-              <Heart className="w-4 h-4 text-[#55A94B]" />
+              <div className="flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-[#FFC857]" />
+                <span className="font-bold">GIA Premia</span>
+                <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-[#FFC857]/25 text-[#B87C00]">
+                  {l('Recompensas', 'Rewards', 'Recompensas')}
+                </span>
+              </div>
+              <Sparkles className="w-4 h-4 text-[#FFC857]" />
             </button>
 
             <button
               type="button"
               onClick={() => handleNav('/quienes-somos')}
               className={`text-left py-3 px-3.5 rounded-xl transition-colors cursor-pointer flex items-center justify-between ${
-                isActive('/quienes-somos') ? 'bg-teal-50 text-[#00A6A6] font-bold' : 'hover:bg-neutral-50'
+                isActive('/quienes-somos') ? 'bg-[#00B8C8]/10 text-[#00B8C8] font-bold' : 'hover:bg-amber-50/50'
               }`}
             >
-              <span>{l('Quiénes somos', 'About us', 'Quem somos')}</span>
+              <span>{l('Sobre GIA', 'About GIA', 'Sobre a GIA')}</span>
               <Compass className="w-4 h-4 text-neutral-400" />
             </button>
 
@@ -650,9 +488,9 @@ export const Navbar: React.FC = () => {
             <button
               type="button"
               onClick={() => handleNav('/planea-con-gia')}
-              className="w-full py-4 text-center text-xs font-extrabold uppercase tracking-wider text-white bg-[#00A6A6] hover:bg-[#009191] rounded-2xl shadow-md flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full py-4 text-center text-xs font-extrabold uppercase tracking-wider text-white bg-[#FF6B57] hover:bg-[#E85541] rounded-2xl shadow-md shadow-[#FF6B57]/25 flex items-center justify-center gap-2 cursor-pointer transition-all"
             >
-              <Sparkles className="w-4 h-4 text-[#FDBA2D]" />
+              <Sparkles className="w-4 h-4 text-[#FFC857]" />
               <span>{l('Crear mi viaje', 'Create my trip', 'Criar minha viagem')}</span>
             </button>
           </div>

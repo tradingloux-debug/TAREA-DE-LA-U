@@ -3,24 +3,35 @@
 @theme {
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
-  --color-brand-blue: #063A5B;
-  --color-brand-deep: #063A5B;
-  --color-brand-teal: #00A6A6;
-  --color-brand-cyan: #20C5C7;
-  --color-brand-yellow: #FDBA2D;
-  --color-brand-orange: #F47B3A;
-  --color-brand-green: #55A94B;
-  --color-brand-sand: #F7F4ED;
+
+  /* Official GIA Experiences Renovated Tropical Palette */
+  --color-brand-blue: #173B59;
+  --color-brand-deep: #173B59;
+  --color-brand-turquoise: #00B8C8;
+  --color-brand-teal: #00B8C8;
+  --color-brand-yellow: #FFC857;
+  --color-brand-coral: #FF6B57;
+  --color-brand-green: #39B98A;
+  --color-brand-warmwhite: #FFFDF8;
+  --color-brand-sand: #FFF8EE;
+
+  /* Shortcut color aliases */
+  --color-gia-turquoise: #00B8C8;
+  --color-gia-yellow: #FFC857;
+  --color-gia-coral: #FF6B57;
+  --color-gia-green: #39B98A;
+  --color-gia-warmwhite: #FFFDF8;
+  --color-gia-blue: #173B59;
 }
 
 @layer base {
   body {
     font-family: var(--font-sans);
-    background-color: #FAFAF7;
-    color: #063A5B;
+    background-color: #FFFDF8;
+    color: #173B59;
   }
-  h1, h2, h3, .font-display {
+  h1, h2, h3, h4, h5, h6, .font-display {
     font-family: var(--font-display);
+    color: #173B59;
   }
 }
-

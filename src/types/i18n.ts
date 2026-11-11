@@ -1,4 +1,4 @@
-export type SupportedLanguage = 'es' | 'en' | 'pt';
+export type SupportedLanguage = 'es' | 'en';
 
 export interface TranslationDictionary {
   nav: {

@@ -17,6 +17,8 @@ import { RouteDetailPage } from './pages/RouteDetailPage';
 import { LocalExperiencesPage } from './pages/LocalExperiencesPage';
 import { TripPlannerPage } from './pages/TripPlannerPage';
 import { ReferralsPage } from './pages/ReferralsPage';
+import { GiaPremiaPage } from './pages/GiaPremiaPage';
+import { AdminDashboardPage } from './pages/AdminDashboardPage';
 import { ContactPage } from './pages/ContactPage';
 import { AboutUsPage } from './pages/AboutUsPage';
 import { TermsPage } from './pages/TermsPage';
@@ -55,6 +57,12 @@ const AppContent: React.FC = () => {
     }
     if (path === '/mi-cuenta' || path.startsWith('/mi-cuenta')) {
       return <ReferralsPage />;
+    }
+    if (path === '/gia-premia' || path.startsWith('/gia-premia')) {
+      return <GiaPremiaPage />;
+    }
+    if (path === '/admin' || path.startsWith('/admin')) {
+      return <AdminDashboardPage />;
     }
     if (path === '/checkout') {
       return <CheckoutPage />;

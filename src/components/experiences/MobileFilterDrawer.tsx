@@ -1,6 +1,7 @@
 import React from 'react';
 import { FilterPanel } from './FilterPanel';
 import { ExperienceFilterState } from '../../types/experience';
+import { useLanguage } from '../../context/LanguageContext';
 import { X, Check, RotateCcw, SlidersHorizontal } from 'lucide-react';
 
 interface MobileFilterDrawerProps {
@@ -22,6 +23,8 @@ export const MobileFilterDrawer: React.FC<MobileFilterDrawerProps> = ({
   resultsCount,
   activeFiltersCount = 0,
 }) => {
+  const { loc } = useLanguage();
+
   if (!isOpen) return null;
 
   return (
@@ -39,14 +42,14 @@ export const MobileFilterDrawer: React.FC<MobileFilterDrawerProps> = ({
           <div className="flex items-center gap-2">
             <SlidersHorizontal className="w-4 h-4 text-[#00A6A6]" />
             <h3 className="text-sm font-black text-[#063A5B] font-display">
-              Filtros {activeFiltersCount > 0 ? `(${activeFiltersCount})` : ''}
+              {loc('Filtros', 'Filters')} {activeFiltersCount > 0 ? `(${activeFiltersCount})` : ''}
             </h3>
           </div>
           <button
             type="button"
             onClick={onClose}
             className="p-1.5 rounded-xl text-neutral-500 hover:text-neutral-900 hover:bg-neutral-200/60 cursor-pointer"
-            aria-label="Cerrar filtros"
+            aria-label={loc('Cerrar filtros', 'Close filters')}
           >
             <X className="w-5 h-5" />
           </button>
@@ -65,7 +68,7 @@ export const MobileFilterDrawer: React.FC<MobileFilterDrawerProps> = ({
             className="px-4 py-3 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 text-xs font-bold rounded-xl transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
           >
             <RotateCcw className="w-3.5 h-3.5" />
-            <span>Limpiar</span>
+            <span>{loc('Limpiar', 'Clear')}</span>
           </button>
 
           <button
@@ -74,7 +77,7 @@ export const MobileFilterDrawer: React.FC<MobileFilterDrawerProps> = ({
             className="flex-1 py-3 bg-[#00A6A6] hover:bg-[#009191] text-white font-extrabold text-xs uppercase tracking-wider rounded-xl shadow-md flex items-center justify-center gap-2 cursor-pointer"
           >
             <Check className="w-4 h-4" />
-            <span>Aplicar filtros ({resultsCount})</span>
+            <span>{loc('Aplicar filtros', 'Apply filters')} ({resultsCount})</span>
           </button>
         </div>
       </div>

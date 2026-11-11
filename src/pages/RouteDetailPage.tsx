@@ -85,20 +85,20 @@ export const RouteDetailPage: React.FC = () => {
   };
 
   return (
-    <div className="bg-neutral-50/60 min-h-screen pb-20">
+    <div className="bg-[#FFFDF8] min-h-screen pb-20">
       {/* Top Breadcrumb */}
-      <div className="bg-white border-b border-neutral-200/80">
+      <div className="bg-white border-b border-amber-100/90">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
           <button
             type="button"
             onClick={() => goBack('/rutas')}
-            className="group inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-100 hover:bg-neutral-200 text-xs font-semibold text-neutral-700 hover:text-[#063A5B] transition-all cursor-pointer"
+            className="group inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-100 hover:bg-amber-100/60 text-xs font-semibold text-[#173B59] transition-all cursor-pointer"
           >
-            <ArrowLeft className="w-3.5 h-3.5 text-[#00A6A6] group-hover:-translate-x-0.5 transition-transform" />
+            <ArrowLeft className="w-3.5 h-3.5 text-[#00B8C8] group-hover:-translate-x-0.5 transition-transform" />
             <span>{language === 'es' ? 'Volver a todos los tours GIA' : 'Back to all GIA tours'}</span>
           </button>
 
-          <span className="text-xs font-mono font-bold text-teal-800">
+          <span className="text-xs font-mono font-bold text-[#00B8C8]">
             {route.days} {language === 'es' ? 'días de exploración' : 'days of exploration'}
           </span>
         </div>

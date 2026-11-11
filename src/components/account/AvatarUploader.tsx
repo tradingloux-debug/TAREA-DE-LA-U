@@ -20,11 +20,11 @@ export const AvatarUploader: React.FC<AvatarUploaderProps> = ({
   const [loading, setLoading] = useState(false);
 
   const t = {
-    changePhoto: language === 'pt' ? 'Alterar foto' : language === 'es' ? 'Cambiar foto' : 'Change photo',
-    uploadPhoto: language === 'pt' ? 'Enviar foto do seu dispositivo' : language === 'es' ? 'Subir foto desde tu dispositivo' : 'Upload from your device',
-    choosePreset: language === 'pt' ? 'Ou escolha um avatar temático' : language === 'es' ? 'O elige un avatar temático' : 'Or choose a themed avatar',
-    removePhoto: language === 'pt' ? 'Remover foto' : language === 'es' ? 'Quitar foto' : 'Remove photo',
-    uploading: language === 'pt' ? 'Carregando imagem...' : language === 'es' ? 'Cargando imagen...' : 'Loading image...',
+    changePhoto: language === 'es' ? 'Cambiar foto' : 'Change photo',
+    uploadPhoto: language === 'es' ? 'Subir foto desde tu dispositivo' : 'Upload from your device',
+    choosePreset: language === 'es' ? 'O elige un avatar temático' : 'Or choose a themed avatar',
+    removePhoto: language === 'es' ? 'Quitar foto' : 'Remove photo',
+    uploading: language === 'es' ? 'Cargando imagen...' : 'Loading image...',
   };
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {

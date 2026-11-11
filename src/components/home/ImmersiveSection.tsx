@@ -218,7 +218,7 @@ export const ImmersiveSection: React.FC = () => {
                   {DESTINATIONS_360.map((dest) => (
                     <tr key={dest.id} className="hover:bg-white/5 transition-colors">
                       <td className="py-3 px-3 font-semibold text-white">
-                        {language === 'es' ? dest.nameEs : language === 'pt' ? dest.nameEs : dest.nameEn}
+                        {language === 'es' ? dest.nameEs : dest.nameEn}
                         <span className="block text-[10px] text-slate-400 font-normal">
                           {dest.departmentEs}
                         </span>
@@ -392,7 +392,7 @@ export const ImmersiveSection: React.FC = () => {
                         onClick={() =>
                           setActiveTourModal({
                             isOpen: true,
-                            title: language === 'es' ? dest.nameEs : language === 'pt' ? dest.nameEs : dest.nameEn,
+                            title: language === 'es' ? dest.nameEs : dest.nameEn,
                             location: `${dest.departmentEs}, El Salvador`,
                             image: dest.panorama360Url || dest.coverImage,
                             sourceUrl: dest.sourceUrl,
@@ -426,7 +426,7 @@ export const ImmersiveSection: React.FC = () => {
                   {/* Bottom Text Over Image */}
                   <div className="absolute bottom-3 left-3 right-3">
                     <p className="text-base font-bold text-white drop-shadow-md leading-snug">
-                      {language === 'es' ? dest.nameEs : language === 'pt' ? dest.nameEs : dest.nameEn}
+                      {language === 'es' ? dest.nameEs : dest.nameEn}
                     </p>
                     <p className="text-[11px] text-teal-300 font-medium mt-0.5">
                       {dest.departmentEs}, El Salvador
@@ -439,12 +439,12 @@ export const ImmersiveSection: React.FC = () => {
               <div className="p-5 space-y-4 flex-1 flex flex-col justify-between">
                 <div className="space-y-3">
                   <p className="text-xs text-slate-300 leading-relaxed font-light">
-                    {language === 'es' ? dest.shortDescEs : language === 'pt' ? dest.shortDescEs : dest.shortDescEn}
+                    {language === 'es' ? dest.shortDescEs : dest.shortDescEn}
                   </p>
 
                   {/* Highlights Tags */}
                   <div className="flex flex-wrap gap-1.5 pt-1">
-                    {(language === 'es' || language === 'pt' ? dest.highlightsEs : dest.highlightsEn).map((h, idx) => (
+                    {(language === 'es' ? dest.highlightsEs : dest.highlightsEn).map((h, idx) => (
                       <span
                         key={idx}
                         className="text-[10.5px] px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-slate-300"
@@ -469,7 +469,7 @@ export const ImmersiveSection: React.FC = () => {
                       onClick={() =>
                         setActiveTourModal({
                           isOpen: true,
-                          title: language === 'es' ? dest.nameEs : language === 'pt' ? dest.nameEs : dest.nameEn,
+                          title: language === 'es' ? dest.nameEs : dest.nameEn,
                           location: `${dest.departmentEs}, El Salvador`,
                           image: dest.panorama360Url || dest.coverImage,
                           sourceUrl: dest.sourceUrl,
@@ -562,7 +562,7 @@ export const ImmersiveSection: React.FC = () => {
                   </span>
                 </div>
                 <h3 className="text-base sm:text-lg font-bold text-white leading-tight">
-                  {language === 'es' || language === 'pt'
+                  {language === 'es'
                     ? activeGalleryModal.destination.nameEs
                     : activeGalleryModal.destination.nameEn}
                 </h3>
@@ -598,7 +598,7 @@ export const ImmersiveSection: React.FC = () => {
                     activeGalleryModal.destination.gallery[activeGalleryModal.activePhotoIndex].url
                   }
                   alt={
-                    language === 'es' || language === 'pt'
+                    language === 'es'
                       ? activeGalleryModal.destination.gallery[activeGalleryModal.activePhotoIndex]
                           .captionEs
                       : activeGalleryModal.destination.gallery[activeGalleryModal.activePhotoIndex]
@@ -655,7 +655,7 @@ export const ImmersiveSection: React.FC = () => {
                   {l('Descripción del destino', 'Destination Overview', 'Descrição do destino')}
                 </span>
                 <p className="text-xs text-slate-300 leading-relaxed">
-                  {language === 'es' || language === 'pt'
+                  {language === 'es'
                     ? activeGalleryModal.destination.fullDescEs
                     : activeGalleryModal.destination.fullDescEn}
                 </p>
@@ -682,7 +682,7 @@ export const ImmersiveSection: React.FC = () => {
               {activeGalleryModal.destination.gallery[activeGalleryModal.activePhotoIndex] && (
                 <div className="p-3 rounded-xl bg-slate-950/80 border border-white/10 space-y-1 text-xs">
                   <p className="font-semibold text-white">
-                    {language === 'es' || language === 'pt'
+                    {language === 'es'
                       ? activeGalleryModal.destination.gallery[activeGalleryModal.activePhotoIndex]
                           .captionEs
                       : activeGalleryModal.destination.gallery[activeGalleryModal.activePhotoIndex]

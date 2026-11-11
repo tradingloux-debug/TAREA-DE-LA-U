@@ -19,8 +19,11 @@ export type AnalyticsEventName =
   | 'referral_page_viewed'
   | 'referral_code_copied'
   | 'referral_code_used'
+  | 'referral_whatsapp_share'
+  | 'category_selected'
   | 'auto_reservation_created'
   | 'payment_completed'
+  | 'quote_requested'
   | 'scrollytelling_stage_viewed'
   | 'scrollytelling_cta_clicked';
 

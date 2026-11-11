@@ -135,7 +135,7 @@ export const TripPlannerPage: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#F7F4ED] min-h-screen py-10 sm:py-14 pb-28 selection:bg-teal-500/20 selection:text-teal-950">
+    <div className="bg-[#FFFDF8] min-h-screen py-10 sm:py-14 pb-28 selection:bg-[#00B8C8]/20 selection:text-[#173B59]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8">
         {/* Back navigation */}
         <div>
@@ -145,33 +145,33 @@ export const TripPlannerPage: React.FC = () => {
           />
         </div>
 
-        {/* 1. CONCEPTO: Header refinado */}
+        {/* 1. CONCEPTO: Header refinado con acento Verde Tropical de Crea con GIA */}
         <div className="space-y-3 max-w-3xl">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/80 border border-neutral-200/80 text-[#063A5B] text-xs font-bold font-mono shadow-2xs">
-            <Sparkles className="w-3.5 h-3.5 text-[#FDBA2D]" />
-            <span>✨ Diseñado para ti</span>
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#39B98A]/10 border border-[#39B98A]/30 text-[#1B6D4C] text-xs font-bold font-mono shadow-2xs">
+            <Sparkles className="w-3.5 h-3.5 text-[#FFC857]" />
+            <span>✨ Diseñado para ti · Crea con GIA</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-black text-[#063A5B] tracking-tight font-display leading-[1.12]">
+          <h1 className="text-3xl sm:text-5xl font-black text-[#173B59] tracking-tight font-display leading-[1.12]">
             Planea con GIA
           </h1>
 
           <p className="text-sm sm:text-base text-neutral-600 leading-relaxed font-normal">
-            Cuéntanos cómo quieres vivir El Salvador y diseñaremos una ruta alrededor de tus intereses, tiempo y presupuesto.
+            Cuéntanos cómo quieres vivir El Salvador y diseñaremos una ruta personalizada alrededor de tus gustos, tiempo y presupuesto.
           </p>
         </div>
 
         {/* Notice if route is preloaded from catalog */}
         {preloadedRoute && (
-          <div className="p-4 rounded-2xl bg-teal-50 border border-teal-200 text-xs text-[#063A5B] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-2xs">
+          <div className="p-4 rounded-2xl bg-[#00B8C8]/10 border border-[#00B8C8]/30 text-xs text-[#173B59] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-2xs">
             <div className="flex items-center gap-2">
-              <span className="font-bold text-[#00A6A6]">Ruta base precargada:</span>
+              <span className="font-bold text-[#00B8C8]">Ruta base precargada:</span>
               <span className="font-semibold underline">{preloadedRoute.titleEs}</span>
             </div>
             <button
               type="button"
               onClick={() => navigate('/planea-con-gia')}
-              className="text-xs text-[#00A6A6] hover:text-[#063A5B] font-bold cursor-pointer"
+              className="text-xs text-[#00B8C8] hover:text-[#173B59] font-bold cursor-pointer transition-colors"
             >
               Diseñar nueva ruta desde cero →
             </button>
@@ -180,14 +180,14 @@ export const TripPlannerPage: React.FC = () => {
 
         {/* Mobile View Switcher (Visible only when currentTrip exists on mobile) */}
         {currentTrip && (
-          <div className="lg:hidden flex items-center p-1 bg-white rounded-2xl border border-neutral-200 shadow-2xs">
+          <div className="lg:hidden flex items-center p-1 bg-white rounded-2xl border border-amber-100 shadow-2xs">
             <button
               type="button"
               onClick={() => setMobileTab('preferences')}
               className={`flex-1 py-2.5 text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
                 mobileTab === 'preferences'
-                  ? 'bg-[#063A5B] text-white shadow-xs'
-                  : 'text-neutral-600 hover:text-neutral-900'
+                  ? 'bg-[#173B59] text-white shadow-xs'
+                  : 'text-neutral-600 hover:text-[#173B59]'
               }`}
             >
               <SlidersHorizontal className="w-3.5 h-3.5" />
@@ -199,8 +199,8 @@ export const TripPlannerPage: React.FC = () => {
               onClick={() => setMobileTab('itinerary')}
               className={`flex-1 py-2.5 text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
                 mobileTab === 'itinerary'
-                  ? 'bg-[#00A6A6] text-white shadow-xs'
-                  : 'text-neutral-600 hover:text-neutral-900'
+                  ? 'bg-[#39B98A] text-white shadow-xs'
+                  : 'text-neutral-600 hover:text-[#173B59]'
               }`}
             >
               <Eye className="w-3.5 h-3.5" />
@@ -261,7 +261,7 @@ export const TripPlannerPage: React.FC = () => {
               <span className="text-[10px] text-neutral-400 block uppercase font-mono">
                 {currentTrip.daysCount} Días · {currentTrip.travelersCount} Viajeros
               </span>
-              <span className="text-base font-black font-mono text-[#063A5B]">
+              <span className="text-base font-black font-mono text-[#173B59]">
                 ${currentTrip.estimatedTotal} USD
               </span>
             </div>
@@ -272,7 +272,7 @@ export const TripPlannerPage: React.FC = () => {
               className={`px-5 py-2.5 text-xs font-extrabold uppercase tracking-wider rounded-xl transition-all shadow-md flex items-center gap-1.5 cursor-pointer ${
                 isSaved
                   ? 'bg-emerald-600 text-white'
-                  : 'bg-[#00A6A6] hover:bg-[#009191] text-white'
+                  : 'bg-[#39B98A] hover:bg-[#2fa076] text-white'
               }`}
             >
               <BookmarkCheck className="w-4 h-4" />

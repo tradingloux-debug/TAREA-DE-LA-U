@@ -38,12 +38,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
     descriptionEs: 'El volcán Ilamatepec es el punto más alto de El Salvador y una de las postales naturales más asombrosas de Centroamérica. En esta experiencia guiada ascenderemos a ritmo pausado y seguro desde el Parque Nacional Los Volcanes, atravesando tres pisos térmicos hasta coronar la caldera activa donde reposa una deslumbrante laguna de agua termal turquesa con vistas al Lago de Coatepeque.',
     descriptionEn: 'The Ilamatepec Volcano is El Salvador’s highest peak and one of Central America’s most striking natural landmarks. Led by certified mountain hosts, you will ascend through pine-oak forests, volcanic gravel, and crater ridges to stand above the steaming turquoise sulfur lagoon, offering 360-degree vistas over Lake Coatepeque.',
     category: 'naturaleza',
+    pillarCategory: 'imperdibles',
     region: 'Occidente',
     location: 'Parque Nacional Los Volcanes, Santa Ana',
     department: 'Santa Ana',
     coordinates: { lat: 13.8533, lng: -89.6306 },
-    meetingPointEs: 'Entrada principal Parque Cerro Verde, Caseta de Guías Locales',
-    meetingPointEn: 'Cerro Verde National Park main entrance, Local Guides kiosk',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Entrada principal Parque Cerro Verde, Caseta de Guías Locales)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: Cerro Verde National Park main entrance, Local Guides kiosk)',
     price: 45,
     currency: 'USD',
     priceRange: 'medio',
@@ -59,24 +60,24 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/santa_ana_1_santa_ana_volcano.usaf.c-130.1.jpg.jpg","/assets/destinations/santa_ana_2_windows_of_santa_ana_01.jpg.jpg","/assets/destinations/santa_ana_3_volcan_de_santa_ana_desde_cerro_verde_-_panoramio.jpg.jpg","/assets/destinations/santa_ana_4_volcan_izalco_desde_volcan_santa_ana_-_panoramio.jpg.jpg","/assets/destinations/santa_ana_5_volcan_santa_ana_-_panoramio.jpg.jpg","/assets/destinations/santa_ana_6_volcan_santa_ana_2004_-_panoramio.jpg.jpg"],
     imageCredits: [{"author":"Wikimedia Commons","sourceUrl":"https://commons.wikimedia.org/wiki/File:Santa_Ana_Volcano.USAF.C-130.1.jpg","license":"Public domain","licenseUrl":"https://creativecommons.org/licenses/","caption":"Santa Ana Volcano.USAF.C-130.1"},{"author":"H. Zell","sourceUrl":"https://commons.wikimedia.org/wiki/File:Windows_of_Santa_Ana_01.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Windows of Santa Ana 01"},{"author":"davidjoviera","sourceUrl":"https://commons.wikimedia.org/wiki/File:Volcan_de_Santa_ana_desde_cerro_verde_-_panoramio.jpg","license":"CC BY 3.0","licenseUrl":"https://creativecommons.org/licenses/by/3.0","caption":"Volcan de Santa ana desde cerro verde - panoramio"},{"author":"ogwen","sourceUrl":"https://commons.wikimedia.org/wiki/File:Volcan_Izalco_desde_Volcan_Santa_Ana_-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Volcan Izalco desde Volcan Santa Ana - panoramio"},{"author":"ogwen","sourceUrl":"https://commons.wikimedia.org/wiki/File:Volcan_Santa_Ana_-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Volcan Santa Ana - panoramio"},{"author":"ogwen","sourceUrl":"https://commons.wikimedia.org/wiki/File:Volcan_Santa_Ana_2004_-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Volcan Santa Ana 2004 - panoramio"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Guía local certificado y guardaparque acompañante',
       'Entradas y permisos al Parque Nacional Los Volcanes',
       'Bastón de senderismo y kit básico de primeros auxilios',
       'Refrigerio ligero de frutas locales y agua purificada'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Certified local guide and national park escort',
       'National Park entrance fees and permits',
       'Trekking poles and basic first-aid support',
       'Light local fruit snack and refill water'
     ],
     notIncludedEs: [
-      'Transporte hasta el Parque Cerro Verde',
       'Almuerzo completo posterior',
       'Propinas voluntarias al equipo'
     ],
     notIncludedEn: [
-      'Transportation to Cerro Verde National Park',
       'Full lunch afterwards',
       'Voluntary gratuities'
     ],
@@ -129,6 +130,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Guided descent back to the park baseline and wrap-up.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: true,
     active: true,
     demoRating: 4.9,
@@ -168,19 +176,20 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/cerro_verde_1_volc_n_de_izalco.jpg.jpg","/assets/destinations/cerro_verde_2_cerro_verde_national_park__el_salvador.jpg.jpg","/assets/destinations/cerro_verde_3_hotel_montana__cerro_verde_national_park__el_salvador.jp.jpg","/assets/destinations/cerro_verde_4_cerro_verde.jpg.jpg","/assets/destinations/cerro_verde_5_volc_n_de_izalco__el_salvador_-_panoramio.jpg.jpg","/assets/destinations/cerro_verde_6_complejo_los_volcanes.jpg.jpg"],
     imageCredits: [{"author":"Efegé","sourceUrl":"https://commons.wikimedia.org/wiki/File:Volc%C3%A1n_de_Izalco.jpg","license":"Public domain","licenseUrl":"https://creativecommons.org/licenses/","caption":"Volcán de Izalco"},{"author":"Jerrye &amp; Roy Klotz, MD","sourceUrl":"https://commons.wikimedia.org/wiki/File:CERRO_VERDE_NATIONAL_PARK,_EL_SALVADOR.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"CERRO VERDE NATIONAL PARK, EL SALVADOR"},{"author":"Jerrye &amp; Roy Klotz, MD","sourceUrl":"https://commons.wikimedia.org/wiki/File:HOTEL_MONTANA,_CERRO_VERDE_NATIONAL_PARK,_EL_SALVADOR.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"HOTEL MONTANA, CERRO VERDE NATIONAL PARK, EL SALVADOR"},{"author":"Andreas Allgaier","sourceUrl":"https://commons.wikimedia.org/wiki/File:Cerro_verde.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Cerro verde"},{"author":"ogwen","sourceUrl":"https://commons.wikimedia.org/wiki/File:Volc%C3%A1n_de_Izalco,_El_Salvador_-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Volcán de Izalco, El Salvador - panoramio"},{"author":"JMRAFFi","sourceUrl":"https://commons.wikimedia.org/wiki/File:Complejo_Los_Volcanes.jpg","license":"CC BY 4.0","licenseUrl":"https://creativecommons.org/licenses/by/4.0","caption":"Complejo Los Volcanes"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Guía naturalista certificado por el Ministerio de Turismo',
       'Pase de entrada al Parque Nacional Cerro Verde',
       'Uso de binoculares de avistamiento para el grupo',
       'Café de altura y quesadilla salvadoreña en mirador'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Certified naturalist guide',
       'Cerro Verde National Park admission fee',
       'Shared birdwatching binoculars',
       'Highland coffee and Salvadoran quesadilla snack at the overlook'
     ],
     notIncludedEs: [
-      'Transporte terrestre interdepartamental',
       'Almuerzo a la carta en restaurante'
     ],
     notIncludedEn: [
@@ -218,6 +227,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Photo session with the black volcanic cone followed by local coffee.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: false,
     active: true,
     demoRating: 4.8,
@@ -234,12 +250,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
     descriptionEs: 'El lago de Coatepeque, formado en la caldera de un antiguo volcán colapsado, es famoso por sus aguas limpias y cambios de coloración turquesa. En esta tranquila aventura matutina navegaremos en kayaks dobles o individuales hacia ensenadas vírgenes donde afloran nacimientos de aguas termales volcánicas ricas en minerales curativos.',
     descriptionEn: 'Formed thousands of years ago in a collapsed volcanic caldera, Lake Coatepeque is renowned for its tranquil turquoise waters and majestic crater backdrop. Paddle double or single touring kayaks along quiet bay shorelines where mineral-rich geothermal hot springs bubble up directly through the sand.',
     category: 'naturaleza',
+    pillarCategory: 'imperdibles',
     region: 'Occidente',
     location: 'Lago de Coatepeque, Santa Ana',
     department: 'Santa Ana',
     coordinates: { lat: 13.8697, lng: -89.5539 },
-    meetingPointEs: 'Muelle privado Eco-Lodge Coatepeque, Ribera Sur',
-    meetingPointEn: 'Eco-Lodge Coatepeque private dock, South Shore',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Muelle privado Eco-Lodge Coatepeque, Ribera Sur)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: Eco-Lodge Coatepeque private dock, South Shore)',
     price: 49,
     currency: 'USD',
     priceRange: 'medio',
@@ -255,20 +272,21 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/coatepeque_1_coatepeque_-_santa_ana_by_mimamor.png.jpg","/assets/destinations/coatepeque_2_coatepeque_caldera.jpg.jpg","/assets/destinations/coatepeque_3_teopan.jpg.jpg","/assets/destinations/coatepeque_4_lago_de_coatepeque-el_salvador.jpg.jpg","/assets/destinations/coatepeque_5_lago_de_coatepeque_28-11-2014.jpg.jpg","/assets/destinations/coatepeque_6_lago_de_coatepeque_28-11-2014__2_.jpg.jpg"],
     imageCredits: [{"author":"MIMAMOR from California, USA","sourceUrl":"https://commons.wikimedia.org/wiki/File:Coatepeque_-_santa_ana_by_mimamor.png","license":"CC BY 2.0","licenseUrl":"https://creativecommons.org/licenses/by/2.0","caption":"Coatepeque - santa ana by mimamor"},{"author":"Lee Siebert, Smithsonian Institution","sourceUrl":"https://commons.wikimedia.org/wiki/File:Coatepeque_Caldera.jpg","license":"Public domain","licenseUrl":"https://creativecommons.org/licenses/","caption":"Coatepeque Caldera"},{"author":"Public domainPublic domainfalsefalse\n\n\n\n  \n\nThis work has been released into the public domain by its author, Laspelotas, at the English Wikipedia project. This applies worldwide.\nIn case this is not legally possible: Laspelotas grants anyone the right to use this work for any purpose, without any conditions, unless such conditions are required by law.","sourceUrl":"https://commons.wikimedia.org/wiki/File:Teopan.jpg","license":"Public domain","licenseUrl":"https://creativecommons.org/licenses/","caption":"Teopan"},{"author":"ElmerGuevara","sourceUrl":"https://commons.wikimedia.org/wiki/File:Lago_de_Coatepeque-El_Salvador.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Lago de Coatepeque-El Salvador"},{"author":"Alberto Uecke","sourceUrl":"https://commons.wikimedia.org/wiki/File:Lago_de_Coatepeque_28-11-2014.JPG","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"Lago de Coatepeque 28-11-2014"},{"author":"Alberto Uecke","sourceUrl":"https://commons.wikimedia.org/wiki/File:Lago_de_Coatepeque_28-11-2014_(2).JPG","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"Lago de Coatepeque 28-11-2014 (2)"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Kayak sit-on-top de travesía, remo ergonómico y chaleco salvavidas homologado',
       'Guía acuático e instructor de remada',
       'Acceso exclusivo a pozas de agua termal natural',
       'Plato de frutas frescas tropicales y agua mineral'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'High-quality touring kayak, paddle, and certified PFD life vest',
       'Lead waterman guide and paddling coaching',
       'Exclusive access to geothermal lakefront pools',
       'Tropical fruit platter and mineral water'
     ],
     notIncludedEs: [
-      'Comida o bebidas adicionales en el restaurante del muelle',
-      'Transporte terrestre al lago'
+      'Comida o bebidas adicionales en el restaurante del muelle'
     ],
     notIncludedEn: [
       'Additional restaurant meals or drinks at the dock',
@@ -314,6 +332,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Gentle paddle back to the club deck for chilled fruit and refreshments.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: true,
     active: true,
     demoRating: 4.9,
@@ -335,8 +360,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'Sonsonate y Ahuachapán',
     department: 'Ahuachapán',
     coordinates: { lat: 13.8667, lng: -89.7833 },
-    meetingPointEs: 'Parque Central de Salcoatitán, fuente histórica',
-    meetingPointEn: 'Salcoatitán Central Park, historic fountain',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Parque Central de Salcoatitán, fuente histórica)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: Salcoatitán Central Park, historic fountain)',
     price: 58,
     currency: 'USD',
     priceRange: 'medio',
@@ -358,6 +383,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
       'Entradas y accesos a miradores y talleres artesanales'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Air-conditioned touring transit between all villages',
       'Accredited bilingual tour guide throughout the day',
       'Traditional yucca snack and specialty coffee tasting',
@@ -409,6 +435,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Mural photography walk and handloom weaving demonstration.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: true,
     active: true,
     demoRating: 4.9,
@@ -428,8 +461,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'Apaneca, Ahuachapán',
     department: 'Ahuachapán',
     coordinates: { lat: 13.8617, lng: -89.8039 },
-    meetingPointEs: 'Entrada Parque de Aventura Albania, Apaneca',
-    meetingPointEn: 'Albania Adventure Park Main Entrance, Apaneca',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Entrada Parque de Aventura Albania, Apaneca)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: Albania Adventure Park Main Entrance, Apaneca)',
     price: 49,
     currency: 'USD',
     priceRange: 'medio',
@@ -445,20 +478,21 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/apaneca_1_apaneca_-_panoramio.jpg.jpg","/assets/destinations/apaneca_2_apaneca__el_salvador_-_panoramio.jpg.jpg","/assets/destinations/apaneca_3_apaneca__el_salvador_-_panoramio__3_.jpg.jpg","/assets/destinations/apaneca_4_apaneca__el_salvador_-_panoramio__17_.jpg.jpg","/assets/destinations/apaneca_5_apaneca__el_salvador_-_panoramio__20_.jpg.jpg","/assets/destinations/apaneca_6_apaneca__el_salvador_-_panoramio__26_.jpg.jpg"],
     imageCredits: [{"author":"Roberto Alas","sourceUrl":"https://commons.wikimedia.org/wiki/File:Apaneca_-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Apaneca - panoramio"},{"author":"PABLO NUÑEZ","sourceUrl":"https://commons.wikimedia.org/wiki/File:Apaneca,_El_Salvador_-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Apaneca, El Salvador - panoramio"},{"author":"PABLO NUÑEZ","sourceUrl":"https://commons.wikimedia.org/wiki/File:Apaneca,_El_Salvador_-_panoramio_(3).jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Apaneca, El Salvador - panoramio (3)"},{"author":"PABLO NUÑEZ","sourceUrl":"https://commons.wikimedia.org/wiki/File:Apaneca,_El_Salvador_-_panoramio_(17).jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Apaneca, El Salvador - panoramio (17)"},{"author":"PABLO NUÑEZ","sourceUrl":"https://commons.wikimedia.org/wiki/File:Apaneca,_El_Salvador_-_panoramio_(20).jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Apaneca, El Salvador - panoramio (20)"},{"author":"PABLO NUÑEZ","sourceUrl":"https://commons.wikimedia.org/wiki/File:Apaneca,_El_Salvador_-_panoramio_(26).jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Apaneca, El Salvador - panoramio (26)"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Entrada general y pase completo al Laberinto de Cipreses',
       'Circuito de tirolesa con arnés, casco y mosquetones homologados',
       'Recorrido guiado en buggie/cuatrimoto con guía líder',
       'Agua purificada y asistencia técnica en todo momento'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Full day pass to the Cypress Hedge Maze',
       'Canopy zipline circuit with certified harness and helmet',
       'Guided mountain buggy/ATV trail ride with lead guide',
       'Hydration water and technical support'
     ],
     notIncludedEs: [
-      'Almuerzo en cafetería del parque',
-      'Transporte interdepartamental'
+      'Almuerzo en cafetería del parque'
     ],
     notIncludedEn: [
       'Lunch at park bistro',
@@ -495,6 +529,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Off-road ride through shaded plantation trails.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: false,
     active: true,
     demoRating: 4.8,
@@ -514,8 +555,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'Juayúa, Sonsonate',
     department: 'Sonsonate',
     coordinates: { lat: 13.8419, lng: -89.7469 },
-    meetingPointEs: 'Parque Central de Juayúa, junto a la fuente de la sirena',
-    meetingPointEn: 'Juayúa Central Plaza, beside the historic fountain',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Parque Central de Juayúa, junto a la fuente de la sirena)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: Juayúa Central Plaza, beside the historic fountain)',
     price: 35,
     currency: 'USD',
     priceRange: 'economico',
@@ -531,20 +572,21 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/juayua_1_juay_a__el_salvador.jpg.jpg","/assets/destinations/juayua_2_iglesia_juay_a__sonsonate.jpg.jpg","/assets/destinations/juayua_3_iglesia_juay_a__el_salvador.jpg.jpg","/assets/destinations/juayua_4_iglesia_juay_a__sonsonate__el_salvador.jpg.jpg","/assets/destinations/juayua_5_calles_de_juayua_1.jpg.jpg","/assets/destinations/juayua_6_fachada_principal_iglesia_parroquial_cristo_negro_de_juayua...jpg"],
     imageCredits: [{"author":"Fanny Basurto","sourceUrl":"https://commons.wikimedia.org/wiki/File:Juay%C3%BAa,_El_Salvador.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Juayúa, El Salvador"},{"author":"Fanny Basurto","sourceUrl":"https://commons.wikimedia.org/wiki/File:Iglesia_Juay%C3%BAa,_Sonsonate.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Iglesia Juayúa, Sonsonate"},{"author":"Fanny Basurto","sourceUrl":"https://commons.wikimedia.org/wiki/File:Iglesia_Juay%C3%BAa,_El_Salvador.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Iglesia Juayúa, El Salvador"},{"author":"Fanny Basurto","sourceUrl":"https://commons.wikimedia.org/wiki/File:Iglesia_Juay%C3%BAa,_Sonsonate,_El_Salvador.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Iglesia Juayúa, Sonsonate, El Salvador"},{"author":"Erickssonr","sourceUrl":"https://commons.wikimedia.org/wiki/File:Calles_de_Juayua_1.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Calles de Juayua 1"},{"author":"ClauH0288","sourceUrl":"https://commons.wikimedia.org/wiki/File:Fachada_Principal_Iglesia_Parroquial_Cristo_Negro_de_Juayua..JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Fachada Principal Iglesia Parroquial Cristo Negro de Juayua."}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Guía montañista local con equipo de cuerdas de apoyo',
       'Chaleco salvavidas para pozas profundas (opcional)',
       'Bolsa seca impermeable para celulares',
       'Degustación de tamal de elote o yuca frita en el pueblo'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Local wilderness guide with support ropes',
       'Life vests for deep pools (optional)',
       'Waterproof dry pouch for phones',
       'Tasting of local corn tamal or yucca snack'
     ],
     notIncludedEs: [
-      'Ropa de cambio (debes traerla)',
-      'Transporte desde San Salvador'
+      'Ropa de cambio (debes traerla)'
     ],
     notIncludedEn: [
       'Change of dry clothes',
@@ -590,6 +632,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Gentle walk back to town for a traditional warm bite.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: true,
     active: true,
     demoRating: 4.8,
@@ -609,8 +658,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'San Francisco Menéndez, Ahuachapán',
     department: 'Ahuachapán',
     coordinates: { lat: 13.8294, lng: -89.9667 },
-    meetingPointEs: 'Centro de Visitantes Mixtepe, Parque Nacional El Imposible',
-    meetingPointEn: 'Mixtepe Visitor Center, El Imposible National Park',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Centro de Visitantes Mixtepe, Parque Nacional El Imposible)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: Mixtepe Visitor Center, El Imposible National Park)',
     price: 55,
     currency: 'USD',
     priceRange: 'medio',
@@ -626,20 +675,21 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/el_imposible_1_flor_de_la_reserva_ecologica_el_imposible..jpg.jpg","/assets/destinations/el_imposible_2_mirador_reserva_natural_el_imposible.jpg.jpg","/assets/destinations/el_imposible_3_posa_piedra_sellada_parque_nacional_el_imposible__el_sa.jpg","/assets/destinations/el_imposible_4_chicharra_en_bosque_el_imposible_-_panoramio.jpg.jpg","/assets/destinations/el_imposible_5_piedra_sellada_en_bosque_el_imposible_-_panoramio.jpg.jpg","/assets/destinations/el_imposible_6_el_imposible_np_banner.jpg.jpg"],
     imageCredits: [{"author":"ElmerGuevara","sourceUrl":"https://commons.wikimedia.org/wiki/File:Flor_de_la_Reserva_Ecologica_El_Imposible..JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Flor de la Reserva Ecologica El Imposible."},{"author":"ElmerGuevara","sourceUrl":"https://commons.wikimedia.org/wiki/File:Mirador_Reserva_Natural_El_Imposible.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Mirador Reserva Natural El Imposible"},{"author":"davidjoviera","sourceUrl":"https://commons.wikimedia.org/wiki/File:Posa_piedra_sellada_Parque_Nacional_El_Imposible,_El_Salvador_-_panoramio.jpg","license":"CC BY 3.0","licenseUrl":"https://creativecommons.org/licenses/by/3.0","caption":"Posa piedra sellada Parque Nacional El Imposible, El Salvador - panoramio"},{"author":"davidjoviera","sourceUrl":"https://commons.wikimedia.org/wiki/File:Chicharra_en_bosque_el_imposible_-_panoramio.jpg","license":"CC BY 3.0","licenseUrl":"https://creativecommons.org/licenses/by/3.0","caption":"Chicharra en bosque el imposible - panoramio"},{"author":"davidjoviera","sourceUrl":"https://commons.wikimedia.org/wiki/File:Piedra_sellada_en_bosque_el_imposible_-_panoramio.jpg","license":"CC BY 3.0","licenseUrl":"https://creativecommons.org/licenses/by/3.0","caption":"Piedra sellada en bosque el imposible - panoramio"},{"author":"davidjoviera","sourceUrl":"https://commons.wikimedia.org/wiki/File:El_Imposible_NP_banner.jpg","license":"CC BY 3.0","licenseUrl":"https://creativecommons.org/licenses/by/3.0","caption":"El Imposible NP banner"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Guía guardaparque nativo de la comunidad',
       'Pase de ingreso y permisos oficiales de conservación',
       'Bastones de apoyo para senderismo',
       'Almuerzo campestre con ingredientes orgánicos locales'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Certified community park ranger guide',
       'Official park conservation entry permits',
       'Trekking poles for rocky terrain',
       'Rustic picnic lunch made with organic local ingredients'
     ],
     notIncludedEs: [
-      'Transporte 4x4 hasta el centro de visitantes (se puede coordinar por separado)'
-    ],
+      ],
     notIncludedEn: [
       '4x4 transit to the remote park gate'
     ],
@@ -690,6 +740,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Paced ascent with stops learning about medicinal plants.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: false,
     active: true,
     demoRating: 4.9,
@@ -709,8 +766,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'Metapán, Santa Ana',
     department: 'Santa Ana',
     coordinates: { lat: 14.4167, lng: -89.3667 },
-    meetingPointEs: 'Centro de Información Los Planes, Parque Montecristo, Metapán',
-    meetingPointEn: 'Los Planes Visitor Center, Montecristo National Park, Metapán',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Centro de Información Los Planes, Parque Montecristo, Metapán)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: Los Planes Visitor Center, Montecristo National Park, Metapán)',
     price: 65,
     currency: 'USD',
     priceRange: 'medio',
@@ -728,12 +785,14 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/montecristo_1_tillandsia_candelifera__ts__2-07015.jpg.jpg","/assets/destinations/montecristo_2_tillandsia_multicaulis__ts__2-06995.jpg.jpg","/assets/destinations/montecristo_3_tillandsia_imperialis__ts__2-06992.jpg.jpg","/assets/destinations/montecristo_4_tillandsia_verapazana__ts__2-06989.jpg.jpg","/assets/destinations/montecristo_5_tillandsia_seleriana__ts__2-06959.jpg.jpg","/assets/destinations/montecristo_6_fauna_del_bosque_montecristo.jpg.jpg"],
     imageCredits: [{"author":"Timm Stolten","sourceUrl":"https://commons.wikimedia.org/wiki/File:Tillandsia_candelifera_(TS)_2-07015.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Tillandsia candelifera (TS) 2-07015"},{"author":"Timm Stolten","sourceUrl":"https://commons.wikimedia.org/wiki/File:Tillandsia_multicaulis_(TS)_2-06995.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Tillandsia multicaulis (TS) 2-06995"},{"author":"Timm Stolten","sourceUrl":"https://commons.wikimedia.org/wiki/File:Tillandsia_imperialis_(TS)_2-06992.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Tillandsia imperialis (TS) 2-06992"},{"author":"Timm Stolten","sourceUrl":"https://commons.wikimedia.org/wiki/File:Tillandsia_verapazana_(TS)_2-06989.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Tillandsia verapazana (TS) 2-06989"},{"author":"Timm Stolten","sourceUrl":"https://commons.wikimedia.org/wiki/File:Tillandsia_seleriana_(TS)_2-06959.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Tillandsia seleriana (TS) 2-06959"},{"author":"ElmerGuevara","sourceUrl":"https://commons.wikimedia.org/wiki/File:Fauna_del_Bosque_Montecristo.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Fauna del Bosque Montecristo"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Guardarrecursos oficial y biólogo guía de la reserva',
       'Permiso de ingreso y conservación al área protegida',
       'Bastones de senderismo y equipo de comunicación por radio',
       'Almuerzo energizante de montaña y refrigerio de marcha'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Official park ranger and naturalist guide',
       'Conservation area entry permits',
       'Trekking poles and satellite radio support',
@@ -787,6 +846,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Paced descent with a stop at the botanical rescue nursery.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: false,
     active: true,
     demoRating: 5.0,
@@ -806,8 +872,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'Santa Tecla, La Libertad',
     department: 'La Libertad',
     coordinates: { lat: 13.7372, lng: -89.2889 },
-    meetingPointEs: 'Centro de Visitantes Parque Nacional El Boquerón, Santa Tecla',
-    meetingPointEn: 'El Boquerón Visitor Center Main Gate, Santa Tecla',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Centro de Visitantes Parque Nacional El Boquerón, Santa Tecla)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: El Boquerón Visitor Center Main Gate, Santa Tecla)',
     price: 28,
     currency: 'USD',
     priceRange: 'economico',
@@ -823,20 +889,21 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/el_boqueron_1_san_salvador_downtown.jpg.jpg","/assets/destinations/el_boqueron_2_laguna_volcan_san_salvador.jpg.jpg","/assets/destinations/el_boqueron_3_sansalvadorvolcano.jpg.jpg","/assets/destinations/el_boqueron_4_volc_n_de_san_salvador.jpg.jpg","/assets/destinations/el_boqueron_5_san_salvador_volcano_1.jpg.jpg","/assets/destinations/el_boqueron_6_el_salvador_del_mundo_con_vista_al_volcan_de_san_salvado.jpg"],
     imageCredits: [{"author":"Wikimedia Commons","sourceUrl":"https://commons.wikimedia.org/wiki/File:San_Salvador_downtown.jpg","license":"Public domain","licenseUrl":"https://creativecommons.org/licenses/","caption":"San Salvador downtown"},{"author":"Correos de El Salvador","sourceUrl":"https://commons.wikimedia.org/wiki/File:Laguna_Volcan_San_Salvador.jpg","license":"Public domain","licenseUrl":"https://creativecommons.org/licenses/","caption":"Laguna Volcan San Salvador"},{"author":"Rick Wunderman, Smithsonian Institution","sourceUrl":"https://commons.wikimedia.org/wiki/File:SanSalvadorVolcano.jpg","license":"Public domain","licenseUrl":"https://creativecommons.org/licenses/","caption":"SanSalvadorVolcano"},{"author":"José Alejandro Álvarez Ramírez (JOSAL)","sourceUrl":"https://commons.wikimedia.org/wiki/File:Volc%C3%A1n_de_San_Salvador.jpg","license":"CC BY 3.0","licenseUrl":"https://creativecommons.org/licenses/by/3.0","caption":"Volcán de San Salvador"},{"author":"Waag7mx","sourceUrl":"https://commons.wikimedia.org/wiki/File:San_Salvador_Volcano_1.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"San Salvador Volcano 1"},{"author":"Claudio.barahona","sourceUrl":"https://commons.wikimedia.org/wiki/File:El_Salvador_del_Mundo_con_vista_al_Volcan_de_San_Salvador..jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"El Salvador del Mundo con vista al Volcan de San Salvador."}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Guía turístico acreditado',
       'Pase de acceso al Parque Nacional El Boquerón',
       'Recorrido botánico interpretativo',
       'Café salvadoreño caliente y dulce típico en cafetería panorámica'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Accredited tour guide',
       'Park admission ticket',
       'Interpretive botanical walk',
       'Warm local coffee and traditional sweet snack with a view'
     ],
     notIncludedEs: [
-      'Transporte hasta la cima del volcán'
-    ],
+      ],
     notIncludedEn: [
       'Ground transit up the mountain highway'
     ],
@@ -871,6 +938,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Relax with single-origin coffee watching sunset colors over the city below.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: false,
     active: true,
     demoRating: 4.8,
@@ -890,8 +964,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'San Salvador Este / Ilopango',
     department: 'San Salvador',
     coordinates: { lat: 13.6706, lng: -89.0558 },
-    meetingPointEs: 'Mirador Panorámico La Herradura, Carretera Panorámica',
-    meetingPointEn: 'La Herradura Overlook, Panoramic Mountain Highway',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Mirador Panorámico La Herradura, Carretera Panorámica)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: La Herradura Overlook, Panoramic Mountain Highway)',
     price: 85,
     currency: 'USD',
     priceRange: 'premium',
@@ -912,14 +986,14 @@ export const DEMO_EXPERIENCES: Experience[] = [
       'Seguro de actividad y transporte de regreso al despegue'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Certified tandem flight pilot with international FAI credentials',
       'Safety harness, certified wing, and emergency backup parachute',
       'Full HD GoPro action video package included',
       'Activity liability insurance and ground shuttle back to launch ridge'
     ],
     notIncludedEs: [
-      'Transporte desde hoteles de la ciudad hasta la rampa'
-    ],
+      ],
     notIncludedEn: [
       'Hotel pickup in downtown San Salvador'
     ],
@@ -956,6 +1030,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Gentle touchdown on landing green and digital video transfer.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: false,
     active: true,
     demoRating: 5.0,
@@ -976,12 +1057,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
     descriptionEs: 'La Libertad es uno de los epicentros de surf más aclamados del mundo gracias a sus rompientes constantes y aguas cálidas todo el año. Ya seas principiante absoluto o busques corregir postura en olas point break, nuestros entrenadores salvadoreños te enseñarán lectura de corrientes, remada y equilibrio en la arena antes de entrar al agua durante la mejor marea de la tarde.',
     descriptionEn: 'El Salvador’s coastline boasts world-class Pacific swells and bath-warm waters. Whether catching your first foam or refining takeoffs, this experience pairs you with experienced local wave riders who focus on ocean safety, paddling mechanics, and stance balance, timing the session to catch the golden Pacific sunset.',
     category: 'playa',
+    pillarCategory: 'imperdibles',
     region: 'Costa Pacífico',
     location: 'Playa El Tunco, La Libertad',
     department: 'La Libertad',
     coordinates: { lat: 13.4939, lng: -89.3842 },
-    meetingPointEs: 'Club de Surf Bocana, frente a la playa El Tunco',
-    meetingPointEn: 'Bocana Surf Shack, beachfront El Tunco',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Club de Surf Bocana, frente a la playa El Tunco)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: Bocana Surf Shack, beachfront El Tunco)',
     price: 38,
     currency: 'USD',
     priceRange: 'economico',
@@ -997,6 +1079,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/el_tunco_1_atardecer_en_el_tunco.jpg.jpg","/assets/destinations/el_tunco_2_tunco_lodge.jpg.jpg","/assets/destinations/el_tunco_3_bienvenidos_al_tunco.jpg.jpg","/assets/destinations/el_tunco_4_turismo_en_el_tunco.jpg.jpg","/assets/destinations/el_tunco_5_tunco.jpg.jpg","/assets/destinations/el_tunco_6_tunco1.jpg.jpg"],
     imageCredits: [{"author":"Silvia Villalta, Esmeralda Manzur, Natalia Valenzuela","sourceUrl":"https://commons.wikimedia.org/wiki/File:ATARDECER_EN_EL_TUNCO.jpg","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"ATARDECER EN EL TUNCO"},{"author":"Silviavillalta","sourceUrl":"https://commons.wikimedia.org/wiki/File:Tunco_Lodge.jpg","license":"CC BY 3.0","licenseUrl":"https://creativecommons.org/licenses/by/3.0","caption":"Tunco Lodge"},{"author":"Silviavillalta","sourceUrl":"https://commons.wikimedia.org/wiki/File:Bienvenidos_al_Tunco.jpg","license":"CC BY 3.0","licenseUrl":"https://creativecommons.org/licenses/by/3.0","caption":"Bienvenidos al Tunco"},{"author":"Silviavillalta","sourceUrl":"https://commons.wikimedia.org/wiki/File:Turismo_en_El_Tunco.jpg","license":"CC BY 3.0","licenseUrl":"https://creativecommons.org/licenses/by/3.0","caption":"Turismo en El Tunco"},{"author":"Rafael Colindres","sourceUrl":"https://commons.wikimedia.org/wiki/File:Tunco.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Tunco"},{"author":"Rafael Colindres","sourceUrl":"https://commons.wikimedia.org/wiki/File:Tunco1.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Tunco1"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Tabla de surf adecuada a tu estatura y nivel',
       'Licra de protección UV (rashguard)',
       'Instructor salvadoreño certificado (ratio máximo 1:3)',
@@ -1004,6 +1087,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
       'Agua de coco fresca al finalizar'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Surfboard matched to your skill and size',
       'UV rashguard vest',
       'Certified local instructor (maximum 1:3 ratio)',
@@ -1012,8 +1096,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
     ],
     notIncludedEs: [
       'Fotografía profesional dentro del agua (disponible opcional in situ)',
-      'Bebidas en bares de la playa',
-      'Transporte desde San Salvador'
+      'Bebidas en bares de la playa'
     ],
     notIncludedEn: [
       'In-water action photography (available as on-site add-on)',
@@ -1060,6 +1143,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Relax on the black sand beach with chilled coconut water at sunset.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: true,
     active: true,
     demoRating: 4.9,
@@ -1081,8 +1171,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'Playa El Zonte, Chiltiupán, La Libertad',
     department: 'La Libertad',
     coordinates: { lat: 13.4981, lng: -89.4447 },
-    meetingPointEs: 'Plaza del puente de El Zonte, entrada a la playa',
-    meetingPointEn: 'El Zonte Bridge Plaza, beach entrance',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Plaza del puente de El Zonte, entrada a la playa)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: El Zonte Bridge Plaza, beach entrance)',
     price: 42,
     currency: 'USD',
     priceRange: 'medio',
@@ -1098,12 +1188,14 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/el_zonte_1_pescadores__playa_el_zonte__01.2011__-_panoramio.jpg.jpg","/assets/destinations/el_zonte_2_el_zonte__01.2011__-_panoramio.jpg.jpg","/assets/destinations/el_zonte_3_el_zonte__11-2011__-_panoramio.jpg.jpg","/assets/destinations/el_zonte_4_el_zonte__11-2011__-_el_club_-_panoramio.jpg.jpg","/assets/destinations/el_zonte_5_el_zonte__11-2011__-_playa_-_panoramio.jpg.jpg","/assets/destinations/el_zonte_6_cajero_bitcoin_athena_el_zonte__el_salvador.jpg.jpg"],
     imageCredits: [{"author":"Martin Haeusler","sourceUrl":"https://commons.wikimedia.org/wiki/File:Pescadores,_Playa_El_Zonte_(01.2011)_-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Pescadores, Playa El Zonte (01.2011) - panoramio"},{"author":"Martin Haeusler","sourceUrl":"https://commons.wikimedia.org/wiki/File:El_Zonte_(01.2011)_-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"El Zonte (01.2011) - panoramio"},{"author":"Martin Haeusler","sourceUrl":"https://commons.wikimedia.org/wiki/File:El_Zonte_(11-2011)_-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"El Zonte (11-2011) - panoramio"},{"author":"Martin Haeusler","sourceUrl":"https://commons.wikimedia.org/wiki/File:El_Zonte_(11-2011)_-_El_Club_-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"El Zonte (11-2011) - El Club - panoramio"},{"author":"Martin Haeusler","sourceUrl":"https://commons.wikimedia.org/wiki/File:El_Zonte_(11-2011)_-_Playa_-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"El Zonte (11-2011) - Playa - panoramio"},{"author":"Karlalhdz","sourceUrl":"https://commons.wikimedia.org/wiki/File:Cajero_Bitcoin_Athena_El_Zonte,_El_Salvador.jpg","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"Cajero Bitcoin Athena El Zonte, El Salvador"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Guía local de la comunidad costera',
       'Caminata guiada por las cuevas marinas (coordinada según tabla de mareas)',
       'Acceso de día a deck frente al mar con hamacas y regaderas',
       'Bebida artesanal de bienvenida (café frío de especialidad o coco natural)'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Local host from the beach village',
       'Tide-timed guided sea caves exploration walk',
       'Day access pass to a beachfront deck with loungers and showers',
@@ -1148,6 +1240,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Relax on the ocean deck admiring surfers at golden hour.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: true,
     active: true,
     demoRating: 4.9,
@@ -1163,12 +1262,19 @@ export const DEMO_EXPERIENCES: Experience[] = [
     descriptionEs: 'El Puerto de La Libertad es el corazón marítimo más histórico de El Salvador. En este recorrido sensorial caminaremos por el muelle elevado donde las lanchas de pescadores son izadas con poleas y cables sobre las olas del Pacífico. Visitaremos el Mercado del Mar para conocer especies locales de peces, camarones y ostras, seguido de una degustación de cóctel de camarón fresco y un paseo por el moderno malecón turístico Sunset Park.',
     descriptionEn: 'The historic port town of La Libertad offers an authentic glimpse into centuries-old maritime culture. Walk down the famous iron pier where brightly painted wooden fishing skiffs are winched above Pacific breakers. Explore the bustling Mercado del Mar, sample fresh shrimp ceviche, and stroll the modern oceanfront malecón.',
     category: 'playa',
+    pillarCategory: 'familiar',
+    recommendedAgesEs: 'Apto para toda la familia (desde 2 años hasta adultos mayores)',
+    recommendedAgesEn: 'Suitable for all family ages (2+ years to seniors)',
+    recommendedAgesPt: 'Adequado para toda a família (de 2 anos a idosos)',
+    accessibilityNotesEs: 'Rampas peatonales en malecón Sunset Park y muelle accesible',
+    accessibilityNotesEn: 'Gentle ramps on Sunset Park boardwalk and accessible pier',
+    accessibilityNotesPt: 'Rampas suaves no calçadão do Sunset Park e cais acessível',
     region: 'Costa Pacífico',
     location: 'Puerto de La Libertad, La Libertad',
     department: 'La Libertad',
     coordinates: { lat: 13.4883, lng: -89.3222 },
-    meetingPointEs: 'Plaza del Malecón, frente a la entrada del Muelle Histórico',
-    meetingPointEn: 'Malecón Plaza, in front of the Historic Pier entrance',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Plaza del Malecón, frente a la entrada del Muelle Histórico)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: Malecón Plaza, in front of the Historic Pier entrance)',
     price: 30,
     currency: 'USD',
     priceRange: 'economico',
@@ -1184,20 +1290,21 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/puerto_libertad_1_playa_la-libertad_el-salvador.jpg.jpg","/assets/destinations/puerto_libertad_2_malecon_puerto_de_la_libertad.jpg.jpg","/assets/destinations/puerto_libertad_3_puerto_libertad.jpg.jpg","/assets/destinations/puerto_libertad_4_autopista_al_puerto_de_la_libertad_frente_a_zaragoza.jpg","/assets/destinations/puerto_libertad_5_puertolalibertad_sv.jpg.jpg","/assets/destinations/puerto_libertad_6_templo_catolico_en_la_comunidad_de_tepeagua__la_libe.jpg"],
     imageCredits: [{"author":"Creator:Sunzal","sourceUrl":"https://commons.wikimedia.org/wiki/File:Playa_la-libertad_El-Salvador.jpg","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"Playa la-libertad El-Salvador"},{"author":"Efegé","sourceUrl":"https://commons.wikimedia.org/wiki/File:Malecon_Puerto_de_La_Libertad.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Malecon Puerto de La Libertad"},{"author":"Efegé","sourceUrl":"https://commons.wikimedia.org/wiki/File:Puerto_Libertad.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Puerto Libertad"},{"author":"JMRAFFi","sourceUrl":"https://commons.wikimedia.org/wiki/File:Autopista_al_Puerto_de_La_Libertad_frente_a_Zaragoza.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Autopista al Puerto de La Libertad frente a Zaragoza"},{"author":"Ayaita","sourceUrl":"https://commons.wikimedia.org/wiki/File:PuertoLaLibertad_SV.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"PuertoLaLibertad SV"},{"author":"Daniel chavez castro","sourceUrl":"https://commons.wikimedia.org/wiki/File:Templo_catolico_en_la_comunidad_de_Tepeagua_(La_Libertad)_-_panoramio.jpg","license":"CC BY 3.0","licenseUrl":"https://creativecommons.org/licenses/by/3.0","caption":"Templo catolico en la comunidad de Tepeagua (La Libertad) - panoramio"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Guía local de la comunidad marítima',
       'Pase de acceso al muelle histórico de pescadores',
       'Degustación de coctel de camarón fresco con salsa criolla',
       'Agua de coco fría o bebida refrescante'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Local maritime community guide',
       'Historic pier access pass',
       'Fresh shrimp cocktail tasting with house lime-herb dressing',
       'Chilled young coconut or refreshing tropical beverage'
     ],
     notIncludedEs: [
-      'Entradas a juegos mecánicos de Sunset Park',
-      'Transporte hasta el Puerto de La Libertad'
+      'Entradas a juegos mecánicos de Sunset Park'
     ],
     notIncludedEn: [
       'Rides inside Sunset Park amusement area',
@@ -1241,6 +1348,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Enjoy the oceanfront lights and sunset breeze.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: false,
     active: true,
     demoRating: 4.7,
@@ -1260,8 +1374,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'Costa del Sol, San Luis La Herradura, La Paz',
     department: 'La Paz',
     coordinates: { lat: 13.3167, lng: -88.9833 },
-    meetingPointEs: 'Muelle Turístico La Puntilla, extremo sur de Costa del Sol',
-    meetingPointEn: 'La Puntilla Pier, southern tip of Costa del Sol',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Muelle Turístico La Puntilla, extremo sur de Costa del Sol)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: La Puntilla Pier, southern tip of Costa del Sol)',
     price: 52,
     currency: 'USD',
     priceRange: 'medio',
@@ -1277,20 +1391,21 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/costa_del_sol_1_entradaplayacostadelsolmdp-jul2017.jpg.jpg","/assets/destinations/costa_del_sol_2_inauguraci_n_estadio_f_tbol_playa_costa_del_sol__6___1.jpg","/assets/destinations/costa_del_sol_sup_3_nouvelle_g_ographie_universelle_-_la_terre_et_les_.jpg","/assets/destinations/costa_del_sol_sup_4_iss030-e-117821_-_view_of_el_salvador.jpg.jpg","/assets/destinations/costa_del_sol_sup_5_departamento_de_la_paz.jpg.jpg"],
     imageCredits: [{"author":"ezarate","sourceUrl":"https://commons.wikimedia.org/wiki/File:EntradaPlayaCostadelSolMDP-jul2017.jpg","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"EntradaPlayaCostadelSolMDP-jul2017"},{"author":"Presidencia El Salvador from San Salvador, El Salvador, América Central","sourceUrl":"https://commons.wikimedia.org/wiki/File:Inauguraci%C3%B3n_estadio_F%C3%BAtbol_Playa_Costa_del_Sol_(6)_(14608233049).jpg","license":"CC0","licenseUrl":"http://creativecommons.org/publicdomain/zero/1.0/deed.en","caption":"Inauguración estadio Fútbol Playa Costa del Sol (6) (14608233049)"},{"author":"Reclus, Elisée, 1830-1905","sourceUrl":"https://commons.wikimedia.org/wiki/File:Nouvelle_g%C3%A9ographie_universelle_-_la_terre_et_les_hommes_(1876)_(14754599566).jpg","license":"No restrictions","licenseUrl":"https://www.flickr.com/commons/usage/","caption":"Nouvelle géographie universelle - la terre et les hommes (1876) (14754599566)"},{"author":"Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center","sourceUrl":"https://commons.wikimedia.org/wiki/File:ISS030-E-117821_-_View_of_El_Salvador.jpg","license":"Public domain","licenseUrl":"https://creativecommons.org/licenses/","caption":"ISS030-E-117821 - View of El Salvador"},{"author":"K3mejia041018","sourceUrl":"https://commons.wikimedia.org/wiki/File:Departamento_de_La_Paz.jpg","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"Departamento de La Paz"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Paseo privado en lancha motora con toldo por el estero de Jaltepeque',
       'Pase de día en club de playa con piscina, vestidores y sombras',
       'Guía lanchero local conocedor de aves y canales',
       'Bebida de coco o refresco natural'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Covered motorboat tour through Jaltepeque estuary',
       'Beach club day pass with swimming pool, cabanas, and showers',
       'Experienced local boat captain and bird guide',
       'Fresh coconut water or tropical fruit drink'
     ],
     notIncludedEs: [
-      'Almuerzo a base de mariscos en restaurante de la playa',
-      'Transporte terrestre hasta San Luis La Herradura'
+      'Almuerzo a base de mariscos en restaurante de la playa'
     ],
     notIncludedEn: [
       'Restaurant lunch on the beach',
@@ -1327,6 +1442,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Relax on sun loungers, swim in Pacific surf, and enjoy lunch.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: false,
     active: true,
     demoRating: 4.8,
@@ -1342,12 +1464,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
     descriptionEs: 'La Bahía de Jiquilisco es el mayor estuario del Pacífico salvadoreño y un sitio protegido RAMSAR. En este viaje culinario y ecológico, abordaremos una lancha tradicional con una cooperativa comunitaria para recolectar curiles y camarón de estanque de forma sostenible. Luego, en una enramada junto al agua, prepararemos un auténtico ceviche negro marinado con limón criollo, cebolla morada y salsa inglesa.',
     descriptionEn: 'Jiquilisco Bay is El Salvador’s largest Pacific wetland estuary and a designated UNESCO Biosphere Reserve. In partnership with a local community cooperative, journey through winding mangrove tunnels to witness sustainable clam foraging. Back on a palapa deck, prepare fresh black curil ceviche with Persian limes and local coastal herbs.',
     category: 'playa',
+    pillarCategory: 'poco_conocido',
     region: 'Costa Pacífico',
     location: 'Bahía de Jiquilisco, Usulután',
     department: 'Usulután',
     coordinates: { lat: 13.2167, lng: -88.5500 },
-    meetingPointEs: 'Embarcadero Puerto El Triunfo, Cooperativa Manglares',
-    meetingPointEn: 'Puerto El Triunfo Main Pier, Mangrove Cooperative Kiosk',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Embarcadero Puerto El Triunfo, Cooperativa Manglares)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: Puerto El Triunfo Main Pier, Mangrove Cooperative Kiosk)',
     price: 68,
     currency: 'USD',
     priceRange: 'premium',
@@ -1363,6 +1486,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/jiquilisco_1_bah_a_de_jiquilisco__isla_de_m_ndez_.jpg.jpg","/assets/destinations/jiquilisco_2_isla_madre_sal.jpg.jpg","/assets/destinations/jiquilisco_3_bahia_jiquilisco.jpg.jpg","/assets/destinations/jiquilisco_4_bahia_de_jiquilisco__el_salvador.jpg.jpg","/assets/destinations/jiquilisco_5_playa_de_corral_de_mulas__usulut_n__el_salvador_-_panoram.jpg","/assets/destinations/jiquilisco_6_admiralty_chart_no_660_harbours_and_anchorages_on_the_wes.jpg"],
     imageCredits: [{"author":"Metztli","sourceUrl":"https://commons.wikimedia.org/wiki/File:Bah%C3%ADa_de_Jiquilisco_(Isla_de_M%C3%A9ndez).JPG","license":"CC BY-SA 3.0","licenseUrl":"http://creativecommons.org/licenses/by-sa/3.0/","caption":"Bahía de Jiquilisco (Isla de Méndez)"},{"author":"Metztli","sourceUrl":"https://commons.wikimedia.org/wiki/File:Isla_Madre_Sal.JPG","license":"CC BY-SA 3.0","licenseUrl":"http://creativecommons.org/licenses/by-sa/3.0/","caption":"Isla Madre Sal"},{"author":"Metztli","sourceUrl":"https://commons.wikimedia.org/wiki/File:Bahia_jiquilisco.jpg","license":"CC BY-SA 3.0","licenseUrl":"http://creativecommons.org/licenses/by-sa/3.0/","caption":"Bahia jiquilisco"},{"author":"ElmerGuevara","sourceUrl":"https://commons.wikimedia.org/wiki/File:Bahia_de_Jiquilisco,_El_Salvador.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Bahia de Jiquilisco, El Salvador"},{"author":"kadejo","sourceUrl":"https://commons.wikimedia.org/wiki/File:Playa_de_Corral_de_Mulas,_Usulut%C3%A1n,_El_Salvador_-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Playa de Corral de Mulas, Usulután, El Salvador - panoramio"},{"author":"United Kingdom Hydrographic Office","sourceUrl":"https://commons.wikimedia.org/wiki/File:Admiralty_Chart_No_660_Harbours_and_Anchorages_on_the_West_Coast_of_Central_America,_Published_1927,_Large_Corrections_1957.jpg","license":"Public domain","licenseUrl":"https://creativecommons.org/licenses/","caption":"Admiralty Chart No 660 Harbours and Anchorages on the West Coast of Central America, Published 1927, Large Corrections 1957"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Paseo privado en lancha techada por canales de manglares',
       'Acompañamiento de pescador artesanal de la comunidad',
       'Ingredientes completos para el taller de ceviche y mariscada',
@@ -1370,6 +1494,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
       'Aporte directo al fondo de conservación de tortugas marinas'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Private covered boat tour through mangrove channels',
       'Accompaniment by an artisanal community fisher',
       'All fresh ingredients for the black ceviche cooking class',
@@ -1377,8 +1502,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
       'Direct contribution to the local sea turtle conservation initiative'
     ],
     notIncludedEs: [
-      'Transporte terrestre hasta Puerto El Triunfo'
-    ],
+      ],
     notIncludedEn: [
       'Ground transit to Puerto El Triunfo'
     ],
@@ -1422,6 +1546,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Savor your freshly crafted meal on the dock before cruising back.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: false,
     active: true,
     demoRating: 5.0,
@@ -1452,8 +1583,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'Playa El Cuco, Chirilagua, San Miguel',
     department: 'San Miguel',
     coordinates: { lat: 13.1750, lng: -88.1067 },
-    meetingPointEs: 'Parqueo Turístico Central de Playa El Cuco',
-    meetingPointEn: 'El Cuco Central Beachside Parking',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Parqueo Turístico Central de Playa El Cuco)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: El Cuco Central Beachside Parking)',
     price: 45,
     currency: 'USD',
     priceRange: 'medio',
@@ -1469,20 +1600,21 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/el_cuco_1_el_cuco_san_miguel_el_salvador_playa_2011.jpg.jpg","/assets/destinations/el_cuco_2_stallman_playa_el_cuco_san_miguel_el_salvador.jpg.jpg","/assets/destinations/el_cuco_3_visita_a_san_miguel_playa_el_cuco_richar_stallman.jpg.jpg","/assets/destinations/el_cuco_4_el_cuco__el_salvador_-_panoramio__2_.jpg.jpg","/assets/destinations/el_cuco_5_el_cuco__el_salvador_-_panoramio__2___cropped_.jpg.jpg"],
     imageCredits: [{"author":"Ll1324","sourceUrl":"https://commons.wikimedia.org/wiki/File:El_Cuco_San_Miguel_El_Salvador_Playa_2011.jpg","license":"CC0","licenseUrl":"http://creativecommons.org/publicdomain/zero/1.0/deed.en","caption":"El Cuco San Miguel El Salvador Playa 2011"},{"author":"Carlos Quintanilla","sourceUrl":"https://commons.wikimedia.org/wiki/File:Stallman_playa_el_Cuco_San_Miguel_El_Salvador.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Stallman playa el Cuco San Miguel El Salvador"},{"author":"Carlos Quintanilla","sourceUrl":"https://commons.wikimedia.org/wiki/File:Visita_a_San_Miguel_playa_el_Cuco_Richar_Stallman.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Visita a San Miguel playa el Cuco Richar Stallman"},{"author":"davidjoviera","sourceUrl":"https://commons.wikimedia.org/wiki/File:El_Cuco,_El_Salvador_-_panoramio_(2).jpg","license":"CC BY 3.0","licenseUrl":"https://creativecommons.org/licenses/by/3.0","caption":"El Cuco, El Salvador - panoramio (2)"},{"author":"davidjoviera","sourceUrl":"https://commons.wikimedia.org/wiki/File:El_Cuco,_El_Salvador_-_panoramio_(2)_(cropped).jpg","license":"CC BY 3.0","licenseUrl":"https://creativecommons.org/licenses/by/3.0","caption":"El Cuco, El Salvador - panoramio (2) (cropped)"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Guía turístico local del oriente salvadoreño',
       'Paseo en lancha costera hacia los acantilados de Las Flores',
       'Almuerzo típico playero con pescado frito fresco o mariscada',
       'Agua de coco fría y sombrilla de playa'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Local eastern El Salvador guide',
       'Coastal boat ride towards Las Flores headland cliffs',
       'Traditional beach lunch with fried fresh catch or seafood soup',
       'Chilled coconut water and beach umbrella setup'
     ],
     notIncludedEs: [
-      'Alquiler de tablas de surf en Las Flores',
-      'Transporte terrestre desde San Salvador o San Miguel'
+      'Alquiler de tablas de surf en Las Flores'
     ],
     notIncludedEn: [
       'Surfboard rentals at Las Flores',
@@ -1519,6 +1651,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Savor freshly cooked catch of the day under palm-thatched palapas.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: false,
     active: true,
     demoRating: 4.8,
@@ -1538,8 +1677,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'Los Cóbanos, Acajutla, Sonsonate',
     department: 'Sonsonate',
     coordinates: { lat: 13.5289, lng: -89.8058 },
-    meetingPointEs: 'Playa Principal de Los Cóbanos, Cooperativa de Turismo Marino',
-    meetingPointEn: 'Los Cóbanos Main Beachfront, Marine Tourism Cooperative Deck',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Playa Principal de Los Cóbanos, Cooperativa de Turismo Marino)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: Los Cóbanos Main Beachfront, Marine Tourism Cooperative Deck)',
     price: 48,
     currency: 'USD',
     priceRange: 'medio',
@@ -1555,6 +1694,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/los_cobanos_1_playa_los_c_banos__el_salvador_000_0025.jpg.jpg","/assets/destinations/los_cobanos_2_tillandsia_xerographica__ts__2-06882.jpg.jpg","/assets/destinations/los_cobanos_3_playa_los_c_banos.jpg.jpg","/assets/destinations/los_cobanos_4_coral_negro_myriopathes_panamensis_de_los_c_banos__el._s.jpg","/assets/destinations/los_cobanos_5_diadema_mexicanum__los_c_banos.jpg.jpg","/assets/destinations/los_cobanos_6_playa_los_c_banos_2026.jpg.jpg"],
     imageCredits: [{"author":"Metztli","sourceUrl":"https://commons.wikimedia.org/wiki/File:Playa_Los_C%C3%B3banos,_El_Salvador_000_0025.jpg","license":"GFDL","licenseUrl":"http://www.gnu.org/copyleft/fdl.html","caption":"Playa Los Cóbanos, El Salvador 000 0025"},{"author":"Timm Stolten","sourceUrl":"https://commons.wikimedia.org/wiki/File:Tillandsia_xerographica_(TS)_2-06882.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Tillandsia xerographica (TS) 2-06882"},{"author":"Pollito03","sourceUrl":"https://commons.wikimedia.org/wiki/File:Playa_Los_C%C3%B3banos.jpg","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"Playa Los Cóbanos"},{"author":"ChikaReef","sourceUrl":"https://commons.wikimedia.org/wiki/File:Coral_negro_Myriopathes_panamensis_de_Los_C%C3%B3banos,_El._Salvador.jpg","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"Coral negro Myriopathes panamensis de Los Cóbanos, El. Salvador"},{"author":"Hapaloxaena","sourceUrl":"https://commons.wikimedia.org/wiki/File:Diadema_mexicanum,_Los_C%C3%B3banos.jpg","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"Diadema mexicanum, Los Cóbanos"},{"author":"Bubulina26","sourceUrl":"https://commons.wikimedia.org/wiki/File:Playa_Los_C%C3%B3banos_2026.jpg","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"Playa Los Cóbanos 2026"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Paseo en lancha certificada con capitán marinero local',
       'Equipo completo de snorkel (máscara, tubo y aletas desinfectadas)',
       'Chaleco salvavidas flotante de apoyo en el agua',
@@ -1562,6 +1702,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
       'Charla de conservación marina y respeto al arrecife'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Certified marine boat outing with local skipper',
       'Full sanitized snorkel gear (mask, snorkel, and fins)',
       'High-buoyancy snorkel vest for effortless floating',
@@ -1569,8 +1710,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
       'Reef conservation and marine life orientation'
     ],
     notIncludedEs: [
-      'Transporte terrestre hasta Los Cóbanos'
-    ],
+      ],
     notIncludedEn: [
       'Ground transit to Los Cóbanos'
     ],
@@ -1612,6 +1752,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Relax on the sand with cold watermelon and pineapple.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: false,
     active: true,
     demoRating: 4.8,
@@ -1635,8 +1782,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'Suchitoto, Cuscatlán',
     department: 'Cuscatlán',
     coordinates: { lat: 13.9383, lng: -89.0278 },
-    meetingPointEs: 'Frente a la Iglesia Santa Lucía, Plaza Central de Suchitoto',
-    meetingPointEn: 'Santa Lucía Church steps, Central Plaza of Suchitoto',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Frente a la Iglesia Santa Lucía, Plaza Central de Suchitoto)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: Santa Lucía Church steps, Central Plaza of Suchitoto)',
     price: 48,
     currency: 'USD',
     priceRange: 'medio',
@@ -1652,6 +1799,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/suchitoto_1_iglesia_de_suchitoto..jpg.jpg","/assets/destinations/suchitoto_2_calles_de_suchitoto_agosto..jpg.jpg","/assets/destinations/suchitoto_3_canton_el_tablon__suchitoto__cuscatlan__el_salvador.jpg.jpg","/assets/destinations/suchitoto_4_suchitoto__2__sm__4290049294_.jpg.jpg","/assets/destinations/suchitoto_5_suchitoto__7__sm__4290049350_.jpg.jpg","/assets/destinations/suchitoto_6_suchitoto__14__sm__4290049480_.jpg.jpg"],
     imageCredits: [{"author":"ElmerGuevara","sourceUrl":"https://commons.wikimedia.org/wiki/File:Iglesia_De_Suchitoto..JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Iglesia De Suchitoto."},{"author":"ElmerGuevara","sourceUrl":"https://commons.wikimedia.org/wiki/File:Calles_de_Suchitoto_Agosto..JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Calles de Suchitoto Agosto."},{"author":"Jarteaga05","sourceUrl":"https://commons.wikimedia.org/wiki/File:Canton_El_Tablon,_Suchitoto,_Cuscatlan,_El_Salvador.jpg","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"Canton El Tablon, Suchitoto, Cuscatlan, El Salvador"},{"author":"xorge","sourceUrl":"https://commons.wikimedia.org/wiki/File:Suchitoto_(2)_sm_(4290049294).jpg","license":"CC BY-SA 2.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/2.0","caption":"Suchitoto (2) sm (4290049294)"},{"author":"xorge","sourceUrl":"https://commons.wikimedia.org/wiki/File:Suchitoto_(7)_sm_(4290049350).jpg","license":"CC BY-SA 2.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/2.0","caption":"Suchitoto (7) sm (4290049350)"},{"author":"xorge","sourceUrl":"https://commons.wikimedia.org/wiki/File:Suchitoto_(14)_sm_(4290049480).jpg","license":"CC BY-SA 2.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/2.0","caption":"Suchitoto (14) sm (4290049480)"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Caminata cultural guiada por historiador local',
       'Taller práctico de teñido en añil 100% orgánico',
       'Bufanda o pañuelo de algodón puro para cada participante (te lo llevas)',
@@ -1659,6 +1807,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
       'Acceso al mirador privado sobre el Lago Suchitlán'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Guided historical stroll with local cultural host',
       'Hands-on organic indigo dyeing workshop',
       'Pure cotton scarf/bandana to dye and take home',
@@ -1666,8 +1815,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
       'Access to scenic Lake Suchitlán panorama overlook'
     ],
     notIncludedEs: [
-      'Paseo en lancha por el lago (opcional disponible)',
-      'Transporte ida y vuelta desde San Salvador'
+      'Paseo en lancha por el lago (opcional disponible)'
     ],
     notIncludedEn: [
       'Lake boat ride (optional add-on)',
@@ -1713,6 +1861,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Unfold your blue pattern while enjoying warm coffee and Salvadoran quesadilla.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: true,
     active: true,
     demoRating: 4.9,
@@ -1743,8 +1898,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'San Juan Opico, La Libertad',
     department: 'La Libertad',
     coordinates: { lat: 13.8267, lng: -89.3622 },
-    meetingPointEs: 'Centro de Interpretación y Museo de Sitio Joya de Cerén',
-    meetingPointEn: 'Joya de Cerén Museum and Visitors Center Entrance',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Centro de Interpretación y Museo de Sitio Joya de Cerén)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: Joya de Cerén Museum and Visitors Center Entrance)',
     price: 36,
     currency: 'USD',
     priceRange: 'economico',
@@ -1760,19 +1915,20 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/joya_ceren_1_temazcal_en_joya_de_ceren.jpg.jpg","/assets/destinations/joya_ceren_2_es_joya_ceren_05_2012_estructura_9_area_2_tamazcal_wide_a.jpg","/assets/destinations/joya_ceren_3_joya_de_ceren__la_libertad.jpg.jpg","/assets/destinations/joya_ceren_4_joya_de_cer_n__domestic_complex.jpg.jpg","/assets/destinations/joya_ceren_5_parque_arqueol_gico_joya_de_cer_n.jpg.jpg","/assets/destinations/joya_ceren_6_parque_arqueol_gico_joya_de_cer_n_-_55384173232.jpg.jpg"],
     imageCredits: [{"author":"Julio Cesar Acosta Burgos","sourceUrl":"https://commons.wikimedia.org/wiki/File:Temazcal_en_Joya_de_Ceren.jpg","license":"Public domain","licenseUrl":"https://creativecommons.org/licenses/","caption":"Temazcal en Joya de Ceren"},{"author":"Mariordo (Mario Roberto Duran Ortiz)","sourceUrl":"https://commons.wikimedia.org/wiki/File:ES_Joya_Ceren_05_2012_Estructura_9_Area_2_Tamazcal_wide_angle_1479.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"ES Joya Ceren 05 2012 Estructura 9 Area 2 Tamazcal wide angle 1479"},{"author":"BelenM","sourceUrl":"https://commons.wikimedia.org/wiki/File:Joya_de_Ceren,_La_Libertad.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Joya de Ceren, La Libertad"},{"author":"Виктор Пинчук","sourceUrl":"https://commons.wikimedia.org/wiki/File:Joya_de_Cer%C3%A9n,_domestic_complex.jpg","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"Joya de Cerén, domestic complex"},{"author":"xiquinhosilva","sourceUrl":"https://commons.wikimedia.org/wiki/File:Parque_Arqueol%C3%B3gico_Joya_de_Cer%C3%A9n.jpg","license":"CC BY 4.0","licenseUrl":"https://creativecommons.org/licenses/by/4.0","caption":"Parque Arqueológico Joya de Cerén"},{"author":"xiquinhosilva","sourceUrl":"https://commons.wikimedia.org/wiki/File:Parque_Arqueol%C3%B3gico_Joya_de_Cer%C3%A9n_-_55384173232.jpg","license":"CC BY 4.0","licenseUrl":"https://creativecommons.org/licenses/by/4.0","caption":"Parque Arqueológico Joya de Cerén - 55384173232"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Entrada oficial al Parque Arqueológico Joya de Cerén',
       'Guía acreditado especializado en arqueología e historia prehispánica',
       'Recorrido por las 4 áreas de excavación techadas y museo de sitio',
       'Bebida refrescante de horchata artesanal'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Official Joya de Cerén archaeological park entry ticket',
       'Accredited heritage guide specialized in Mesoamerican archaeology',
       'Guided walk through all 4 sheltered excavation complexes and museum',
       'Cold traditional horchata drink'
     ],
     notIncludedEs: [
-      'Transporte hasta el parque arqueológico',
       'Almuerzo formal'
     ],
     notIncludedEn: [
@@ -1810,6 +1966,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Inspect the circular domed steam bath and ceremonial medicine house.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: true,
     active: true,
     demoRating: 4.9,
@@ -1829,8 +1992,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'Chalchuapa, Santa Ana',
     department: 'Santa Ana',
     coordinates: { lat: 13.9789, lng: -89.6744 },
-    meetingPointEs: 'Entrada del Museo Arqueológico Stanley H. Boggs, Tazumal, Chalchuapa',
-    meetingPointEn: 'Stanley H. Boggs Museum Entrance, Tazumal, Chalchuapa',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Entrada del Museo Arqueológico Stanley H. Boggs, Tazumal, Chalchuapa)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: Stanley H. Boggs Museum Entrance, Tazumal, Chalchuapa)',
     price: 38,
     currency: 'USD',
     priceRange: 'medio',
@@ -1846,19 +2009,20 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/tazumal_1_tazumal_1.jpg.jpg","/assets/destinations/tazumal_2_tazumal_panoramica.jpg.jpg","/assets/destinations/tazumal_3_el_tazumal__chalchuapa.jpg.jpg","/assets/destinations/tazumal_4_archeologists_on_a_piramid-tazumal_restaurando.jpg.jpg","/assets/destinations/tazumal_5_piramid-tazumal__chalchuapa.jpg.jpg","/assets/destinations/tazumal_6_estructuras_tazumal.png.jpg"],
     imageCredits: [{"author":"otrarove","sourceUrl":"https://commons.wikimedia.org/wiki/File:Tazumal_1.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Tazumal 1"},{"author":"otrarove","sourceUrl":"https://commons.wikimedia.org/wiki/File:Tazumal_Panoramica.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Tazumal Panoramica"},{"author":"ARamirez69","sourceUrl":"https://commons.wikimedia.org/wiki/File:El_Tazumal,_Chalchuapa.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"El Tazumal, Chalchuapa"},{"author":"Jose Huwaidi","sourceUrl":"https://commons.wikimedia.org/wiki/File:Archeologists_on_a_piramid-Tazumal_restaurando.jpg","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"Archeologists on a piramid-Tazumal restaurando"},{"author":"Jose Huwaidi","sourceUrl":"https://commons.wikimedia.org/wiki/File:Piramid-Tazumal,_Chalchuapa.jpg","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"Piramid-Tazumal, Chalchuapa"},{"author":"Juan Miguel","sourceUrl":"https://commons.wikimedia.org/wiki/File:Estructuras_Tazumal.png","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Estructuras Tazumal"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Entradas oficiales a Tazumal y Parque Arqueológico Casa Blanca',
       'Guía acreditado especializado en patrimonio cultural maya',
       'Degustación de atol de elote salvadoreño recién hecho',
       'Visita guiada al museo de sitio Stanley Boggs'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Official admission to Tazumal and Casa Blanca archaeological parks',
       'Accredited cultural heritage guide',
       'Warm traditional sweetcorn atol beverage',
       'Guided walkthrough of the Stanley Boggs on-site museum'
     ],
     notIncludedEs: [
-      'Transporte entre San Salvador y Chalchuapa',
       'Almuerzo formal'
     ],
     notIncludedEn: [
@@ -1896,6 +2060,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Explore grass-covered mounds and living indigo garden.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: false,
     active: true,
     demoRating: 4.8,
@@ -1915,8 +2086,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'Concepción de Ataco, Ahuachapán',
     department: 'Ahuachapán',
     coordinates: { lat: 13.8703, lng: -89.8489 },
-    meetingPointEs: 'Parque Central de Ataco, frente a la Iglesia de la Inmaculada Concepción',
-    meetingPointEn: 'Ataco Central Square, front steps of the Immaculate Conception Church',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Parque Central de Ataco, frente a la Iglesia de la Inmaculada Concepción)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: Ataco Central Square, front steps of the Immaculate Conception Church)',
     price: 34,
     currency: 'USD',
     priceRange: 'economico',
@@ -1932,20 +2103,21 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/ataco_1_concepcion_de_ataco_sign.jpg.jpg","/assets/destinations/ataco_2_walking_in_concepcion_de_ataco.jpg.jpg","/assets/destinations/ataco_3_concepci_n_de_ataco__el_salvador__2011__-_panoramio.jpg.jpg","/assets/destinations/ataco_4_calle_en_concepci_n_de_ataco__12.2010__-_panoramio.jpg.jpg","/assets/destinations/ataco_5_parque_en_concepci_n_de_ataco__12-2010__-_panoramio.jpg.jpg","/assets/destinations/ataco_6_concepci_n_de_ataco__el_salvador_-_panoramio.jpg.jpg"],
     imageCredits: [{"author":"Sammiethedeadrat","sourceUrl":"https://commons.wikimedia.org/wiki/File:Concepcion_de_Ataco_Sign.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Concepcion de Ataco Sign"},{"author":"Samuel Cruz Prado","sourceUrl":"https://commons.wikimedia.org/wiki/File:Walking_in_Concepcion_de_Ataco.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Walking in Concepcion de Ataco"},{"author":"Martin Haeusler","sourceUrl":"https://commons.wikimedia.org/wiki/File:Concepci%C3%B3n_de_Ataco,_El_Salvador_(2011)_-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Concepción de Ataco, El Salvador (2011) - panoramio"},{"author":"Martin Haeusler","sourceUrl":"https://commons.wikimedia.org/wiki/File:Calle_en_Concepci%C3%B3n_de_Ataco_(12.2010)_-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Calle en Concepción de Ataco (12.2010) - panoramio"},{"author":"Martin Haeusler","sourceUrl":"https://commons.wikimedia.org/wiki/File:Parque_en_Concepci%C3%B3n_de_Ataco_(12-2010)_-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Parque en Concepción de Ataco (12-2010) - panoramio"},{"author":"davidjoviera","sourceUrl":"https://commons.wikimedia.org/wiki/File:Concepci%C3%B3n_de_Ataco,_El_Salvador_-_panoramio.jpg","license":"CC BY 3.0","licenseUrl":"https://creativecommons.org/licenses/by/3.0","caption":"Concepción de Ataco, El Salvador - panoramio"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Guía cultural local nativo de Concepción de Ataco',
       'Paseo guiado explicativo por la ruta de murales artísticos',
       'Demostración interactiva en taller de telares tradicionales',
       'Degustación de café de altura con pan dulce tradicional de canela'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Local cultural storyteller native to Ataco',
       'Guided narrative walk through the celebrated mural corridors',
       'Hands-on pedal loom textile weaving demonstration',
       'Highland coffee tasting paired with artisan cinnamon sweet bread'
     ],
     notIncludedEs: [
-      'Compras en tiendas artesanales',
-      'Transporte hasta el pueblo'
+      'Compras en tiendas artesanales'
     ],
     notIncludedEn: [
       'Handicraft purchases',
@@ -1982,6 +2154,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Savor mountain-grown coffee with freshly baked artisan sweet bread.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: false,
     active: true,
     demoRating: 4.9,
@@ -2001,8 +2180,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'Perquín y Río Sapo, Morazán',
     department: 'Morazán',
     coordinates: { lat: 13.9564, lng: -88.1611 },
-    meetingPointEs: 'Museo de la Revolución, Perquín, Morazán',
-    meetingPointEn: 'Museum of the Revolution Entrance, Perquín',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Museo de la Revolución, Perquín, Morazán)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: Museum of the Revolution Entrance, Perquín)',
     price: 50,
     currency: 'USD',
     priceRange: 'medio',
@@ -2018,20 +2197,21 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/perquin_1_parque_de_perqu_n.jpg.jpg","/assets/destinations/perquin_2_casa_de_la_cultura_en_perqu_n__el_salvador_-_2009.jpg.jpg","/assets/destinations/perquin_3_cerro_de_perqu_n.jpg.jpg","/assets/destinations/perquin_4_llano_del_muerto_en_perqu_n__el_salvador_-_2011.jpg.jpg","/assets/destinations/perquin_5_catarata_de_piedra_en_perqu_n__el_salvador_-_panoramio.jpg.jpg","/assets/destinations/perquin_6_catarata_de_piedra_en_perqu_n_-_panoramio.jpg.jpg"],
     imageCredits: [{"author":"Tatiana Caledonio","sourceUrl":"https://commons.wikimedia.org/wiki/File:Parque_de_Perqu%C3%ADn.jpg","license":"Public domain","licenseUrl":"https://creativecommons.org/licenses/","caption":"Parque de Perquín"},{"author":"Tatiana Caledonio","sourceUrl":"https://commons.wikimedia.org/wiki/File:Casa_de_la_Cultura_en_Perqu%C3%ADn,_El_Salvador_-_2009.jpg","license":"Public domain","licenseUrl":"https://creativecommons.org/licenses/","caption":"Casa de la Cultura en Perquín, El Salvador - 2009"},{"author":"Tatiana Caledonio","sourceUrl":"https://commons.wikimedia.org/wiki/File:Cerro_de_Perqu%C3%ADn.jpg","license":"Public domain","licenseUrl":"https://creativecommons.org/licenses/","caption":"Cerro de Perquín"},{"author":"House1090","sourceUrl":"https://commons.wikimedia.org/wiki/File:Llano_del_Muerto_en_Perqu%C3%ADn,_El_Salvador_-_2011.jpg","license":"CC BY-SA 2.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/2.0","caption":"Llano del Muerto en Perquín, El Salvador - 2011"},{"author":"Daniel chavez castro","sourceUrl":"https://commons.wikimedia.org/wiki/File:Catarata_de_piedra_en_Perqu%C3%ADn,_El_Salvador_-_panoramio.jpg","license":"CC BY 3.0","licenseUrl":"https://creativecommons.org/licenses/by/3.0","caption":"Catarata de piedra en Perquín, El Salvador - panoramio"},{"author":"Daniel chavez castro","sourceUrl":"https://commons.wikimedia.org/wiki/File:Catarata_de_piedra_en_Perqu%C3%ADn_-_panoramio.jpg","license":"CC BY 3.0","licenseUrl":"https://creativecommons.org/licenses/by/3.0","caption":"Catarata de piedra en Perquín - panoramio"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Guía comunitario con memoria testimonial viva',
       'Ingreso al Museo de la Revolución y cerro El Pericón',
       'Visita y tiempo de descanso en la reserva natural del Río Sapo',
       'Almuerzo campesino en restaurante comunitario'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Local community testimonial guide',
       'Entry tickets to the Museum and El Pericón hill',
       'Visit and swim time at the protected Río Sapo natural reserve',
       'Traditional homestyle lunch at community-run eatery'
     ],
     notIncludedEs: [
-      'Transporte hasta el departamento de Morazán'
-    ],
+      ],
     notIncludedEn: [
       'Transportation to Morazán department'
     ],
@@ -2075,6 +2255,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Hearty local meal followed by a visit to the turquoise waters of Río Sapo.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: false,
     active: true,
     demoRating: 4.9,
@@ -2105,8 +2292,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'Arambala, Morazán',
     department: 'Morazán',
     coordinates: { lat: 13.9167, lng: -88.1000 },
-    meetingPointEs: 'Puente colgante de Río Sapo, Carretera a Perquín',
-    meetingPointEn: 'Río Sapo Suspension Bridge, Arambala road to Perquín',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Puente colgante de Río Sapo, Carretera a Perquín)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: Río Sapo Suspension Bridge, Arambala road to Perquín)',
     price: 36,
     currency: 'USD',
     priceRange: 'economico',
@@ -2122,19 +2309,20 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/rio_sapo_1_cruz_piedra.jpg.jpg","/assets/destinations/rio_sapo_2__rea_protegida_de_r_o_sapo__el_salvador__12-2010__-_panoram.jpg","/assets/destinations/rio_sapo_3_rio_sapo_.jpg.jpg","/assets/destinations/rio_sapo_sup_4_el_salvador-morazan.png.jpg","/assets/destinations/rio_sapo_sup_5_el_chorrer_n_en_san_fernando__moraz_n__el_salvador_-_20.jpg"],
     imageCredits: [{"author":"Melissa Villalta","sourceUrl":"https://commons.wikimedia.org/wiki/File:Cruz_Piedra.jpg","license":"Public domain","licenseUrl":"https://creativecommons.org/licenses/","caption":"Cruz Piedra"},{"author":"Martin Haeusler","sourceUrl":"https://commons.wikimedia.org/wiki/File:%C3%81rea_protegida_de_R%C3%ADo_Sapo,_El_Salvador_(12-2010)_-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Área protegida de Río Sapo, El Salvador (12-2010) - panoramio"},{"author":"Briandvid","sourceUrl":"https://commons.wikimedia.org/wiki/File:Rio_Sapo_.jpg","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"Rio Sapo"},{"author":"User:Golbez","sourceUrl":"https://commons.wikimedia.org/wiki/File:El_Salvador-Morazan.png","license":"CC BY-SA 3.0","licenseUrl":"http://creativecommons.org/licenses/by-sa/3.0/","caption":"El Salvador-Morazan"},{"author":"House1090","sourceUrl":"https://commons.wikimedia.org/wiki/File:El_Chorrer%C3%B3n_en_San_Fernando,_Moraz%C3%A1n,_El_Salvador_-_2011.jpg","license":"CC BY-SA 2.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/2.0","caption":"El Chorrerón en San Fernando, Morazán, El Salvador - 2011"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Guía ecológico comunitario de Arambala',
       'Pase de acceso y conservación al área protegida de Río Sapo',
       'Chaleco salvavidas para nadar en pozas profundas (opcional)',
       'Refrigerio de frutas tropicales y agua fresca'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Local eco-guide from Arambala',
       'Protected river reserve access permit',
       'Safety life vest for deep water swimming (optional)',
       'Fresh fruit snacks and cold water'
     ],
     notIncludedEs: [
-      'Transporte hasta Arambala / Morazán',
       'Toalla y ropa de cambio'
     ],
     notIncludedEn: [
@@ -2181,6 +2369,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Enjoy chilled fruit before a leisurely return stroll.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: false,
     active: true,
     demoRating: 4.9,
@@ -2196,12 +2391,16 @@ export const DEMO_EXPERIENCES: Experience[] = [
     descriptionEs: 'El Centro Histórico de San Salvador vive un renacimiento cultural vibrante. En este recorrido a pie con arquitectos e historiadores urbanos, recorrerás plazas abiertas, la revolucionaria iglesia El Rosario con su juego hipnótico de vitrales de colores, el majestuoso Palacio Nacional y las criptas históricas, culminando con café de altura en una terraza con vista a la Catedral.',
     descriptionEn: 'San Salvador’s historic downtown is experiencing a vibrant urban cultural renaissance. Led by local architecture storytellers, discover pedestrian plazas, the world-renowned El Rosario church illuminated by rainbow stained glass concrete arches, the National Palace halls, and a heritage rooftop espresso bar overlooking the Metropolitan Cathedral.',
     category: 'cultura',
+    pillarCategory: 'en_tendencia',
+    trendingReasonEs: 'Centro Histórico revitalizado, BINAES 24/7 y nueva iluminación nocturna patrimonial',
+    trendingReasonEn: 'Revitalized historic downtown, 24/7 National Library (BINAES) and stunning night illumination',
+    trendingReasonPt: 'Centro Histórico revitalizado, Biblioteca Nacional (BINAES) 24h e nova iluminação noturna',
     region: 'Centro',
     location: 'Centro Histórico, San Salvador',
     department: 'San Salvador',
     coordinates: { lat: 13.6989, lng: -89.1914 },
-    meetingPointEs: 'Plaza Gerardo Barrios, frente a la estatua ecuestre',
-    meetingPointEn: 'Gerardo Barrios Plaza, in front of the equestrian monument',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Plaza Gerardo Barrios, frente a la estatua ecuestre)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: Gerardo Barrios Plaza, in front of the equestrian monument)',
     price: 32,
     currency: 'USD',
     priceRange: 'economico',
@@ -2217,20 +2416,21 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/san_salvador_1_centro_historico_san_salvador.jpg.jpg","/assets/destinations/san_salvador_2_centro_de_san_salvador_de_noche.jpg.jpg","/assets/destinations/san_salvador_3_centro_hist_rico_de_san_salvador_2.jpg.jpg","/assets/destinations/san_salvador_4_centro_hist_rico_de_san_salvador_3.jpg.jpg","/assets/destinations/san_salvador_5_centro_hist_rico_de_san_salvador_5.jpg.jpg","/assets/destinations/san_salvador_6_centro_hist_rico_de_san_salvador_6.jpg.jpg"],
     imageCredits: [{"author":"Maranon68","sourceUrl":"https://commons.wikimedia.org/wiki/File:Centro_historico_san_salvador.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Centro historico san salvador"},{"author":"Kayren22","sourceUrl":"https://commons.wikimedia.org/wiki/File:Centro_de_San_Salvador_de_noche.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Centro de San Salvador de noche"},{"author":"S.Cacao","sourceUrl":"https://commons.wikimedia.org/wiki/File:Centro_Hist%C3%B3rico_de_San_Salvador_2.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Centro Histórico de San Salvador 2"},{"author":"Spartacous Cacao","sourceUrl":"https://commons.wikimedia.org/wiki/File:Centro_Hist%C3%B3rico_de_San_Salvador_3.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Centro Histórico de San Salvador 3"},{"author":"S.Cacao","sourceUrl":"https://commons.wikimedia.org/wiki/File:Centro_Hist%C3%B3rico_de_San_Salvador_5.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Centro Histórico de San Salvador 5"},{"author":"Spartacous Cacao","sourceUrl":"https://commons.wikimedia.org/wiki/File:Centro_Hist%C3%B3rico_de_San_Salvador_6.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Centro Histórico de San Salvador 6"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Guía profesional especializado en historia urbana y arquitectura',
       'Entrada al Palacio Nacional y salas de exposición',
       'Entrada y visita explicativa a la Iglesia El Rosario',
       'Café de especialidad o bebida refrescante en terraza panorámica'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Professional guide specialized in urban history & architecture',
       'Entry tickets to the restored National Palace',
       'Entry and architectural tour of El Rosario Church',
       'Specialty coffee or cold craft drink on a scenic rooftop'
     ],
     notIncludedEs: [
-      'Consumos adicionales en librerías o mercados de artesanías',
-      'Transporte al punto de encuentro'
+      'Consumos adicionales en librerías o mercados de artesanías'
     ],
     notIncludedEn: [
       'Purchases at artisan craft markets',
@@ -2274,6 +2474,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Casual conversation enjoying single-origin espresso with city plaza views.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: true,
     active: true,
     demoRating: 4.9,
@@ -2295,8 +2502,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'San Sebastián, San Vicente',
     department: 'San Vicente',
     coordinates: { lat: 13.7333, lng: -88.8333 },
-    meetingPointEs: 'Parque Central de San Sebastián, frente a la Iglesia Parroquial',
-    meetingPointEn: 'San Sebastián Central Park, in front of the Parish Church',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Parque Central de San Sebastián, frente a la Iglesia Parroquial)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: San Sebastián Central Park, in front of the Parish Church)',
     price: 35,
     currency: 'USD',
     priceRange: 'economico',
@@ -2312,20 +2519,21 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/san_sebastian_sup_1_san_sebastian_at_night_from_monte_urgull.jpg.jpg","/assets/destinations/san_sebastian_sup_2_bandera_del_municipio_de_san_sebastian_salitrillo..jpg","/assets/destinations/san_sebastian_sup_3_el_salvador_-_san_salvador__latin_top_jobs_garden_.jpg","/assets/destinations/san_sebastian_sup_4_el_salvador_-_san_salvador__latin_top_jobs_garden_.jpg","/assets/destinations/san_sebastian_sup_5_san_sebastian_donostia_panoramic_1190583.jpg.jpg"],
     imageCredits: [{"author":"Phillip Maiwald (Nikopol)","sourceUrl":"https://commons.wikimedia.org/wiki/File:San_Sebastian_at_night_from_Monte_Urgull.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"San Sebastian at night from Monte Urgull"},{"author":"DxD","sourceUrl":"https://commons.wikimedia.org/wiki/File:Bandera_del_Municipio_de_San_Sebastian_Salitrillo..jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Bandera del Municipio de San Sebastian Salitrillo."},{"author":"randreu","sourceUrl":"https://commons.wikimedia.org/wiki/File:El_Salvador_-_San_Salvador,_Latin_Top_Jobs_Garden,_San_Sebastian_Orquids_-_panoramio.jpg","license":"CC BY 3.0","licenseUrl":"https://creativecommons.org/licenses/by/3.0","caption":"El Salvador - San Salvador, Latin Top Jobs Garden, San Sebastian Orquids - panoramio"},{"author":"randreu","sourceUrl":"https://commons.wikimedia.org/wiki/File:El_Salvador_-_San_Salvador,_Latin_Top_Jobs_Garden,_San_Sebastian_Orquids_-_panoramio_(1).jpg","license":"CC BY 3.0","licenseUrl":"https://creativecommons.org/licenses/by/3.0","caption":"El Salvador - San Salvador, Latin Top Jobs Garden, San Sebastian Orquids - panoramio (1)"},{"author":"Ermell","sourceUrl":"https://commons.wikimedia.org/wiki/File:San_Sebastian_Donostia_Panoramic_1190583.jpg","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"San Sebastian Donostia Panoramic 1190583"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Guía local de la cooperativa artesanal de San Sebastián',
       'Visita a dos talleres familiares de tejido en telar de lanzadera',
       'Taller interactivo de urdido de hilos de algodón',
       'Refrigerio tradicional con quesadilla y café salvadoreño'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Local artisan cooperative guide',
       'Visits to two multi-generational family loom workshops',
       'Hands-on cotton thread warping and weaving exercise',
       'Traditional afternoon snack with quesadilla and coffee'
     ],
     notIncludedEs: [
-      'Compras directas de hamacas o manteles (opcionales con los artesanos)',
-      'Transporte hasta San Sebastián'
+      'Compras directas de hamacas o manteles (opcionales con los artesanos)'
     ],
     notIncludedEn: [
       'Direct purchase of woven hammocks',
@@ -2362,6 +2570,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Try pressing the loom pedals yourself and enjoy warm coffee.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: false,
     active: true,
     demoRating: 4.8,
@@ -2395,8 +2610,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'Olocuilta (La Paz) y Antiguo Cuscatlán (La Libertad)',
     department: 'La Paz',
     coordinates: { lat: 13.5689, lng: -89.1178 },
-    meetingPointEs: 'Pupusódromo El Manguito, Olocuilta, Carretera a Comalapa',
-    meetingPointEn: 'El Manguito Pupusa Pavilion, Olocuilta',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Pupusódromo El Manguito, Olocuilta, Carretera a Comalapa)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: El Manguito Pupusa Pavilion, Olocuilta)',
     price: 32,
     currency: 'USD',
     priceRange: 'economico',
@@ -2412,19 +2627,20 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/pupusas_1_plain_pupusas_revueltas.jpg.jpg","/assets/destinations/pupusas_2_pupusas_olocuilta_el_salvador_2012.jpg.jpg","/assets/destinations/pupusas_3_pupusas..jpg.jpg","/assets/destinations/pupusas_4_pupusa_with_curtido__5825005643_.jpg.jpg","/assets/destinations/pupusas_5_la_pupusa_mas_grande_el_salvador.jpg.jpg","/assets/destinations/pupusas_6_pupusa_5.5_mt._2016.jpg.jpg"],
     imageCredits: [{"author":"Jess Lander","sourceUrl":"https://commons.wikimedia.org/wiki/File:Plain_pupusas_revueltas.jpg","license":"CC BY 2.0","licenseUrl":"https://creativecommons.org/licenses/by/2.0","caption":"Plain pupusas revueltas"},{"author":"Ll1324","sourceUrl":"https://commons.wikimedia.org/wiki/File:Pupusas_olocuilta_el_salvador_2012.jpg","license":"CC0","licenseUrl":"http://creativecommons.org/publicdomain/zero/1.0/deed.en","caption":"Pupusas olocuilta el salvador 2012"},{"author":"ElmerGuevara","sourceUrl":"https://commons.wikimedia.org/wiki/File:Pupusas..JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Pupusas."},{"author":"The DLC from kansas city, mo","sourceUrl":"https://commons.wikimedia.org/wiki/File:Pupusa_with_curtido_(5825005643).jpg","license":"CC BY-SA 2.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/2.0","caption":"Pupusa with curtido (5825005643)"},{"author":"JMRAFFi","sourceUrl":"https://commons.wikimedia.org/wiki/File:La_pupusa_mas_grande_El_Salvador.jpg","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"La pupusa mas grande El Salvador"},{"author":"JMRAFFi","sourceUrl":"https://commons.wikimedia.org/wiki/File:Pupusa_5.5_mt._2016.jpg","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"Pupusa 5.5 mt. 2016"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Degustación guiada de 4 variedades de pupusas (arroz y maíz)',
       'Taller práctico de palmeado de pupusas con pupusera profesional',
       'Bebida tradicional ilimitada (horchata salvadoreña de morro o fresco de ensalada)',
       'Explicación cultural del curtido y salsa de tomate casera'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Guided tasting of 4 pupusa varieties (rice and heirloom maize)',
       'Hands-on pupusa patting masterclass with a veteran pupusa chef',
       'Unlimited traditional beverage (Salvadoran horchata or chopped fruit punch)',
       'Cultural guide to homemade curtido and fire-roasted salsa balancing'
     ],
     notIncludedEs: [
-      'Transporte entre pupusódromos (se coordinan traslados cortos)',
       'Bebidas alcohólicas'
     ],
     notIncludedEn: [
@@ -2460,6 +2676,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Savor hot pupusas straight off the hotplate with oregano curtido.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: true,
     active: true,
     demoRating: 4.9,
@@ -2481,8 +2704,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'Apaneca, Ruta de las Flores',
     department: 'Ahuachapán',
     coordinates: { lat: 13.8617, lng: -89.8039 },
-    meetingPointEs: 'Café La Concordia, Parque Central de Apaneca',
-    meetingPointEn: 'La Concordia Coffee Bar, Apaneca Central Plaza',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Café La Concordia, Parque Central de Apaneca)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: La Concordia Coffee Bar, Apaneca Central Plaza)',
     price: 52,
     currency: 'USD',
     priceRange: 'medio',
@@ -2498,6 +2721,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/apaneca_1_apaneca_-_panoramio.jpg.jpg","/assets/destinations/apaneca_2_apaneca__el_salvador_-_panoramio.jpg.jpg","/assets/destinations/apaneca_3_apaneca__el_salvador_-_panoramio__3_.jpg.jpg","/assets/destinations/apaneca_4_apaneca__el_salvador_-_panoramio__17_.jpg.jpg","/assets/destinations/apaneca_5_apaneca__el_salvador_-_panoramio__20_.jpg.jpg"],
     imageCredits: [{"author":"Roberto Alas","sourceUrl":"https://commons.wikimedia.org/wiki/File:Apaneca_-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Apaneca - panoramio"},{"author":"PABLO NUÑEZ","sourceUrl":"https://commons.wikimedia.org/wiki/File:Apaneca,_El_Salvador_-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Apaneca, El Salvador - panoramio"},{"author":"PABLO NUÑEZ","sourceUrl":"https://commons.wikimedia.org/wiki/File:Apaneca,_El_Salvador_-_panoramio_(3).jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Apaneca, El Salvador - panoramio (3)"},{"author":"PABLO NUÑEZ","sourceUrl":"https://commons.wikimedia.org/wiki/File:Apaneca,_El_Salvador_-_panoramio_(17).jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Apaneca, El Salvador - panoramio (17)"},{"author":"PABLO NUÑEZ","sourceUrl":"https://commons.wikimedia.org/wiki/File:Apaneca,_El_Salvador_-_panoramio_(20).jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Apaneca, El Salvador - panoramio (20)"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Visita guiada a finca cafetalera sostenible',
       'Sesión de cata y degustación de 3 métodos de extracción',
       'Taller práctico de pupusas con ingredientes frescos e ilimitados',
@@ -2505,6 +2729,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
       'Bolsa conmemorativa de 250g de café tostado en grano'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Guided walk through sustainable coffee plantation',
       'Cupping session & 3 artisan brew methods',
       'Hands-on pupusa making class with fresh ingredients',
@@ -2512,7 +2737,6 @@ export const DEMO_EXPERIENCES: Experience[] = [
       'Take-home 250g bag of roasted specialty coffee'
     ],
     notIncludedEs: [
-      'Transporte interdepartamental',
       'Bebidas alcohólicas adicionales',
       'Compras en tienda de souvenirs'
     ],
@@ -2559,6 +2783,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Master the hand-patting technique, stuffing, and eating with house-made curtido.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: true,
     active: true,
     demoRating: 5.0,
@@ -2589,8 +2820,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'Atiquizaya, Ahuachapán',
     department: 'Ahuachapán',
     coordinates: { lat: 13.9767, lng: -89.7533 },
-    meetingPointEs: 'Plaza Central de Atiquizaya, Casa Cultural',
-    meetingPointEn: 'Atiquizaya Central Plaza, Cultural House',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Plaza Central de Atiquizaya, Casa Cultural)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: Atiquizaya Central Plaza, Cultural House)',
     price: 38,
     currency: 'USD',
     priceRange: 'economico',
@@ -2606,20 +2837,21 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/ruta_flores_1_ataco__7185455734_.jpg.jpg","/assets/destinations/ruta_flores_2_mirador_tur_stico_de_apaneca.jpg.jpg","/assets/destinations/ruta_flores_3_concepci_n_de_ataco__el_salvador__2011__-_panoramio.jpg.jpg","/assets/destinations/ruta_flores_4_ruta_de_las_flores_en_ataco._-_panoramio.jpg.jpg"],
     imageCredits: [{"author":"David Stanley from Nanaimo, Canada","sourceUrl":"https://commons.wikimedia.org/wiki/File:Ataco_(7185455734).jpg","license":"CC BY 2.0","licenseUrl":"https://creativecommons.org/licenses/by/2.0","caption":"Ataco (7185455734)"},{"author":"Alex Romero","sourceUrl":"https://commons.wikimedia.org/wiki/File:Mirador_Tur%C3%ADstico_de_Apaneca.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Mirador Turístico de Apaneca"},{"author":"Martin Haeusler","sourceUrl":"https://commons.wikimedia.org/wiki/File:Concepci%C3%B3n_de_Ataco,_El_Salvador_(2011)_-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Concepción de Ataco, El Salvador (2011) - panoramio"},{"author":"feinteriano","sourceUrl":"https://commons.wikimedia.org/wiki/File:RUTA_DE_LAS_FLORES_EN_ATACO._-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"RUTA DE LAS FLORES EN ATACO. - panoramio"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Ingredientes completos de primera calidad (crema de ordeño, queso duro y ajonjolí)',
       'Tu propia quesadilla horneada entera para degustar y llevarte a casa',
       'Degustación de atol de elote recién preparado en olla de barro',
       'Café de olla campesino endulzado con dulce de atado'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'All high-grade ingredients (fresh dairy cream, aged artisan cheese, sesame)',
       'Your own freshly baked whole quesadilla cake to take home',
       'Tasting of warm sweetcorn atol cooked in a clay vessel',
       'Clay-pot coffee sweetened with raw cane panela sugar'
     ],
     notIncludedEs: [
-      'Transporte hasta Atiquizaya'
-    ],
+      ],
     notIncludedEn: [
       'Transit to Atiquizaya'
     ],
@@ -2659,6 +2891,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Cut into golden crusted warm quesadilla with fresh coffee.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: false,
     active: true,
     demoRating: 4.9,
@@ -2680,8 +2919,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'Juayúa, Sonsonate',
     department: 'Sonsonate',
     coordinates: { lat: 13.8419, lng: -89.7469 },
-    meetingPointEs: 'Atrio de la Iglesia Santa Lucía, Juayúa',
-    meetingPointEn: 'Santa Lucía Church steps, Juayúa',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Atrio de la Iglesia Santa Lucía, Juayúa)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: Santa Lucía Church steps, Juayúa)',
     price: 30,
     currency: 'USD',
     priceRange: 'economico',
@@ -2697,20 +2936,21 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/juayua_1_juay_a__el_salvador.jpg.jpg","/assets/destinations/juayua_2_iglesia_juay_a__sonsonate.jpg.jpg","/assets/destinations/juayua_3_iglesia_juay_a__el_salvador.jpg.jpg","/assets/destinations/juayua_4_iglesia_juay_a__sonsonate__el_salvador.jpg.jpg","/assets/destinations/juayua_5_calles_de_juayua_1.jpg.jpg"],
     imageCredits: [{"author":"Fanny Basurto","sourceUrl":"https://commons.wikimedia.org/wiki/File:Juay%C3%BAa,_El_Salvador.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Juayúa, El Salvador"},{"author":"Fanny Basurto","sourceUrl":"https://commons.wikimedia.org/wiki/File:Iglesia_Juay%C3%BAa,_Sonsonate.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Iglesia Juayúa, Sonsonate"},{"author":"Fanny Basurto","sourceUrl":"https://commons.wikimedia.org/wiki/File:Iglesia_Juay%C3%BAa,_El_Salvador.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Iglesia Juayúa, El Salvador"},{"author":"Fanny Basurto","sourceUrl":"https://commons.wikimedia.org/wiki/File:Iglesia_Juay%C3%BAa,_Sonsonate,_El_Salvador.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Iglesia Juayúa, Sonsonate, El Salvador"},{"author":"Erickssonr","sourceUrl":"https://commons.wikimedia.org/wiki/File:Calles_de_Juayua_1.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Calles de Juayua 1"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Guía gastrónomo local de Juayúa',
       'Paseo guiado por el mercado campesino y puestos de especias',
       'Degustación de 3 bocadillos tradicionales (rigua con queso, tamal de elote y dulce artesanal)',
       'Bebida refrescante de chilate o fresco de ensalada'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Local culinary guide from Juayúa',
       'Guided walk through farmers market and spice stalls',
       'Tastings of 3 heritage bites (sweetcorn rigua, tamal, and handmade sweet)',
       'Chilled chopped fruit drink or traditional warm chilate'
     ],
     notIncludedEs: [
-      'Almuerzo formal completo de plato fuerte',
-      'Transporte interdepartamental'
+      'Almuerzo formal completo de plato fuerte'
     ],
     notIncludedEn: [
       'Full sit-down restaurant main course',
@@ -2745,6 +2985,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Sample fresh sweetcorn riguas and fruit drinks at vetted family stalls.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: false,
     active: true,
     demoRating: 4.8,
@@ -2766,8 +3013,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'Guatajiagua, Morazán',
     department: 'Morazán',
     coordinates: { lat: 13.6833, lng: -88.1833 },
-    meetingPointEs: 'Casa de la Cultura y Taller Comunitario de Guatajiagua',
-    meetingPointEn: 'House of Culture & Community Pottery Studio, Guatajiagua',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Casa de la Cultura y Taller Comunitario de Guatajiagua)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: House of Culture & Community Pottery Studio, Guatajiagua)',
     price: 40,
     currency: 'USD',
     priceRange: 'medio',
@@ -2783,6 +3030,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/perquin_1_parque_de_perqu_n.jpg.jpg","/assets/destinations/perquin_2_casa_de_la_cultura_en_perqu_n__el_salvador_-_2009.jpg.jpg","/assets/destinations/perquin_3_cerro_de_perqu_n.jpg.jpg","/assets/destinations/perquin_4_llano_del_muerto_en_perqu_n__el_salvador_-_2011.jpg.jpg"],
     imageCredits: [{"author":"Tatiana Caledonio","sourceUrl":"https://commons.wikimedia.org/wiki/File:Parque_de_Perqu%C3%ADn.jpg","license":"Public domain","licenseUrl":"https://creativecommons.org/licenses/","caption":"Parque de Perquín"},{"author":"Tatiana Caledonio","sourceUrl":"https://commons.wikimedia.org/wiki/File:Casa_de_la_Cultura_en_Perqu%C3%ADn,_El_Salvador_-_2009.jpg","license":"Public domain","licenseUrl":"https://creativecommons.org/licenses/","caption":"Casa de la Cultura en Perquín, El Salvador - 2009"},{"author":"Tatiana Caledonio","sourceUrl":"https://commons.wikimedia.org/wiki/File:Cerro_de_Perqu%C3%ADn.jpg","license":"Public domain","licenseUrl":"https://creativecommons.org/licenses/","caption":"Cerro de Perquín"},{"author":"House1090","sourceUrl":"https://commons.wikimedia.org/wiki/File:Llano_del_Muerto_en_Perqu%C3%ADn,_El_Salvador_-_2011.jpg","license":"CC BY-SA 2.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/2.0","caption":"Llano del Muerto en Perquín, El Salvador - 2011"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Maestra alfarera de la comunidad indígena de Guatajiagua',
       'Materiales de barro natural y herramientas tradicionales',
       'Taller práctico de modelado donde creas tu propia pieza',
@@ -2790,6 +3038,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
       'Refrigerio campesino con fruta y bebida tradicional'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Master potter from the local indigenous collective',
       'Natural clay clay bodies and traditional smoothing river stones',
       'Hands-on shaping workshop creating your own ceramic piece',
@@ -2797,8 +3046,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
       'Homestyle snack and local drink'
     ],
     notIncludedEs: [
-      'Transporte hasta Guatajiagua / Morazán'
-    ],
+      ],
     notIncludedEn: [
       'Transit to Guatajiagua'
     ],
@@ -2831,6 +3079,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Watch hot fired pieces bathed in natural nacascolo tannin extract turning jet black.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Transporte privado climatizado con chofer profesional (ida y vuelta)',
+      modeEn: 'Private air-conditioned transport with professional driver (round-trip)',
+      airportTransfer: false,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: false,
     active: true,
     demoRating: 5.0,
@@ -2872,10 +3127,58 @@ export const DEMO_EXPERIENCES: Experience[] = [
     duration: '2 días / 1 noche',
     durationHours: 32,
     durationType: 'multi_day',
+    packageDurationTier: '2d_1n',
+    durationBadgeEs: '2 Días / 1 Noche',
+    durationBadgeEn: '2D / 1N',
+    travelerProfiles: ['parejas', 'gastronomia', 'adultos_mayores', 'familias'],
+    comfortLevel: 'estandar',
+    destinationsCovered: ['Ahuachapán', 'Salcoatitán', 'Apaneca', 'Ataco', 'Termales de Santa Teresa'],
+    accommodationDetails: {
+      typeEs: 'Hotel boutique de montaña con arquitectura colonial',
+      typeEn: 'Boutique mountain lodge with colonial architecture',
+      detailsEs: 'Habitación doble con baño privado, agua caliente, balcón con vista a jardines de café y desayuno típico incluido.',
+      detailsEn: 'Double room with private bathroom, hot water, garden view balcony, and traditional highland breakfast included.',
+      comfortTier: 'estandar'
+    },
+    transportDetails: {
+      modeEs: 'Transporte privado con aire acondicionado y chofer profesional durante los 2 días',
+      modeEn: 'Private air-conditioned tourism transport with professional driver for both days',
+      airportTransfer: false,
+      pickupNotesEs: 'Pick-up coordinado en tu hotel en San Salvador, Santa Ana o Juayúa',
+      pickupNotesEn: 'Coordinated pickup at your San Salvador, Santa Ana, or Juayúa hotel'
+    },
+    mealPlan: {
+      summaryEs: '1 desayuno típico de montaña, 2 almuerzos tradicionales y 1 cena campestre',
+      summaryEn: '1 highland breakfast, 2 traditional lunches, 1 dinner included',
+      breakfastCount: 1,
+      lunchCount: 2,
+      dinnerCount: 1
+    },
+    customizationOptions: [
+      {
+        id: 'opt-spa-termal',
+        labelEs: 'Tratamiento de barro mineral y masaje relajante en termales',
+        labelEn: 'Mineral mud treatment & relaxation massage at thermal springs',
+        descriptionEs: 'Sesión privada de spa natural en las pozas volcánicas de Santa Teresa.',
+        descriptionEn: 'Private natural spa session in Santa Teresa volcanic pools.',
+        priceDiff: 35,
+        category: 'actividad'
+      },
+      {
+        id: 'opt-upgrade-boutique',
+        labelEs: 'Upgrade a Suite Presidencial en Cabañas de Apaneca',
+        labelEn: 'Upgrade to Presidential Mountain Suite',
+        descriptionEs: 'Habitación superior con chimenea a leña y tina de hidromasaje.',
+        descriptionEn: 'Superior room with wood-burning fireplace and hydromassage tub.',
+        priceDiff: 60,
+        category: 'alojamiento'
+      }
+    ],
     availabilityStatus: 'propuesta_a_medida',
     difficulty: 'facil',
     isPackage: true,
     packageDays: 2,
+    packageNights: 1,
     packageServices: {
       transportIncluded: true,
       accommodationIncluded: true,
@@ -2907,6 +3210,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
       'Taller y degustación de café de especialidad Pacamara'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Private air-conditioned tourist vehicle with professional driver for 2 full days',
       '1 night lodging at a vetted highland boutique hotel (double occupancy)',
       'Certified bilingual guide accompanying the entire circuit',
@@ -2996,10 +3300,58 @@ export const DEMO_EXPERIENCES: Experience[] = [
     duration: '3 días / 2 noches',
     durationHours: 54,
     durationType: 'multi_day',
+    packageDurationTier: '3d_2n',
+    durationBadgeEs: '3 Días / 2 Noches',
+    durationBadgeEn: '3D / 2N',
+    travelerProfiles: ['aventura', 'individual', 'grupos', 'parejas'],
+    comfortLevel: 'estandar',
+    destinationsCovered: ['Surf City', 'Playa El Tunco', 'Playa El Zonte', 'Playa El Sunzal'],
+    accommodationDetails: {
+      typeEs: 'Lodge de surf frente al mar o hotel boutique costero',
+      typeEn: 'Beachfront surf lodge or coastal boutique hotel',
+      detailsEs: 'Habitación privada con aire acondicionado, WiFi satelital, piscina y acceso directo a la playa de arena volcánica.',
+      detailsEn: 'Private air-conditioned room, high-speed WiFi, pool, and direct footstep access to volcanic sand beach breaks.',
+      comfortTier: 'estandar'
+    },
+    transportDetails: {
+      modeEs: 'Shuttle privado aeropuerto-playa y traslados diarios a los mejores picos de surf',
+      modeEn: 'Private airport-beach shuttle and daily surf spot transfers',
+      airportTransfer: true,
+      pickupNotesEs: 'Recepción directa en sala de llegadas de Aeropuerto Internacional (SAL)',
+      pickupNotesEn: 'Direct greeting at SAL International Airport arrival hall'
+    },
+    mealPlan: {
+      summaryEs: 'Desayunos energéticos diarios con café salvadoreño y 2 almuerzos marinos frente al mar',
+      summaryEn: 'Daily energizing breakfasts with local coffee and 2 oceanfront seafood lunches',
+      breakfastCount: 2,
+      lunchCount: 2,
+      dinnerCount: 0
+    },
+    customizationOptions: [
+      {
+        id: 'opt-video-analysis',
+        labelEs: 'Sesión de foto y video coaching profesional con drone',
+        labelEn: 'Professional drone photo & video coaching session',
+        descriptionEs: 'Análisis técnico post-sesión para acelerar tu progresión en la ola.',
+        descriptionEn: 'Post-session technical video breakdown to speed up your wave riding.',
+        priceDiff: 45,
+        category: 'actividad'
+      },
+      {
+        id: 'opt-ice-bath',
+        labelEs: 'Sesión de crioterapia y baño de hielo post-surf',
+        labelEn: 'Ice bath recovery session & breathwork workshop',
+        descriptionEs: 'Recuperación muscular guiada y respiración consciente al atardecer.',
+        descriptionEn: 'Guided muscle recovery and sunset breathwork.',
+        priceDiff: 25,
+        category: 'actividad'
+      }
+    ],
     availabilityStatus: 'propuesta_a_medida',
     difficulty: 'moderado',
     isPackage: true,
     packageDays: 3,
+    packageNights: 2,
     packageServices: {
       transportIncluded: true,
       accommodationIncluded: true,
@@ -3023,6 +3375,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
       ...[{"author":"Martin Haeusler","sourceUrl":"https://commons.wikimedia.org/wiki/File:Pescadores,_Playa_El_Zonte_(01.2011)_-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Pescadores, Playa El Zonte (01.2011) - panoramio"},{"author":"Martin Haeusler","sourceUrl":"https://commons.wikimedia.org/wiki/File:El_Zonte_(01.2011)_-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"El Zonte (01.2011) - panoramio"},{"author":"Martin Haeusler","sourceUrl":"https://commons.wikimedia.org/wiki/File:El_Zonte_(11-2011)_-_panoramio.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"El Zonte (11-2011) - panoramio"}]
     ],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       'Traslado privado ida y vuelta (Aeropuerto/San Salvador - La Libertad)',
       '2 noches de alojamiento en hotel de playa seleccionado con piscina y A/C',
       '3 clases o clínicas de surf personalizadas (2 horas por sesión) con instructor certificado',
@@ -3031,6 +3384,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
       'Paquete digital de fotos y video de tus mejores olas'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Round-trip private shuttle (Airport/San Salvador - Beachfront)',
       '2 nights lodging at a vetted beach lodge with pool and AC',
       '3 coached surf clinics (2 hours each) with certified local coach',
@@ -3148,6 +3502,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
       'Almuerzos típicos incluidos en cada jornada'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Private air-conditioned touring vehicle with dedicated driver for 4 days',
       '3 nights accommodation with breakfasts (1 night Santa Ana, 1 night Suchitoto, 1 night Beach)',
       'Accredited private bilingual tour leader throughout the trip',
@@ -3201,6 +3556,13 @@ export const DEMO_EXPERIENCES: Experience[] = [
         descriptionEn: 'Relax by the ocean, visit the historic fishing pier, and final transfer to airport or city.'
       }
     ],
+        transportDetails: {
+      modeEs: 'Vehículo privado climatizado con chofer y traslados aeropuerto/interdepartamentales',
+      modeEn: 'Private air-conditioned vehicle with driver and airport/intercity transfers',
+      airportTransfer: true,
+      pickupNotesEs: 'Recogida y retorno incluido en hoteles de San Salvador, Santa Ana, Antiguo Cuscatlán o Costa de La Libertad',
+      pickupNotesEn: 'Hotel pickup and drop-off included in San Salvador, Santa Ana, Antiguo Cuscatlán, or La Libertad Coast'
+    },
     featured: true,
     active: true,
     demoRating: 5.0,
@@ -3215,23 +3577,71 @@ export const DEMO_EXPERIENCES: Experience[] = [
     shortDescriptionEn: 'An intimate couples retreat: private golden-hour boat cruise, waterfront dining, and boutique lake lodge stay.',
     descriptionEs: 'Diseñado para aniversarios, lunas de miel o celebraciones en pareja. Esta experiencia premium te invita a disfrutar la serenidad del Lago de Coatepeque con absoluta privacidad. Incluye un crucero privado al atardecer en pontón o lancha clásica con tabla de quesos y vino, cena a la luz de las velas junto al agua y noche en una cabaña de madera con balcón panorámico hacia la caldera volcánica.',
     descriptionEn: 'Tailored for couples seeking a peaceful, romantic sanctuary. Sail the turquoise waters of Lake Coatepeque on a private sunset cruise complete with artisan cheese board and chilled wine. Indulge in a candlelit lakefront dinner, followed by an overnight stay at a boutique eco-lodge offering uninterrupted views of Santa Ana volcano.',
-    category: 'paquetes',
+    category: 'especial',
     region: 'Occidente',
     location: 'Lago de Coatepeque, Santa Ana',
     department: 'Santa Ana',
     coordinates: { lat: 13.8697, lng: -89.5539 },
-    meetingPointEs: 'Eco-Resort Ribera del Lago de Coatepeque (coordinación previa)',
-    meetingPointEn: 'Lake Coatepeque Waterfront Eco-Resort',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Eco-Resort Ribera del Lago de Coatepeque (coordinación previa))',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: Lake Coatepeque Waterfront Eco-Resort)',
     price: 240,
     currency: 'USD',
     priceRange: 'premium',
     duration: '2 días / 1 noche',
     durationHours: 26,
     durationType: 'multi_day',
+    packageDurationTier: '2d_1n',
+    durationBadgeEs: '2 Días / 1 Noche',
+    durationBadgeEn: '2D / 1N',
+    travelerProfiles: ['parejas', 'premium'],
+    comfortLevel: 'premium',
+    destinationsCovered: ['Lago de Coatepeque', 'Santa Ana'],
+    accommodationDetails: {
+      typeEs: 'Cabaña panorámica o Suite de lujo frente al lago',
+      typeEn: 'Luxury panoramic lakefront cabin or suite',
+      detailsEs: 'Cama King, terraza de madera privada con vista a la caldera volcánica, jacuzzi exterior privado y chimenea.',
+      detailsEn: 'King bed, private wooden balcony over caldera, private outdoor tub, and fireplace.',
+      comfortTier: 'premium'
+    },
+    transportDetails: {
+      modeEs: 'Traslado privado en vehículo SUV de lujo (opcional) o llegada directa en vehículo propio',
+      modeEn: 'Private luxury SUV transfer (optional) or direct arrival',
+      airportTransfer: false,
+      pickupNotesEs: 'Servicio de chofer privado disponible desde San Salvador bajo solicitud',
+      pickupNotesEn: 'Private chauffeur available from San Salvador upon request'
+    },
+    mealPlan: {
+      summaryEs: '1 desayuno gourmet en terraza, 1 tabla de quesos y vinos, y 1 cena romántica de 3 tiempos a la luz de las velas',
+      summaryEn: '1 gourmet balcony breakfast, artisan wine & cheese board, and 1 3-course candlelit dinner',
+      breakfastCount: 1,
+      lunchCount: 0,
+      dinnerCount: 1
+    },
+    customizationOptions: [
+      {
+        id: 'opt-ramo-flores',
+        labelEs: 'Decoración floral con rosas y ambientación de velas',
+        labelEn: 'Romantic floral setup with fresh roses & candles',
+        descriptionEs: 'Arreglo romántico de bienvenida y velas aromáticas en la habitación.',
+        descriptionEn: 'Romantic welcome flowers and ambient aromatherapy candles in your suite.',
+        priceDiff: 40,
+        category: 'actividad'
+      },
+      {
+        id: 'opt-masaje-pareja',
+        labelEs: 'Masaje relajante en pareja en deck privado frente al agua',
+        labelEn: 'Couples relaxation massage on private waterfront deck',
+        descriptionEs: '60 minutos de masaje con aceites esenciales botánicos.',
+        descriptionEn: '60-minute therapeutic massage with botanical essential oils.',
+        priceDiff: 90,
+        category: 'actividad'
+      }
+    ],
     availabilityStatus: 'propuesta_a_medida',
     difficulty: 'facil',
     isPackage: true,
     packageDays: 2,
+    packageNights: 1,
     packageServices: {
       transportIncluded: false,
       accommodationIncluded: true,
@@ -3249,6 +3659,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
     images: ["/assets/destinations/coatepeque_1_coatepeque_-_santa_ana_by_mimamor.png.jpg","/assets/destinations/coatepeque_2_coatepeque_caldera.jpg.jpg","/assets/destinations/coatepeque_3_teopan.jpg.jpg","/assets/destinations/coatepeque_4_lago_de_coatepeque-el_salvador.jpg.jpg","/assets/destinations/coatepeque_5_lago_de_coatepeque_28-11-2014.jpg.jpg"],
     imageCredits: [{"author":"MIMAMOR from California, USA","sourceUrl":"https://commons.wikimedia.org/wiki/File:Coatepeque_-_santa_ana_by_mimamor.png","license":"CC BY 2.0","licenseUrl":"https://creativecommons.org/licenses/by/2.0","caption":"Coatepeque - santa ana by mimamor"},{"author":"Lee Siebert, Smithsonian Institution","sourceUrl":"https://commons.wikimedia.org/wiki/File:Coatepeque_Caldera.jpg","license":"Public domain","licenseUrl":"https://creativecommons.org/licenses/","caption":"Coatepeque Caldera"},{"author":"Public domainPublic domainfalsefalse\n\n\n\n  \n\nThis work has been released into the public domain by its author, Laspelotas, at the English Wikipedia project. This applies worldwide.\nIn case this is not legally possible: Laspelotas grants anyone the right to use this work for any purpose, without any conditions, unless such conditions are required by law.","sourceUrl":"https://commons.wikimedia.org/wiki/File:Teopan.jpg","license":"Public domain","licenseUrl":"https://creativecommons.org/licenses/","caption":"Teopan"},{"author":"ElmerGuevara","sourceUrl":"https://commons.wikimedia.org/wiki/File:Lago_de_Coatepeque-El_Salvador.JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Lago de Coatepeque-El Salvador"},{"author":"Alberto Uecke","sourceUrl":"https://commons.wikimedia.org/wiki/File:Lago_de_Coatepeque_28-11-2014.JPG","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"Lago de Coatepeque 28-11-2014"}],
     includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
       '1 noche de hospedaje en cabaña o suite boutique con vista al lago y cama King',
       'Paseo privado en lancha/pontón al atardecer (1.5 horas) exclusivo para la pareja',
       'Tabla de quesos artesanales salvadoreños, frutas y botella de vino seleccionada',
@@ -3256,6 +3667,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
       'Desayuno a la carta con café de especialidad servido en el balcón'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       '1 night lodging in a boutique lakefront cabin/suite with panoramic king bed',
       '1.5-hour private sunset pontoon boat cruise exclusive to the couple',
       'Artisan local cheese platter, fresh fruits, and curated bottle of wine',
@@ -3263,7 +3675,6 @@ export const DEMO_EXPERIENCES: Experience[] = [
       'A la carte breakfast with specialty coffee served on your balcony'
     ],
     notIncludedEs: [
-      'Transporte terrestre hasta el Lago de Coatepeque (se puede añadir como extra)',
       'Bebidas alcohólicas adicionales'
     ],
     notIncludedEn: [
@@ -3333,10 +3744,58 @@ export const DEMO_EXPERIENCES: Experience[] = [
     duration: '3 días / 2 noches',
     durationHours: 52,
     durationType: 'multi_day',
+    packageDurationTier: '3d_2n',
+    durationBadgeEs: '3 Días / 2 Noches',
+    durationBadgeEn: '3D / 2N',
+    travelerProfiles: ['familias', 'adultos_mayores', 'grupos'],
+    comfortLevel: 'estandar',
+    destinationsCovered: ['Cerro Verde', 'Lago de Coatepeque', 'Izalco', 'Santa Ana'],
+    accommodationDetails: {
+      typeEs: 'Lodge familiar campestre con jardines, piscina y habitaciones comunicadas',
+      typeEn: 'Family countryside lodge with gardens, pool, and connected suites',
+      detailsEs: 'Habitación familiar múltiple o cabaña independiente con camas cómodas, baño privado y áreas verdes seguras para niños.',
+      detailsEn: 'Spacious family suite or private detached cottage with private bath and secure manicured play lawns.',
+      comfortTier: 'estandar'
+    },
+    transportDetails: {
+      modeEs: 'Van turística privada con aire acondicionado, asientos para niños y chofer certificado',
+      modeEn: 'Private air-conditioned touring van with child safety seats and certified driver',
+      airportTransfer: false,
+      pickupNotesEs: 'Pick-up directo en la puerta de tu hotel o residencia en San Salvador o Santa Ana',
+      pickupNotesEn: 'Door-to-door pickup at your hotel or residence in San Salvador or Santa Ana'
+    },
+    mealPlan: {
+      summaryEs: 'Todos los desayunos familiares incluidos y 2 almuerzos típicos con menús infantiles',
+      summaryEn: 'All family breakfasts included plus 2 traditional lunches with kid-friendly options',
+      breakfastCount: 2,
+      lunchCount: 2,
+      dinnerCount: 0
+    },
+    customizationOptions: [
+      {
+        id: 'opt-kayaks-kids',
+        labelEs: 'Paseo en pontón familiar con chalecos salvavidas para todas las edades',
+        labelEn: 'Private family pontoon cruise with fitted life jackets',
+        descriptionEs: 'Recorrido sereno por los manantiales y aguas calientes del lago.',
+        descriptionEn: 'Gentle cruise around lake springs and calm coves.',
+        priceDiff: 45,
+        category: 'actividad'
+      },
+      {
+        id: 'opt-noche-fogata',
+        labelEs: 'Noche de fogata, historias y bombones al aire libre',
+        labelEn: 'Campfire evening, local storytelling & s’mores',
+        descriptionEs: 'Actividad nocturna familiar alrededor del fuego en el jardín del hotel.',
+        descriptionEn: 'Cozy outdoor evening activity around the garden fire pit.',
+        priceDiff: 20,
+        category: 'actividad'
+      }
+    ],
     availabilityStatus: 'propuesta_a_medida',
     difficulty: 'facil',
     isPackage: true,
     packageDays: 3,
+    packageNights: 2,
     packageServices: {
       transportIncluded: true,
       accommodationIncluded: true,
@@ -3368,6 +3827,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
       'Paseo en lancha y uso de kayaks seguros con chalecos para todas las tallas'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Private air-conditioned family van transit with professional driver for 3 days',
       '2 nights in a family-friendly country lodge with gardens and pool',
       'Family-focused tour guide and activities coordinator',
@@ -3445,18 +3905,66 @@ export const DEMO_EXPERIENCES: Experience[] = [
     location: 'Circuito Nacional Multidestino',
     department: 'San Salvador',
     coordinates: { lat: 13.6989, lng: -89.1914 },
-    meetingPointEs: 'Aeropuerto Internacional de El Salvador (SAL) - Servicio de bienvenida en sala de llegadas',
-    meetingPointEn: 'El Salvador International Airport (SAL) - VIP arrival hall greeting',
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Aeropuerto Internacional de El Salvador (SAL) - Servicio de bienvenida en sala de llegadas)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: El Salvador International Airport (SAL) - VIP arrival hall greeting)',
     price: 580,
     currency: 'USD',
     priceRange: 'premium',
     duration: '5 días / 4 noches',
     durationHours: 96,
     durationType: 'multi_day',
+    packageDurationTier: '5d_4n',
+    durationBadgeEs: '5 Días / 4 Noches',
+    durationBadgeEn: '5D / 4N',
+    travelerProfiles: ['individual', 'parejas', 'grupos', 'premium'],
+    comfortLevel: 'premium',
+    destinationsCovered: ['San Salvador', 'Santa Ana', 'Joya de Cerén', 'Lago de Coatepeque', 'Suchitoto', 'Surf City El Tunco'],
+    accommodationDetails: {
+      typeEs: 'Hoteles boutique 4 estrellas seleccionados y posadas patrimoniales',
+      typeEn: 'Curated 4-star boutique hotels and heritage colonial posadas',
+      detailsEs: '4 noches de hospedaje con desayunos (1 noche San Salvador, 1 noche Santa Ana, 1 noche Suchitoto, 1 noche frente al Pacífico).',
+      detailsEn: '4 nights accommodation with breakfasts (1 night San Salvador, 1 night Santa Ana, 1 night Suchitoto, 1 night beachfront Pacific).',
+      comfortTier: 'premium'
+    },
+    transportDetails: {
+      modeEs: 'Minivan ejecutiva con aire acondicionado, WiFi y chofer profesional dedicado',
+      modeEn: 'Executive air-conditioned touring minivan with dedicated driver and WiFi',
+      airportTransfer: true,
+      pickupNotesEs: 'Recepción VIP en sala de llegadas de Aeropuerto SAL y retorno programado para tu vuelo',
+      pickupNotesEn: 'VIP arrival greeting at SAL Airport and synchronized departure flight transfer'
+    },
+    mealPlan: {
+      summaryEs: 'Todos los desayunos incluidos y 4 almuerzos típicos y de autor en restaurantes insignia',
+      summaryEn: 'All breakfasts included plus 4 authentic Salvadoran gourmet lunches',
+      breakfastCount: 4,
+      lunchCount: 4,
+      dinnerCount: 0
+    },
+    customizationOptions: [
+      {
+        id: 'opt-all-inclusive-dinners',
+        labelEs: 'Plan de cenas gourmet en los mejores restaurantes de cada destino',
+        labelEn: 'Gourmet dinner plan at top curated destination restaurants',
+        descriptionEs: 'Cenas coordinadas de 3 tiempos con maridaje o cóctel de bienvenida.',
+        descriptionEn: '3-course dinners reserved with welcome cocktail in each city.',
+        priceDiff: 140,
+        category: 'alimentacion'
+      },
+      {
+        id: 'opt-upgrade-presidential',
+        labelEs: 'Upgrade a Suites Presidenciales y Cabaña con Jacuzzi',
+        labelEn: 'Upgrade to Presidential Suites & Private Jacuzzi Cabin',
+        descriptionEs: 'La categoría más exclusiva de alojamiento durante las 4 noches.',
+        descriptionEn: 'Top-tier luxury accommodations across all 4 destinations.',
+        priceDiff: 220,
+        category: 'alojamiento'
+      }
+    ],
     availabilityStatus: 'propuesta_a_medida',
     difficulty: 'moderado',
     isPackage: true,
     packageDays: 5,
+    packageNights: 4,
     packageServices: {
       transportIncluded: true,
       accommodationIncluded: true,
@@ -3490,6 +3998,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
       'Taller privado de añil en Suchitoto y cata de café de especialidad en finca de altura'
     ],
     includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
       'Private air-conditioned coach with professional driver and onboard WiFi for the entire trip',
       '4 nights accommodation with breakfasts (San Salvador, Santa Ana, Suchitoto, Beach)',
       'Accredited private bilingual tour leader for the 5 days',
@@ -3556,5 +4065,1366 @@ export const DEMO_EXPERIENCES: Experience[] = [
     active: true,
     demoRating: 5.0,
     demoReviewsCount: 34
+  },
+
+  // ==========================================
+  // GRAN CIRCUITO 7 DÍAS / 6 NOCHES
+  // ==========================================
+  {
+    id: 'pkg-gran-circuito-7d6n',
+    slug: 'gran-circuito-el-salvador-completo-7dias-6noches',
+    titleEs: 'Gran Circuito El Salvador Completo: De Volcanes a Bahía de Jiquilisco (7 Días / 6 Noches)',
+    titleEn: 'Complete El Salvador Grand Expedition: From Volcanic Peaks to Pacific Biosphere (7D / 6N)',
+    shortDescriptionEs: 'La expedición definitiva de 7 días: volcanes, Ruta de las Flores, Suchitoto colonial, Joya de Cerén, olas de Surf City y manglares de Jiquilisco.',
+    shortDescriptionEn: 'The definitive 7-day master circuit connecting volcanoes, coffee highlands, UNESCO Maya relics, colonial towns, Surf City, and coastal biosphere.',
+    descriptionEs: 'El viaje integral insignia de GIA Experiences organizado con rigor geográfico para evitar desplazamientos innecesarios y maximizar cada jornada. Acompañado por un guía líder privado bilingüe y chofer profesional, explorarás la totalidad del país: desde la caldera turquesa de Santa Ana y los pueblos coloniales de la cordillera cafetalera, pasando por la arquitectura histórica de San Salvador y Suchitoto, hasta relajarte en las playas de Surf City y navegar en lancha entre los manglares y tortugas marinas de la Bahía de Jiquilisco.',
+    descriptionEn: 'Our premier signature master tour engineered with optimal geographic pacing to eliminate backtracking and maximize discovery. Led by an accredited bilingual guide and private driver throughout, this 7-day circuit traverses El Salvador’s complete tapestry: summiting Santa Ana’s turquoise crater, exploring the artisanal villages of Ruta de las Flores, discovering UNESCO World Heritage at Joya de Cerén, walking colonial cobblestones in Suchitoto, surfing Pacific waters, and boating through Jiquilisco Bay’s sea turtle sanctuaries.',
+    category: 'paquetes',
+    region: 'Centro',
+    location: 'Circuito Nacional Completo (Occidente, Centro, Costa y Oriente)',
+    department: 'San Salvador',
+    coordinates: { lat: 13.6989, lng: -89.1914 },
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Aeropuerto Internacional de El Salvador (SAL) - Sala de llegadas internacionales)',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: El Salvador International Airport (SAL) - International Arrivals Greeting)',
+    price: 890,
+    currency: 'USD',
+    priceRange: 'premium',
+    duration: '7 días / 6 noches',
+    durationHours: 144,
+    durationType: 'multi_day',
+    packageDurationTier: '7d_6n',
+    durationBadgeEs: '7 Días / 6 Noches',
+    durationBadgeEn: '7D / 6N',
+    travelerProfiles: ['individual', 'parejas', 'familias', 'grupos', 'premium'],
+    comfortLevel: 'premium',
+    isPriceOnQuote: true,
+    priceNoteEs: 'Desde $890 USD por persona en base doble. Tarifa sujeta a cotización según categoría de hotel preferida.',
+    priceNoteEn: 'From $890 USD per person (double occupancy). Price subject to custom quote based on chosen hotel tier.',
+    destinationsCovered: [
+      'San Salvador (Centro Histórico)',
+      'Joya de Cerén (UNESCO)',
+      'Parque Nacional Los Volcanes (Santa Ana)',
+      'Lago de Coatepeque',
+      'Ruta de las Flores (Apaneca y Ataco)',
+      'Suchitoto y Lago Suchitlán',
+      'Surf City (Playa El Tunco / El Zonte)',
+      'Bahía de Jiquilisco (Reserva de Biosfera)'
+    ],
+    accommodationDetails: {
+      typeEs: 'Hoteles boutique patrimoniales y ecolodges de primer nivel',
+      typeEn: 'Curated heritage boutique hotels and premier eco-resorts',
+      detailsEs: '6 noches de alojamiento con desayuno incluido: 1 noche San Salvador, 1 noche Lago de Coatepeque, 1 noche Concepción de Ataco, 1 noche Suchitoto, 1 noche Surf City El Tunco, 1 noche Bahía de Jiquilisco.',
+      detailsEn: '6 nights accommodation with breakfast: 1 night San Salvador, 1 night Lake Coatepeque, 1 night Ataco, 1 night Suchitoto, 1 night Surf City, 1 night Jiquilisco Bay.',
+      comfortTier: 'premium'
+    },
+    transportDetails: {
+      modeEs: 'Transporte turístico privado con aire acondicionado, conductor profesional y WiFi a bordo',
+      modeEn: 'Private air-conditioned tourism vehicle with dedicated driver and onboard WiFi',
+      airportTransfer: true,
+      pickupNotesEs: 'Recepción en sala de llegadas de Aeropuerto SAL y retorno sincronizado a tu vuelo de salida',
+      pickupNotesEn: 'Arrival greeting at SAL Airport and departure transfer synchronized with your flight'
+    },
+    mealPlan: {
+      summaryEs: 'Todos los desayunos incluidos, 6 almuerzos tradicionales y de autor en ruta, y cena de bienvenida',
+      summaryEn: 'All breakfasts included, 6 curated destination lunches, and welcome dinner',
+      breakfastCount: 6,
+      lunchCount: 6,
+      dinnerCount: 1
+    },
+    customizationOptions: [
+      {
+        id: 'opt-7d-all-dinners',
+        labelEs: 'Plan completo de cenas gourmet en restaurantes locales seleccionados',
+        labelEn: 'Complete 6-night gourmet dinner plan at vetted destination restaurants',
+        descriptionEs: 'Cenas de 3 tiempos con mesa reservada y bebidas de bienvenida.',
+        descriptionEn: '3-course dinners reserved with welcome drinks in each town.',
+        priceDiff: 190,
+        category: 'alimentacion'
+      },
+      {
+        id: 'opt-7d-private-boat-jiquilisco',
+        labelEs: 'Lancha rápida privada exclusiva en Bahía de Jiquilisco y liberación de tortugas',
+        labelEn: 'Exclusive private speedboat in Jiquilisco Bay & turtle release project',
+        descriptionEs: 'Participación directa con biólogos locales en el santuario de tortugas carey.',
+        descriptionEn: 'Hands-on participation with local marine biologists at hawksbill turtle nursery.',
+        priceDiff: 75,
+        category: 'actividad'
+      }
+    ],
+    availabilityStatus: 'propuesta_a_medida',
+    difficulty: 'moderado',
+    isPackage: true,
+    packageDays: 7,
+    packageNights: 6,
+    packageServices: {
+      transportIncluded: true,
+      accommodationIncluded: true,
+      mealsIncluded: true,
+      guidesIncluded: true,
+      ticketsIncluded: true,
+      communityVisit: true
+    },
+    proposalNoteEs: 'Propuesta insignia de gran circuito. Los hoteles, vehículos y actividades se configuran según el perfil exacto de tu grupo.',
+    proposalNoteEn: 'Signature grand circuit proposal. Accommodations, vehicles, and activities custom-tailored to your party.',
+    languages: ['ES', 'EN'],
+    groupType: ['individual', 'parejas', 'familias', 'grupos'],
+    minPeople: 2,
+    maxPeople: 14,
+    images: [
+      ...["/assets/destinations/santa_ana_1_santa_ana_volcano.usaf.c-130.1.jpg.jpg","/assets/destinations/santa_ana_2_windows_of_santa_ana_01.jpg.jpg"],
+      ...["/assets/destinations/coatepeque_1_coatepeque_-_santa_ana_by_mimamor.png.jpg","/assets/destinations/coatepeque_2_coatepeque_caldera.jpg.jpg"],
+      ...["/assets/destinations/suchitoto_1_iglesia_de_suchitoto..jpg.jpg","/assets/destinations/suchitoto_2_calles_de_suchitoto_agosto..jpg.jpg"],
+      ...["/assets/destinations/el_tunco_1_atardecer_en_el_tunco.jpg.jpg","/assets/destinations/el_tunco_2_tunco_lodge.jpg.jpg"]
+    ],
+    imageCredits: [
+      ...[{"author":"Wikimedia Commons","sourceUrl":"https://commons.wikimedia.org/wiki/File:Santa_Ana_Volcano.USAF.C-130.1.jpg","license":"Public domain","licenseUrl":"https://creativecommons.org/licenses/","caption":"Santa Ana Volcano.USAF.C-130.1"},{"author":"H. Zell","sourceUrl":"https://commons.wikimedia.org/wiki/File:Windows_of_Santa_Ana_01.jpg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Windows of Santa Ana 01"}],
+      ...[{"author":"MIMAMOR from California, USA","sourceUrl":"https://commons.wikimedia.org/wiki/File:Coatepeque_-_santa_ana_by_mimamor.png","license":"CC BY 2.0","licenseUrl":"https://creativecommons.org/licenses/by/2.0","caption":"Coatepeque - santa ana by mimamor"}],
+      ...[{"author":"ElmerGuevara","sourceUrl":"https://commons.wikimedia.org/wiki/File:Iglesia_De_Suchitoto..JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Iglesia De Suchitoto."}],
+      ...[{"author":"Silvia Villalta, Esmeralda Manzur, Natalia Valenzuela","sourceUrl":"https://commons.wikimedia.org/wiki/File:ATARDECER_EN_EL_TUNCO.jpg","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"ATARDECER EN EL TUNCO"}]
+    ],
+    includedEs: [
+      'Transporte turístico privado exclusivo con chofer profesional y WiFi durante los 7 días completos',
+      '6 noches de hospedaje con desayunos en hoteles boutique y lodges certificados de El Salvador',
+      'Guía turístico privado bilingüe acreditado por el Ministerio de Turismo acompañando toda la ruta',
+      'Todas las entradas y permisos oficiales (Joya de Cerén, Parque Nacional Los Volcanes, Palacio Nacional, etc.)',
+      '6 almuerzos tradicionales completos en restaurantes insignia de cada región',
+      'Cena de bienvenida en San Salvador con degustación de pupusas gourmet',
+      'Paseo privado en pontón al atardecer en Lago de Coatepeque y tour en lancha en Bahía de Jiquilisco',
+      'Taller privado de añil en Suchitoto y cata de café Pacamara de especialidad en finca de altura'
+    ],
+    includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
+      'Private air-conditioned touring van with professional driver and onboard WiFi for the entire 7 days',
+      '6 nights accommodation with daily breakfast at premier boutique hotels and eco-resorts',
+      'Accredited private bilingual tour leader accompanying the complete itinerary',
+      'All official national park admissions and archaeological permits',
+      '6 curated traditional lunches at iconic regional restaurants',
+      'Welcome dinner in San Salvador with gourmet pupusa tasting flight',
+      'Private sunset boat cruise on Lake Coatepeque and mangrove boat expedition in Jiquilisco Bay',
+      'Hands-on organic indigo workshop in Suchitoto and specialty Pacamara coffee cupping'
+    ],
+    notIncludedEs: [
+      'Vuelo aéreo internacional de llegada y salida',
+      'Cenas de los días 2 al 6 (libertad para explorar la gastronomía nocturna)',
+      'Seguro de viaje internacional'
+    ],
+    notIncludedEn: [
+      'International airfare',
+      'Dinners on days 2 through 6 (free evenings to discover local dining scenes)',
+      'International travel medical insurance'
+    ],
+    requirementsEs: [
+      'Pasaporte con al menos 6 meses de vigencia',
+      'Calzado cerrado con buena tracción para volcanes y ropa ligera de playa'
+    ],
+    requirementsEn: [
+      'Valid passport with at least 6 months validity',
+      'Closed-toe hiking shoes with grip and light breathable beachwear'
+    ],
+    itinerary: [
+      {
+        time: 'Día 1',
+        titleEs: 'Bienvenida en el aeropuerto, Centro Histórico de San Salvador y Cena de Bienvenida',
+        titleEn: 'Day 1: Arrival welcome, Historic Downtown San Salvador & Welcome Dinner',
+        descriptionEs: 'Recepción en aeropuerto, traslado a hotel y recorrido guiado por el Palacio Nacional, Iglesia El Rosario y cena de pupusas gourmet.',
+        descriptionEn: 'Airport pickup, check-in, walking tour of the restored National Palace and El Rosario church, ending with gourmet pupusas.'
+      },
+      {
+        time: 'Día 2',
+        titleEs: 'Sitios Mayas de Joya de Cerén (UNESCO) & San Andrés, traslado al Lago de Coatepeque',
+        titleEn: 'Day 2: UNESCO Joya de Cerén & San Andrés Maya ruins, drive to Lake Coatepeque',
+        descriptionEs: 'Exploración de la aldea prehispánica intacta bajo ceniza volcánica y pirámides mayas. Noche en hotel boutique junto al lago.',
+        descriptionEn: 'Discover the pre-Columbian village preserved beneath volcanic ash, followed by San Andrés. Overnight at lakefront lodge.'
+      },
+      {
+        time: 'Día 3',
+        titleEs: 'Ascenso al Cráter del Volcán Santa Ana (Ilamatepec) y mirador de Cerro Verde',
+        titleEn: 'Day 3: Santa Ana Volcano Crater trek & Cerro Verde overlooks',
+        descriptionEs: 'Caminata guiada hacia la laguna de azufre esmeralda a 2,381 msnm. Traslado hacia la Ruta de las Flores. Noche en Ataco.',
+        descriptionEn: 'Guided summit hike to the steaming turquoise caldera lake, followed by scenic drive into Ruta de las Flores. Overnight in Ataco.'
+      },
+      {
+        time: 'Día 4',
+        titleEs: 'Ruta de las Flores: Apaneca, Laberinto de Albania, cata de café y aguas termales',
+        titleEn: 'Day 4: Ruta de las Flores: Apaneca, coffee finca cupping & Santa Teresa hot springs',
+        descriptionEs: 'Recorrido entre cafetos de sombra, laberinto vegetal y relajante baño en las termales naturales de Santa Teresa. Noche en Ataco.',
+        descriptionEn: 'Shade coffee plantation tour, cypress maze adventure, and relaxing evening in volcanic thermal springs. Overnight in Ataco.'
+      },
+      {
+        time: 'Día 5',
+        titleEs: 'Suchitoto colonial, taller del oro azul (añil) y navegación en Lago Suchitlán',
+        titleEn: 'Day 5: Colonial Suchitoto, organic indigo dyeing atelier & Suchitlán lake boat ride',
+        descriptionEs: 'Calles de adoquín, casas señoriales, teñido tradicional de bufanda en añil y lancha entre aves acuáticas. Noche en Suchitoto.',
+        descriptionEn: 'Cobblestone colonial architecture, artisan indigo workshop, and late afternoon birdwatching boat ride. Overnight in Suchitoto.'
+      },
+      {
+        time: 'Día 6',
+        titleEs: 'Traslado a Surf City, olas del Pacífico en El Tunco / El Zonte y atardecer costero',
+        titleEn: 'Day 6: Drive to Surf City, Pacific beach break in El Tunco/El Zonte & sunset session',
+        descriptionEs: 'Viaje escénico hacia la costa salvadoreña, clase o descanso en la playa de arena volcánica y mariscos frescos. Noche frente al mar.',
+        descriptionEn: 'Scenic transfer down to the Pacific coastline, surf lesson or beach club relaxation, and seafood feast. Overnight by the ocean.'
+      },
+      {
+        time: 'Día 7',
+        titleEs: 'Expedición en lancha por Bahía de Jiquilisco, santuario de tortugas y traslado al aeropuerto',
+        titleEn: 'Day 7: Jiquilisco Bay mangrove boat expedition, sea turtle sanctuary & airport farewell',
+        descriptionEs: 'Navegación entre canales de manglar en la mayor reserva de biosfera del país, almuerzo marinero y traslado a tiempo al aeropuerto.',
+        descriptionEn: 'Boat cruise through UNESCO Biosphere mangrove canals, fresh coastal lunch, and private transfer to airport for departure flight.'
+      }
+    ],
+    featured: true,
+    active: true,
+    demoRating: 5.0,
+    demoReviewsCount: 48
+  },
+
+  // ==========================================
+  // PAQUETE COMUNITARIO MORAZÁN (3D / 2N)
+  // ==========================================
+  {
+    id: 'pkg-morazan-paz-3d2n',
+    slug: 'ruta-de-la-paz-y-naturaleza-morazan-3dias',
+    titleEs: 'Ruta de la Paz, Memoria Histórica & Naturaleza Virgen en Morazán (3 Días / 2 Noches)',
+    titleEn: 'Peace Route, Living History & Pristine Nature in Morazán (3D / 2N)',
+    shortDescriptionEs: 'Una inmersión profunda en la historia viva salvadoreña: Perquín, Museo de la Revolución, aguas turquesas del Río Sapo y saberes comunitarios.',
+    shortDescriptionEn: 'A deep cultural journey through living memory: Perquín, Revolution Museum, pristine turquoise pools of Río Sapo, and community cooperatives.',
+    descriptionEs: 'El departamento de Morazán guarda algunas de las memorias más conmovedoras y los paisajes de montaña más vírgenes de Centroamérica. En este paquete de 3 días conocerás la historia del conflicto armado y la construcción de la paz de boca de sus propios protagonistas en Perquín y la comunidad Segundo Montes. Disfrutarás de caminatas por pinares y baños refrescantes en el cristalino Río Sapo, considerado el río más limpio de El Salvador.',
+    descriptionEn: 'Morazán preserves both the poignant memory of El Salvador’s civil conflict and some of Central America’s cleanest mountain waters. This 3-day immersive journey visits the historic town of Perquín, the Revolution Museum guided by former combatants, and community cooperatives, balanced with refreshing swims in the pristine turquoise pools of Río Sapo.',
+    category: 'comunitario',
+    region: 'Oriente',
+    location: 'Perquín y Arambala, Morazán',
+    department: 'Morazán',
+    coordinates: { lat: 13.9567, lng: -88.1611 },
+    meetingPointEs: 'San Salvador (pick-up coordinado en hotel) o punto de encuentro en San Miguel',
+    meetingPointEn: 'San Salvador hotel pickup or San Miguel meeting point',
+    price: 245,
+    currency: 'USD',
+    priceRange: 'medio',
+    duration: '3 días / 2 noches',
+    durationHours: 52,
+    durationType: 'multi_day',
+    packageDurationTier: '3d_2n',
+    durationBadgeEs: '3 Días / 2 Noches',
+    durationBadgeEn: '3D / 2N',
+    travelerProfiles: ['aventura', 'gastronomia', 'adultos_mayores', 'grupos'],
+    comfortLevel: 'economico',
+    destinationsCovered: ['Perquín', 'Río Sapo', 'Arambala', 'Comunidad Segundo Montes', 'El Mozote'],
+    accommodationDetails: {
+      typeEs: 'Posada de montaña comunitaria o cabañas de pino en Perquín',
+      typeEn: 'Community mountain lodge or pine cottages in Perquín',
+      detailsEs: 'Cabañas rústicas acogedoras con baño privado, agua caliente de montaña y clima fresco entre pinares.',
+      detailsEn: 'Cozy rustic mountain cabins with private bathroom, warm mountain water, and crisp pine air.',
+      comfortTier: 'economico'
+    },
+    transportDetails: {
+      modeEs: 'Transporte privado 4x4 o van turística con chofer local experimentado',
+      modeEn: 'Private 4x4 touring van with experienced local mountain driver',
+      airportTransfer: false,
+      pickupNotesEs: 'Pick-up directo en San Salvador o San Miguel',
+      pickupNotesEn: 'Direct pickup in San Salvador or San Miguel'
+    },
+    mealPlan: {
+      summaryEs: 'Desayunos campesinos tradicionales con cuajada de Morazán y 3 almuerzos típicos incluidos',
+      summaryEn: 'Traditional country breakfasts with artisan cheese and 3 hearty local lunches',
+      breakfastCount: 2,
+      lunchCount: 3,
+      dinnerCount: 0
+    },
+    customizationOptions: [
+      {
+        id: 'opt-morazan-guatajiagua',
+        labelEs: 'Visita adicional a los artesanos de alfarería negra de Guatajiagua',
+        labelEn: 'Additional artisan visit to black pottery masters of Guatajiagua',
+        descriptionEs: 'Taller práctico de barro teñido con tinte natural de nacascol.',
+        descriptionEn: 'Hands-on pottery workshop with ancestral nacascol natural black dye.',
+        priceDiff: 25,
+        category: 'actividad'
+      }
+    ],
+    availabilityStatus: 'propuesta_a_medida',
+    difficulty: 'moderado',
+    isPackage: true,
+    packageDays: 3,
+    packageNights: 2,
+    packageServices: {
+      transportIncluded: true,
+      accommodationIncluded: true,
+      mealsIncluded: true,
+      guidesIncluded: true,
+      ticketsIncluded: true,
+      communityVisit: true
+    },
+    proposalNoteEs: 'Propuesta de turismo comunitario y memoria histórica coordinada directamente con cooperativas de Morazán.',
+    proposalNoteEn: 'Community-based tourism and living history package coordinated directly with Morazán cooperatives.',
+    languages: ['ES', 'EN'],
+    groupType: ['individual', 'parejas', 'grupos'],
+    minPeople: 2,
+    maxPeople: 10,
+    images: [
+      ...["/assets/destinations/suchitoto_1_iglesia_de_suchitoto..jpg.jpg","/assets/destinations/suchitoto_2_calles_de_suchitoto_agosto..jpg.jpg"],
+      ...["/assets/destinations/cerro_verde_1_volc_n_de_izalco.jpg.jpg"]
+    ],
+    imageCredits: [
+      ...[{"author":"ElmerGuevara","sourceUrl":"https://commons.wikimedia.org/wiki/File:Iglesia_De_Suchitoto..JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Iglesia De Suchitoto."}]
+    ],
+    includedEs: [
+      'Transporte turístico privado durante los 3 días completos por Morazán',
+      '2 noches de hospedaje en cabañas de montaña en Perquín',
+      'Acompañamiento de guía local de la comunidad y testimonios de la memoria histórica',
+      'Entradas al Museo de la Revolución de Perquín y monumento de El Mozote',
+      'Paseo guiado y tiempo libre para nadar en las pozas turquesas del Río Sapo',
+      'Todos los desayunos y 3 almuerzos tradicionales campesinos'
+    ],
+    includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
+      'Private touring vehicle for all 3 days in Morazán',
+      '2 nights lodging in mountain cabins in Perquín',
+      'Local community guide accompaniment and living history testimonials',
+      'Admission to Perquín Revolution Museum and El Mozote memorial',
+      'Guided walk and swimming time in Río Sapo turquoise river pools',
+      'All breakfasts and 3 traditional mountain lunches'
+    ],
+    notIncludedEs: [
+      'Cenas (disponibilidad de comedores y cafés locales en Perquín)',
+      'Gastos personales y compras de artesanías'
+    ],
+    notIncludedEn: [
+      'Dinners (local dining options in Perquín town)',
+      'Personal expenses & souvenirs'
+    ],
+    requirementsEs: [
+      'Calzado de montaña y sandalias acuáticas para el río',
+      'Abrigo para las noches frescas de montaña (altura de 1,200 msnm)'
+    ],
+    requirementsEn: [
+      'Hiking shoes and water sandals for river walking',
+      'Warm sweater for cool mountain evenings (1,200m altitude)'
+    ],
+    itinerary: [
+      {
+        time: 'Día 1 - 07:30',
+        titleEs: 'Salida hacia Morazán y llegada a la Comunidad Segundo Montes',
+        titleEn: 'Day 1: Scenic journey to Morazán & Segundo Montes Community',
+        descriptionEs: 'Traslado hacia el oriente, visita a cooperativas comunitarias y almuerzo en Meanguera.',
+        descriptionEn: 'Drive east into the mountains, tour community cooperatives, and enjoy regional lunch.'
+      },
+      {
+        time: 'Día 1 - 14:00',
+        titleEs: 'Perquín y Museo de la Revolución',
+        titleEn: 'Day 1: Perquín town & Revolution Museum',
+        descriptionEs: 'Recorrido por las salas históricas y trincheras guiado por historiadores locales.',
+        descriptionEn: 'Explore historic war exhibits and trench networks led by local community storytellers.'
+      },
+      {
+        time: 'Día 2 - 09:00',
+        titleEs: 'Senderismo y baño en el Río Sapo',
+        titleEn: 'Day 2: Rio Sapo pristine turquoise waters hike & swim',
+        descriptionEs: 'Caminata entre pinares y pozas cristalinas de agua pura. Almuerzo campestre junto al río.',
+        descriptionEn: 'Hike among pines to pristine turquoise waters. Relax and picnic by the riverbank.'
+      },
+      {
+        time: 'Día 2 - 15:30',
+        titleEs: 'Cerro de Perquín y mirador panorámico',
+        titleEn: 'Day 2: Cerro de Perquín summit viewpoint',
+        descriptionEs: 'Ascenso corto al mirador para contemplar el atardecer sobre la frontera con Honduras.',
+        descriptionEn: 'Short climb to summit cross for panoramic sunset views across the mountain range.'
+      },
+      {
+        time: 'Día 3 - 09:00',
+        titleEs: 'Monumento de El Mozote y regreso',
+        titleEn: 'Day 3: El Mozote memorial walk & afternoon return',
+        descriptionEs: 'Homenaje a la memoria y reconciliación, almuerzo típico y viaje de retorno.',
+        descriptionEn: 'Memorial visit and reflections on reconciliation, followed by lunch and return drive.'
+      }
+    ],
+    featured: false,
+    active: true,
+    demoRating: 4.9,
+    demoReviewsCount: 16
+  },
+
+  // ==========================================
+  // ESCAPADA ALEGRÍA & SIERRA TECAPA (2D / 1N)
+  // ==========================================
+  {
+    id: 'pkg-alegria-usulutan-2d1n',
+    slug: 'escapada-laguna-de-alegria-y-sierra-tecapa-2dias',
+    titleEs: 'Escapada Laguna de Alegría & Cafetales de la Sierra Tecapa (2 Días / 1 Noche)',
+    titleEn: 'Alegría Emerald Crater Lake & Sierra Tecapa Highlands (2D / 1N)',
+    shortDescriptionEs: 'Pueblo de flores, clima fresco de montaña, la mística "Esmeralda de América" en el cráter de Alegría y miradores volcánicos.',
+    shortDescriptionEn: 'Highland flower village, crisp mountain breezes, the mystical emerald sulfur crater lake, and panoramic Sierra overlooks.',
+    descriptionEs: 'Alegría es uno de los pueblos más pintorescos y poéticos de El Salvador, cuna del célebre escritor Alberto Masferrer. Este paquete de 2 días te lleva a respirar la tranquilidad de sus calles empedradas adornadas con viveros de flores, ascender al cráter volcánico donde reposa la laguna sulfurosa verde esmeralda y degustar cafés de estricta altura cultivados en suelos de ceniza volcánica.',
+    descriptionEn: 'Perched in the cool heights of the Tecapa mountain range, Alegría is famed for its flower nurseries, colonial plazas, and the emerald sulfur crater lake christened by Chilean poet Gabriela Mistral as "The Emerald of America". Enjoy a tranquil 2-day escape with coffee tastings and mountain views.',
+    category: 'naturaleza',
+    region: 'Oriente',
+    location: 'Ciudad de Alegría y Volcán Tecapa, Usulután',
+    department: 'Usulután',
+    coordinates: { lat: 13.5017, lng: -88.5000 },
+    meetingPointEs: 'San Salvador o San Miguel (pick-up coordinado en hotel)',
+    meetingPointEn: 'San Salvador or San Miguel hotel pickup',
+    price: 175,
+    currency: 'USD',
+    priceRange: 'medio',
+    duration: '2 días / 1 noche',
+    durationHours: 30,
+    durationType: 'multi_day',
+    packageDurationTier: '2d_1n',
+    durationBadgeEs: '2 Días / 1 Noche',
+    durationBadgeEn: '2D / 1N',
+    travelerProfiles: ['parejas', 'individual', 'adultos_mayores', 'gastronomia'],
+    comfortLevel: 'estandar',
+    destinationsCovered: ['Ciudad de Alegría', 'Laguna de Alegría', 'Mirador de las Cien Graditas', 'Santiago de María'],
+    accommodationDetails: {
+      typeEs: 'Posada colonial con encanto o cabaña de montaña en Alegría',
+      typeEn: 'Colonial boutique posada or mountain cabin in Alegría',
+      detailsEs: 'Habitación privada con baño, agua caliente, vistas a las colinas cafetaleras y patio con flores.',
+      detailsEn: 'Private room with bath, hot water, coffee hill vistas, and flowering courtyards.',
+      comfortTier: 'estandar'
+    },
+    transportDetails: {
+      modeEs: 'Transporte privado turístico con aire acondicionado durante los 2 días',
+      modeEn: 'Private air-conditioned tourism transport for both days',
+      airportTransfer: false,
+      pickupNotesEs: 'Pick-up coordinado en San Salvador o San Miguel',
+      pickupNotesEn: 'Coordinated pickup in San Salvador or San Miguel'
+    },
+    mealPlan: {
+      summaryEs: '1 desayuno montañés con pupusas de arroz o maíz, y 2 almuerzos tradicionales en miradores',
+      summaryEn: '1 mountain breakfast and 2 traditional lunches at scenic overlooks',
+      breakfastCount: 1,
+      lunchCount: 2,
+      dinnerCount: 0
+    },
+    customizationOptions: [
+      {
+        id: 'opt-cata-cafe-tecapa',
+        labelEs: 'Cata guiada de micro-lotes de café Bourbon y Pacamara de la sierra',
+        labelEn: 'Guided cupping of Bourbon and Pacamara micro-lots',
+        descriptionEs: 'Sesión con barista profesional en cafetería de especialidad de Alegría.',
+        descriptionEn: 'Session with professional coffee master in artisan café.',
+        priceDiff: 20,
+        category: 'alimentacion'
+      }
+    ],
+    availabilityStatus: 'propuesta_a_medida',
+    difficulty: 'facil',
+    isPackage: true,
+    packageDays: 2,
+    packageNights: 1,
+    packageServices: {
+      transportIncluded: true,
+      accommodationIncluded: true,
+      mealsIncluded: true,
+      guidesIncluded: true,
+      ticketsIncluded: true,
+      communityVisit: true
+    },
+    proposalNoteEs: 'Propuesta de escapada rural y ecoturismo en la sierra oriental de El Salvador.',
+    proposalNoteEn: 'Rural ecotourism getaway in the eastern volcanic highlands.',
+    languages: ['ES', 'EN'],
+    groupType: ['individual', 'parejas', 'familias', 'grupos'],
+    minPeople: 2,
+    maxPeople: 10,
+    images: [
+      ...["/assets/destinations/coatepeque_1_coatepeque_-_santa_ana_by_mimamor.png.jpg","/assets/destinations/coatepeque_2_coatepeque_caldera.jpg.jpg"],
+      ...["/assets/destinations/santa_ana_2_windows_of_santa_ana_01.jpg.jpg"]
+    ],
+    imageCredits: [
+      ...[{"author":"MIMAMOR","sourceUrl":"https://commons.wikimedia.org/wiki/File:Coatepeque_-_santa_ana_by_mimamor.png","license":"CC BY 2.0","licenseUrl":"https://creativecommons.org/licenses/by/2.0","caption":"Coatepeque"}]
+    ],
+    includedEs: [
+      'Transporte turístico privado con chofer durante los 2 días completos',
+      '1 noche de hospedaje en hotel o posada típica en Alegría',
+      'Guía turístico acreditado acompañando visitas a la laguna y viveros',
+      'Entradas a la Laguna de Alegría y miradores de la Sierra Tecapa',
+      '1 desayuno típico y 2 almuerzos tradicionales en terrazas panorámicas'
+    ],
+    includedEn: [
+      'Private tourism transport with driver for both full days',
+      '1 night lodging in a traditional posada in Alegría town',
+      'Certified guide for crater lake and town strolls',
+      'Admission permits to Alegría crater lake and panoramic lookouts',
+      '1 traditional breakfast and 2 scenic terrace lunches'
+    ],
+    notIncludedEs: [
+      'Cena libre en los restaurantes del parque central de Alegría',
+      'Compras de plantas y recuerdos en viveros locales'
+    ],
+    notIncludedEn: [
+      'Dinner (free evening around the town square)',
+      'Plant and souvenir purchases at local nurseries'
+    ],
+    requirementsEs: [
+      'Calzado cómodo de caminata y suéter ligero para la noche fresca'
+    ],
+    requirementsEn: [
+      'Walking shoes and light sweater for cool mountain evenings'
+    ],
+    itinerary: [
+      {
+        time: 'Día 1 - 08:30',
+        titleEs: 'Salida hacia la Sierra Tecapa y llegada a Ciudad de Alegría',
+        titleEn: 'Day 1: Scenic drive up Sierra Tecapa into Alegría town',
+        descriptionEs: 'Llegada, paseo por el parque central con casas de madera y visita a viveros florales.',
+        descriptionEn: 'Arrive in the picturesque mountain village, visit flowering nurseries and plaza.'
+      },
+      {
+        time: 'Día 1 - 14:00',
+        titleEs: 'Cráter Volcánico y Laguna de Alegría',
+        titleEn: 'Day 1: Volcanic Crater & Emerald Sulfur Lake',
+        descriptionEs: 'Caminata alrededor de las orillas termales esmeralda de la laguna volcánica.',
+        descriptionEn: 'Stroll around the emerald volcanic lake shores with geothermal fumaroles.'
+      },
+      {
+        time: 'Día 2 - 09:00',
+        titleEs: 'Mirador de las Cien Graditas y cata de café',
+        titleEn: 'Day 2: Scenic lookout walk & highland coffee tasting',
+        descriptionEs: 'Vista panorámica sobre el valle de Jiquilisco y degustación de café de altura.',
+        descriptionEn: 'Panoramic valley views reaching the coast, followed by artisan coffee tasting.'
+      },
+      {
+        time: 'Día 2 - 13:30',
+        titleEs: 'Almuerzo tradicional y viaje de regreso',
+        titleEn: 'Day 2: Traditional lunch and afternoon return',
+        descriptionEs: 'Almuerzo típico de despedida antes de emprender el retorno.',
+        descriptionEn: 'Farewell regional lunch before comfortable return journey.'
+      }
+    ],
+    featured: false,
+    active: true,
+    demoRating: 4.8,
+    demoReviewsCount: 14
+  },
+
+  // ==========================================
+  // TOURS DE UN DÍA (1 Día - Sin Alojamiento)
+  // ==========================================
+  {
+    id: 'exp-tour-1d-volcan-lago',
+    slug: 'tour-1-dia-volcan-santa-ana-y-lago-coatepeque',
+    titleEs: 'Tour de 1 Día: Cráter del Volcán Santa Ana & Almuerzo Panorámico en Coatepeque (Full Day)',
+    titleEn: '1-Day Tour: Santa Ana Volcano Crater Trek & Scenic Lake Coatepeque Lunch (Full Day)',
+    shortDescriptionEs: 'La combinación clásica perfecta en una sola jornada: ascenso guiado al cráter turquesa y almuerzo relajante frente al lago. Sin alojamiento.',
+    shortDescriptionEn: 'The signature day trip: guided hike to the turquoise volcano crater followed by a relaxing lakefront lunch. No lodging required.',
+    descriptionEs: 'Diseñado para viajeros que disponen de un día libre en El Salvador y desean conocer sus dos atractivos naturales más célebres sin necesidad de pernoctar. Incluye transporte privado ida y vuelta desde San Salvador, ascenso guiado por expertos al cráter activo del Volcán Ilamatepec, tiempo para fotos panorámicas de la laguna turquesa y posterior almuerzo típico salvadoreño en un restaurante con terraza sobre el Lago de Coatepeque.',
+    descriptionEn: 'Ideal for travelers with a single day available who want to experience El Salvador’s two most famous natural landmarks seamlessly. Includes round-trip private transport from San Salvador, certified mountain guiding to the summit crater lake of Santa Ana Volcano, and a relaxing lakeside lunch over Lake Coatepeque before returning to the city by late afternoon.',
+    category: 'naturaleza',
+    region: 'Occidente',
+    location: 'Santa Ana y Lago de Coatepeque',
+    department: 'Santa Ana',
+    coordinates: { lat: 13.8533, lng: -89.6306 },
+    meetingPointEs: 'San Salvador (Pick-up en hotel u oficina a las 06:30 AM)',
+    meetingPointEn: 'San Salvador hotel or Airbnb pickup at 06:30 AM',
+    price: 65,
+    currency: 'USD',
+    priceRange: 'medio',
+    duration: '9 horas (Full Day)',
+    durationHours: 9,
+    durationType: 'full_day',
+    packageDurationTier: '1_dia',
+    durationBadgeEs: '1 Día (Sin Hotel)',
+    durationBadgeEn: '1 Day (No Hotel)',
+    travelerProfiles: ['aventura', 'individual', 'parejas', 'grupos'],
+    comfortLevel: 'estandar',
+    destinationsCovered: ['Parque Nacional Los Volcanes', 'Volcán Santa Ana', 'Lago de Coatepeque'],
+    accommodationDetails: {
+      typeEs: 'Sin alojamiento incluido (Experiencia de 1 día)',
+      typeEn: 'No lodging included (1-Day full day tour)',
+      detailsEs: 'Este tour concluye el mismo día en la tarde con regreso cómodo a tu hotel en San Salvador.',
+      detailsEn: 'This full-day tour concludes late afternoon with direct return drop-off at your hotel.',
+      comfortTier: 'estandar'
+    },
+    transportDetails: {
+      modeEs: 'Transporte privado con aire acondicionado y chofer durante todo el día',
+      modeEn: 'Private air-conditioned tourism vehicle with dedicated driver for the full day',
+      airportTransfer: false,
+      pickupNotesEs: 'Pick-up a las 06:30 AM y drop-off a las 16:30 PM en San Salvador',
+      pickupNotesEn: 'Pickup at 06:30 AM and drop-off around 16:30 PM in San Salvador'
+    },
+    mealPlan: {
+      summaryEs: 'Refrigerio ligero de hidratación en sendero y almuerzo típico completo en restaurante del lago',
+      summaryEn: 'Trail snacks and water plus full traditional lunch at lakefront restaurant',
+      breakfastCount: 0,
+      lunchCount: 1,
+      dinnerCount: 0
+    },
+    customizationOptions: [
+      {
+        id: 'opt-1d-boat-coatepeque',
+        labelEs: 'Paseo en lancha de 45 minutos por el Lago de Coatepeque post-almuerzo',
+        labelEn: '45-minute private boat tour on Lake Coatepeque after lunch',
+        descriptionEs: 'Navegación relajante por las aguas termales y orillas de la caldera.',
+        descriptionEn: 'Scenic boat cruise along thermal spring shoreline and private islands.',
+        priceDiff: 25,
+        category: 'actividad'
+      }
+    ],
+    availabilityStatus: 'disponible_inmediato',
+    difficulty: 'moderado',
+    isPackage: true,
+    packageDays: 1,
+    packageNights: 0,
+    packageServices: {
+      transportIncluded: true,
+      accommodationIncluded: false,
+      mealsIncluded: true,
+      guidesIncluded: true,
+      ticketsIncluded: true,
+      communityVisit: false
+    },
+    proposalNoteEs: 'Tour de día completo con transporte y guía incluido. No requiere hospedaje.',
+    proposalNoteEn: 'Full-day tour with private transport and certified guide. No accommodation required.',
+    languages: ['ES', 'EN'],
+    groupType: ['individual', 'parejas', 'grupos'],
+    minPeople: 1,
+    maxPeople: 14,
+    images: [
+      ...["/assets/destinations/santa_ana_1_santa_ana_volcano.usaf.c-130.1.jpg.jpg","/assets/destinations/santa_ana_2_windows_of_santa_ana_01.jpg.jpg"],
+      ...["/assets/destinations/coatepeque_1_coatepeque_-_santa_ana_by_mimamor.png.jpg"]
+    ],
+    imageCredits: [
+      ...[{"author":"Wikimedia Commons","sourceUrl":"https://commons.wikimedia.org/wiki/File:Santa_Ana_Volcano.USAF.C-130.1.jpg","license":"Public domain","licenseUrl":"https://creativecommons.org/licenses/","caption":"Santa Ana Volcano.USAF.C-130.1"}]
+    ],
+    includedEs: [
+      'Transporte turístico privado ida y vuelta desde San Salvador con aire acondicionado',
+      'Guía turístico acreditado y guardaparque para el ascenso al volcán',
+      'Todas las entradas oficiales al Parque Nacional Los Volcanes',
+      'Almuerzo típico completo en restaurante con terraza sobre el Lago de Coatepeque',
+      'Kit básico de hidratación y bastón de apoyo para senderismo'
+    ],
+    includedEn: [
+      'Roundtrip private air-conditioned tourist transport from San Salvador',
+      'Certified mountain guide and park ranger escort for the volcano summit',
+      'All Los Volcanes National Park entrance fees and permits',
+      'Traditional multi-course lunch at panoramic lakefront restaurant',
+      'Trail hydration pack and trekking pole support'
+    ],
+    notIncludedEs: [
+      'Hospedaje nocturno (tour de regreso en el día)',
+      'Bebidas alcohólicas adicionales en el restaurante',
+      'Propinas voluntarias'
+    ],
+    notIncludedEn: [
+      'Nightly lodging (same-day return tour)',
+      'Alcoholic drinks at lunch',
+      'Voluntary gratuities'
+    ],
+    requirementsEs: [
+      'Calzado cerrado con buena tracción y abrigo ligero para la cumbre ventosa'
+    ],
+    requirementsEn: [
+      'Closed-toe footwear with grip and light windbreaker for the summit'
+    ],
+    itinerary: [
+      {
+        time: '06:30',
+        titleEs: 'Pick-up en San Salvador y traslado a Los Volcanes',
+        titleEn: 'San Salvador hotel pickup & drive to Los Volcanes',
+        descriptionEs: 'Viaje cómodo en minivan privada por la autopista Panamericana.',
+        descriptionEn: 'Comfortable private minivan transit along the Pan-American highway.'
+      },
+      {
+        time: '08:15',
+        titleEs: 'Registro y comienzo del ascenso al Volcán Santa Ana',
+        titleEn: 'Park briefing & Santa Ana volcano summit hike',
+        descriptionEs: 'Ascenso guiado a ritmo pausado con vistas a los volcanes de Izalco y Cerro Verde.',
+        descriptionEn: 'Guided ascent at a steady pace overlooking Izalco volcano cone.'
+      },
+      {
+        time: '11:15',
+        titleEs: 'Cráter de azufre esmeralda y contemplación',
+        titleEn: 'Summit crater rim arrival & photography',
+        descriptionEs: 'Tiempo para descansar, fotografías panorámicas y refrigerio en la caldera activa.',
+        descriptionEn: 'Time to marvel at the turquoise sulfur lagoon and snap 360-degree photos.'
+      },
+      {
+        time: '13:30',
+        titleEs: 'Descenso y traslado al Lago de Coatepeque',
+        titleEn: 'Descent & transfer to Lake Coatepeque',
+        descriptionEs: 'Llegada a restaurante ribereño y almuerzo con vista panorámica a la caldera.',
+        descriptionEn: 'Arrive at lakefront terrace for traditional lunch overlooking turquoise waters.'
+      },
+      {
+        time: '15:30',
+        titleEs: 'Retorno confortable a San Salvador',
+        titleEn: 'Scenic drive back to San Salvador',
+        descriptionEs: 'Llegada estimada a tu hotel a las 17:00 PM.',
+        descriptionEn: 'Estimated hotel drop-off around 17:00 PM.'
+      }
+    ],
+    featured: true,
+    active: true,
+    demoRating: 4.9,
+    demoReviewsCount: 52
+  },
+
+  // ==========================================
+  // TOUR 1 DÍA CULTURA: JOYA DE CERÉN & SUCHITOTO
+  // ==========================================
+  {
+    id: 'exp-tour-1d-joya-suchitoto',
+    slug: 'tour-1-dia-joya-de-ceren-y-suchitoto-colonial',
+    titleEs: 'Tour de 1 Día: Pompeya Maya de Joya de Cerén & Suchitoto Colonial con Taller de Añil',
+    titleEn: '1-Day Tour: UNESCO Joya de Cerén (Maya Pompeii) & Colonial Suchitoto with Indigo Atelier',
+    shortDescriptionEs: 'Viaja en el tiempo: la aldea maya preservada bajo cenizas y el encanto colonial empedrado de Suchitoto con teñido de añil. Sin alojamiento.',
+    shortDescriptionEn: 'Time travel through Maya history frozen under volcanic ash and the cobblestone colonial charm of Suchitoto with indigo dyeing.',
+    descriptionEs: 'Un recorrido cultural insuperable de un día completo. Descubre por la mañana Joya de Cerén, único sitio en Mesoamérica reconocido por la UNESCO como Patrimonio de la Humanidad donde podrás contemplar cómo vivían las familias mayas comunes antes de una erupción volcánica. Luego viajaremos a la señorial ciudad colonial de Suchitoto para caminar por sus calles de adoquín, disfrutar de un almuerzo tradicional y participar en un taller práctico de teñido con el auténtico añil salvadoreño.',
+    descriptionEn: 'An unforgettable cultural day tour. In the morning, explore UNESCO World Heritage Joya de Cerén, often called the Pompeii of the Americas, where volcanic ash froze a 1,400-year-old Maya agricultural community in place. Then travel to cobblestone-paved Suchitoto for a colonial heritage stroll, traditional lunch, and hands-on organic indigo dyeing workshop.',
+    category: 'cultura',
+    region: 'Centro',
+    location: 'Joya de Cerén y Suchitoto',
+    department: 'Cuscatlán',
+    coordinates: { lat: 13.9383, lng: -89.0278 },
+    meetingPointEs: 'San Salvador (Pick-up en hotel a las 08:00 AM)',
+    meetingPointEn: 'San Salvador hotel pickup at 08:00 AM',
+    price: 68,
+    currency: 'USD',
+    priceRange: 'medio',
+    duration: '8 horas (Full Day)',
+    durationHours: 8,
+    durationType: 'full_day',
+    packageDurationTier: '1_dia',
+    durationBadgeEs: '1 Día (Sin Hotel)',
+    durationBadgeEn: '1 Day (No Hotel)',
+    travelerProfiles: ['gastronomia', 'adultos_mayores', 'familias', 'individual'],
+    comfortLevel: 'estandar',
+    destinationsCovered: ['Parque Arqueológico Joya de Cerén (UNESCO)', 'Suchitoto colonial', 'Lago Suchitlán'],
+    accommodationDetails: {
+      typeEs: 'Sin alojamiento incluido (Tour de 1 día)',
+      typeEn: 'No lodging included (1-Day tour)',
+      detailsEs: 'Experiencia cultural de un día completo con regreso a San Salvador al final de la tarde.',
+      detailsEn: 'Full-day cultural circuit returning to San Salvador in the late afternoon.',
+      comfortTier: 'estandar'
+    },
+    transportDetails: {
+      modeEs: 'Transporte privado turístico con aire acondicionado y chofer dedicado',
+      modeEn: 'Private air-conditioned touring vehicle with dedicated driver',
+      airportTransfer: false,
+      pickupNotesEs: 'Pick-up a las 08:00 AM y retorno a las 16:30 PM en San Salvador',
+      pickupNotesEn: 'Pickup at 08:00 AM and drop-off around 16:30 PM in San Salvador'
+    },
+    mealPlan: {
+      summaryEs: 'Almuerzo tradicional en restaurante patrimonial de Suchitoto incluido',
+      summaryEn: 'Traditional multi-course lunch at historic Suchitoto restaurant included',
+      breakfastCount: 0,
+      lunchCount: 1,
+      dinnerCount: 0
+    },
+    customizationOptions: [
+      {
+        id: 'opt-lancha-suchitlan',
+        labelEs: 'Paseo en lancha de 40 minutos en el Lago Suchitlán',
+        labelEn: '40-minute scenic boat cruise on Lake Suchitlán',
+        descriptionEs: 'Avistamiento de garzas y aves migratorias entre islas lacustres.',
+        descriptionEn: 'Birdwatching cruise spotting herons and migratory birds around lake islands.',
+        priceDiff: 18,
+        category: 'actividad'
+      }
+    ],
+    availabilityStatus: 'disponible_inmediato',
+    difficulty: 'facil',
+    isPackage: true,
+    packageDays: 1,
+    packageNights: 0,
+    packageServices: {
+      transportIncluded: true,
+      accommodationIncluded: false,
+      mealsIncluded: true,
+      guidesIncluded: true,
+      ticketsIncluded: true,
+      communityVisit: true
+    },
+    proposalNoteEs: 'Tour cultural de un día completo. Incluye taller de añil donde te llevas tu propia bufanda teñida.',
+    proposalNoteEn: 'Full-day heritage tour. Includes hands-on indigo dyeing atelier with keepsake scarf.',
+    languages: ['ES', 'EN'],
+    groupType: ['individual', 'parejas', 'familias', 'grupos'],
+    minPeople: 1,
+    maxPeople: 12,
+    images: [
+      ...["/assets/destinations/suchitoto_1_iglesia_de_suchitoto..jpg.jpg","/assets/destinations/suchitoto_2_calles_de_suchitoto_agosto..jpg.jpg"],
+      ...["/assets/destinations/suchitoto_3_suchitoto.jpg.jpg"]
+    ],
+    imageCredits: [
+      ...[{"author":"ElmerGuevara","sourceUrl":"https://commons.wikimedia.org/wiki/File:Iglesia_De_Suchitoto..JPG","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0","caption":"Iglesia De Suchitoto."}]
+    ],
+    includedEs: [
+      'Transporte turístico privado ida y vuelta desde San Salvador con aire acondicionado',
+      'Guía cultural acreditado bilingüe durante todo el día',
+      'Boleto de entrada al Parque Arqueológico Joya de Cerén y museo de sitio',
+      'Almuerzo tradicional salvadoreño en terraza con vista al lago o parque central',
+      'Taller práctico de añil orgánico con bufanda 100% de algodón de recuerdo'
+    ],
+    includedEn: [
+      'Roundtrip private air-conditioned transport from San Salvador',
+      'Accredited bilingual heritage guide for the entire day',
+      'Admission fee to Joya de Cerén Archaeological Park & museum',
+      'Traditional multi-course Salvadoran lunch at scenic terrace',
+      'Hands-on organic indigo workshop with take-home 100% cotton scarf'
+    ],
+    notIncludedEs: [
+      'Alojamiento nocturno (tour de 1 día)',
+      'Gastos personales en galerías de arte'
+    ],
+    notIncludedEn: [
+      'Overnight lodging (1-day tour)',
+      'Personal art gallery purchases'
+    ],
+    requirementsEs: [
+      'Calzado cómodo para caminar sobre empedrado colonial y sombrero para el sol'
+    ],
+    requirementsEn: [
+      'Comfortable walking shoes for cobblestones and sun hat'
+    ],
+    itinerary: [
+      {
+        time: '08:00',
+        titleEs: 'Pick-up en San Salvador y viaje a Joya de Cerén',
+        titleEn: 'San Salvador hotel pickup & drive to Joya de Cerén',
+        descriptionEs: 'Salida hacia el valle de Zapotitán.',
+        descriptionEn: 'Drive west towards the fertile Zapotitán valley.'
+      },
+      {
+        time: '09:00',
+        titleEs: 'Visita guiada a la aldea maya Joya de Cerén',
+        titleEn: 'Guided exploration of Joya de Cerén Maya compounds',
+        descriptionEs: 'Recorrido por dormitorios, bodegas, temazcal y campos de cultivo enterrados por el volcán Loma Caldera.',
+        descriptionEn: 'Walk through preserved homes, storerooms, and sauna buried by volcanic eruption.'
+      },
+      {
+        time: '11:15',
+        titleEs: 'Traslado escénico a Suchitoto',
+        titleEn: 'Scenic drive to colonial Suchitoto',
+        descriptionEs: 'Llegada a la capital cultural de El Salvador.',
+        descriptionEn: 'Arrive in El Salvador’s cultural and artistic capital.'
+      },
+      {
+        time: '12:15',
+        titleEs: 'Almuerzo típico y paseo por la Plaza Central',
+        titleEn: 'Traditional lunch & central square stroll',
+        descriptionEs: 'Almuerzo tradicional y visita a la emblemática Iglesia Santa Lucía.',
+        descriptionEn: 'Regional lunch followed by visit to the iconic white Santa Lucía church.'
+      },
+      {
+        time: '14:00',
+        titleEs: 'Taller práctico de añil orgánico',
+        titleEn: 'Hands-on organic indigo dyeing workshop',
+        descriptionEs: 'Aprende las técnicas ancestrales de doblado y sumersión en tintes naturales.',
+        descriptionEn: 'Fold, tie, and dye your own cotton scarf using natural indigo vats.'
+      },
+      {
+        time: '15:30',
+        titleEs: 'Regreso cómodo a San Salvador',
+        titleEn: 'Afternoon return drive to San Salvador',
+        descriptionEs: 'Llegada estimada a tu alojamiento a las 17:00 PM.',
+        descriptionEn: 'Drop-off at your hotel around 17:00 PM.'
+      }
+    ],
+    featured: true,
+    active: true,
+    demoRating: 4.9,
+    demoReviewsCount: 38
+  },
+
+  // ==========================================
+  // TOUR 1 DÍA PLAYA: SURF CITY SUNSET EXPRESS
+  // ==========================================
+  {
+    id: 'exp-tour-1d-surf-sunset',
+    slug: 'tour-1-dia-surf-city-express-y-atardecer-playa-el-tunco',
+    titleEs: 'Tour de 1 Día: Surf City Express, Paseo Costero & Atardecer Dorado en Playa El Tunco',
+    titleEn: '1-Day Tour: Surf City Express, Coastal Walk & Golden Sunset at El Tunco Beach',
+    shortDescriptionEs: 'Disfruta la energía del Pacífico: brisa marina, clase de surf o club de playa, mariscos frescos y atardecer sobre las olas. Sin alojamiento.',
+    shortDescriptionEn: 'Experience the warm Pacific: ocean breeze, coached surf session or beach club relaxation, seafood lunch, and legendary sunset.',
+    descriptionEs: 'Escápate a la costa en un tour de un día completo diseñado para desconectar junto al mar. Saliendo desde San Salvador, te trasladaremos directamente a la zona dorada de Surf City. Tendrás la opción de tomar una clase de surf para principiantes con tabla e instructor o relajarte en un club de playa privado con piscina infinita. Al mediodía disfrutarás de ceviches y mariscos recién capturados frente al océano y culminarás contemplando el atardecer entre las formaciones rocosas de El Tunco.',
+    descriptionEn: 'The quintessential Pacific day escape. Located just 40 minutes from San Salvador, Surf City offers warm tropical water and world-class scenery. Choose between a coached beginner surf lesson with board provided or relaxing poolside at a beachfront club. Savor fresh coastal seafood and finish the afternoon watching the golden sun dip into the Pacific horizon.',
+    category: 'playa',
+    region: 'Costa Pacífico',
+    location: 'Playa El Tunco y Muelle de La Libertad',
+    department: 'La Libertad',
+    coordinates: { lat: 13.4939, lng: -89.3842 },
+    meetingPointEs: 'San Salvador (Pick-up en hotel a las 09:30 AM)',
+    meetingPointEn: 'San Salvador hotel pickup at 09:30 AM',
+    price: 55,
+    currency: 'USD',
+    priceRange: 'economico',
+    duration: '8 horas (Full Day)',
+    durationHours: 8,
+    durationType: 'full_day',
+    packageDurationTier: '1_dia',
+    durationBadgeEs: '1 Día (Sin Hotel)',
+    durationBadgeEn: '1 Day (No Hotel)',
+    travelerProfiles: ['aventura', 'individual', 'grupos', 'parejas'],
+    comfortLevel: 'estandar',
+    destinationsCovered: ['Muelle Pesquero de La Libertad', 'Sunset Park', 'Playa El Tunco'],
+    accommodationDetails: {
+      typeEs: 'Sin alojamiento incluido (Tour de 1 día de regreso en la tarde)',
+      typeEn: 'No accommodation included (Same-day coastal tour)',
+      detailsEs: 'Regreso programado a San Salvador al anochecer tras contemplar la puesta de sol.',
+      detailsEn: 'Scheduled evening return to San Salvador right after sunset.',
+      comfortTier: 'estandar'
+    },
+    transportDetails: {
+      modeEs: 'Transporte privado turístico con aire acondicionado',
+      modeEn: 'Private air-conditioned tourism vehicle',
+      airportTransfer: false,
+      pickupNotesEs: 'Pick-up a las 09:30 AM y retorno a las 18:30 PM en San Salvador',
+      pickupNotesEn: 'Pickup at 09:30 AM and return around 18:30 PM in San Salvador'
+    },
+    mealPlan: {
+      summaryEs: 'Almuerzo completo de mariscos frescos o menú típico costero frente al mar',
+      summaryEn: 'Complete fresh seafood or traditional lunch fronting the Pacific',
+      breakfastCount: 0,
+      lunchCount: 1,
+      dinnerCount: 0
+    },
+    customizationOptions: [
+      {
+        id: 'opt-surf-class-add',
+        labelEs: 'Clase de surf personalizada de 1 hora con instructor certificado y tabla',
+        labelEn: '1-hour coached surf lesson with certified local instructor & board',
+        descriptionEs: 'Aprende a pararte en la espuma y leer las olas de manera segura.',
+        descriptionEn: 'Learn ocean safety and stand up on gentle beach break waves.',
+        priceDiff: 25,
+        category: 'actividad'
+      }
+    ],
+    availabilityStatus: 'disponible_inmediato',
+    difficulty: 'facil',
+    isPackage: true,
+    packageDays: 1,
+    packageNights: 0,
+    packageServices: {
+      transportIncluded: true,
+      accommodationIncluded: false,
+      mealsIncluded: true,
+      guidesIncluded: true,
+      ticketsIncluded: true,
+      communityVisit: true
+    },
+    proposalNoteEs: 'Tour de día de playa con transporte privado y almuerzo marino incluido. No requiere hospedaje.',
+    proposalNoteEn: 'Full-day beach tour with private transport and seafood lunch included. No lodging required.',
+    languages: ['ES', 'EN'],
+    groupType: ['individual', 'parejas', 'grupos'],
+    minPeople: 1,
+    maxPeople: 15,
+    images: [
+      ...["/assets/destinations/el_tunco_1_atardecer_en_el_tunco.jpg.jpg","/assets/destinations/el_tunco_2_tunco_lodge.jpg.jpg"],
+      ...["/assets/destinations/el_tunco_3_bienvenidos_al_tunco.jpg.jpg"]
+    ],
+    imageCredits: [
+      ...[{"author":"Silvia Villalta, Esmeralda Manzur, Natalia Valenzuela","sourceUrl":"https://commons.wikimedia.org/wiki/File:ATARDECER_EN_EL_TUNCO.jpg","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"ATARDECER EN EL TUNCO"}]
+    ],
+    includedEs: [
+      'Transporte turístico privado ida y vuelta desde San Salvador con aire acondicionado',
+      'Paseo guiado por el Muelle Artesanal de La Libertad y Malecón',
+      'Almuerzo completo de mariscos frescos en restaurante frente al mar',
+      'Pase de día con acceso a duchas, vestidores y piscina en club de playa',
+      'Tiempo libre para compras de artesanías playeras y contemplación del atardecer'
+    ],
+    includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
+      'Roundtrip private air-conditioned transit from San Salvador',
+      'Guided walk along historic La Libertad fishing pier',
+      'Complete fresh seafood lunch at oceanfront restaurant',
+      'Day pass with shower and swimming pool access at beach club',
+      'Leisure time to shop bohemian beach crafts and watch sunset'
+    ],
+    notIncludedEs: [
+      'Hospedaje nocturno (tour de 1 día)',
+      'Bebidas alcohólicas adicionales'
+    ],
+    notIncludedEn: [
+      'Nightly accommodation (1-day tour)',
+      'Additional cocktails'
+    ],
+    requirementsEs: [
+      'Traje de baño, sandalias, protector solar biodegradable y toalla'
+    ],
+    requirementsEn: [
+      'Swimwear, sandals, biodegradable sunscreen, and beach towel'
+    ],
+    itinerary: [
+      {
+        time: '09:30',
+        titleEs: 'Pick-up en San Salvador y viaje hacia el Pacífico',
+        titleEn: 'San Salvador hotel pickup & drive to the Pacific',
+        descriptionEs: 'Bajada escénica hacia el litoral por la carretera de Surf City.',
+        descriptionEn: 'Scenic 40-minute drive down to the coastline.'
+      },
+      {
+        time: '10:30',
+        titleEs: 'Muelle pesquero de La Libertad y Sunset Park',
+        titleEn: 'Historic fishing pier & artisanal seafood market',
+        descriptionEs: 'Observación de las lanchas pesqueras tradicionales y brisa marina.',
+        descriptionEn: 'Watch artisanal fishing boats hauled up onto the wooden pier.'
+      },
+      {
+        time: '12:00',
+        titleEs: 'Llegada a Playa El Tunco y almuerzo marinero',
+        titleEn: 'Arrival in El Tunco & oceanfront seafood lunch',
+        descriptionEs: 'Almuerzo frente a las olas con ceviche fresco y pescado frito.',
+        descriptionEn: 'Multi-course coastal seafood lunch right on the beach.'
+      },
+      {
+        time: '14:00',
+        titleEs: 'Tarde libre: Clase de surf opcional o relax en piscina',
+        titleEn: 'Afternoon leisure: Optional surf coaching or pool relaxation',
+        descriptionEs: 'Tiempo para surfear o descansar en camastros con un coco frío.',
+        descriptionEn: 'Catch gentle waves or unwind on pool loungers with fresh coconut water.'
+      },
+      {
+        time: '17:30',
+        titleEs: 'Atardecer dorado sobre la piedra de El Tunco',
+        titleEn: 'Golden hour sunset over iconic El Tunco rock',
+        descriptionEs: 'La postal más emblemática del litoral salvadoreño.',
+        descriptionEn: 'Witness one of Central America’s most photogenic golden sunsets.'
+      },
+      {
+        time: '18:15',
+        titleEs: 'Retorno confortable a San Salvador',
+        titleEn: 'Evening return to San Salvador',
+        descriptionEs: 'Llegada aproximada a tu hotel a las 19:15 PM.',
+        descriptionEn: 'Arrive back at your hotel around 19:15 PM.'
+      }
+    ],
+    featured: true,
+    active: true,
+    demoRating: 4.8,
+    demoReviewsCount: 41
+  },
+
+  // ==========================================
+  // EXPERIENCIA ESPECIAL: SOBREVUELO EN HELICÓPTERO
+  // ==========================================
+  {
+    id: 'exp-vuelo-helicoptero-volcanes',
+    slug: 'sobrevuelo-panoramico-helicoptero-volcanes-y-costa',
+    titleEs: 'Experiencia Especial: Sobrevuelo Panorámico en Helicóptero sobre Volcanes y Costa con Brindis Privado',
+    titleEn: 'Special Experience: VIP Helicopter Flight over Volcanic Craters & Coast with Private Champagne Toast',
+    shortDescriptionEs: 'Una perspectiva aérea irrepetible: sobrevuela los cráteres de Santa Ana y Boquerón, el Lago de Coatepeque y el Pacífico con champaña.',
+    shortDescriptionEn: 'An unforgettable aerial perspective: soar above steaming volcanic calderas, Lake Coatepeque, and the Pacific coastline with champagne.',
+    descriptionEs: 'La experiencia aérea más exclusiva de El Salvador. Despegando desde helipuerto privado en San Salvador, sobrevolarás a baja altitud la caldera activa del Volcán de Santa Ana con su laguna esmeralda humeante, el espejo turquesa de Coatepeque y descenderás hacia la costa pacífica de Surf City. Culmina con un brindis privado de champaña y tabla de quesos finos en un mirador exclusivo.',
+    descriptionEn: 'The most exclusive luxury sightseeing flight in El Salvador. Taking off from a private heliport in San Salvador, enjoy front-row aerial views hovering above the active sulfur lagoon of Santa Ana Volcano, the turquoise crater basin of Lake Coatepeque, and the Pacific surf breaks, ending with a private champagne toast.',
+    category: 'especial',
+    region: 'Centro',
+    location: 'San Salvador (Helipuerto privado) y Volcanes',
+    department: 'San Salvador',
+    coordinates: { lat: 13.6989, lng: -89.1914 },
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Helipuerto Privado Ilopango / San Salvador (Traslado VIP incluido))',
+    meetingPointEn: 'Direct pickup at your hotel / accommodation in San Salvador, Santa Ana, or La Libertad (or designated meeting point: Private VIP Heliport, San Salvador (Luxury transfer included))',
+    price: 490,
+    currency: 'USD',
+    priceRange: 'premium',
+    duration: '2.5 horas (Vuelo de 45 min + Brindis)',
+    durationHours: 2.5,
+    durationType: 'hours',
+    packageDurationTier: '1_dia',
+    durationBadgeEs: 'Experiencia Especial VIP',
+    durationBadgeEn: 'Special VIP Experience',
+    travelerProfiles: ['parejas', 'premium'],
+    comfortLevel: 'premium',
+    isPriceOnQuote: true,
+    priceNoteEs: 'Tarifa sujeta a cotización según número de pasajeros (capacidad de 2 a 4 personas por vuelo).',
+    priceNoteEn: 'Rate subject to custom quote based on guest count (2 to 4 passengers per flight).',
+    destinationsCovered: ['Volcán de San Salvador', 'Volcán Santa Ana', 'Lago de Coatepeque', 'Costa del Pacífico'],
+    accommodationDetails: {
+      typeEs: 'No aplica (Experiencia privada de día)',
+      typeEn: 'Not applicable (Private day experience)',
+      detailsEs: 'Servicio exclusivo de sobrevuelo con traslados en vehículo blindado o de lujo incluido.',
+      detailsEn: 'Exclusive flight service with luxury private chauffeur transit included.',
+      comfortTier: 'premium'
+    },
+    transportDetails: {
+      modeEs: 'Helicóptero ejecutivo Bell o Robinson con piloto certificado y traslado terrestre en SUV de lujo',
+      modeEn: 'Executive Bell/Robinson helicopter with certified captain and luxury SUV ground transfer',
+      airportTransfer: true,
+      pickupNotesEs: 'Pick-up privado en tu hotel en San Salvador',
+      pickupNotesEn: 'Private luxury pickup at your hotel in San Salvador'
+    },
+    mealPlan: {
+      summaryEs: 'Brindis con botella de champaña francesa y tabla gourmet de quesos importados y fresas',
+      summaryEn: 'French champagne toast with imported artisan cheese and fresh strawberry platter',
+      breakfastCount: 0,
+      lunchCount: 0,
+      dinnerCount: 0
+    },
+    customizationOptions: [
+      {
+        id: 'opt-video-drone-flight',
+        labelEs: 'Video cinematográfico profesional del despegue, vuelo y brindis grabado en 4K',
+        labelEn: 'Professional 4K cinematic video of takeoff, flight, and toast',
+        descriptionEs: 'Cámaras interiores y dron exterior para recuerdo audiovisual inolvidable.',
+        descriptionEn: 'Interior cockpit cameras and exterior drone footage edited into a keepsake film.',
+        priceDiff: 150,
+        category: 'actividad'
+      }
+    ],
+    availabilityStatus: 'propuesta_a_medida',
+    difficulty: 'facil',
+    isPackage: true,
+    packageDays: 1,
+    packageNights: 0,
+    packageServices: {
+      transportIncluded: true,
+      accommodationIncluded: false,
+      mealsIncluded: true,
+      guidesIncluded: true,
+      ticketsIncluded: true,
+      communityVisit: false
+    },
+    proposalNoteEs: 'Experiencia privada de alta gama. Requiere confirmación de peso y datos de pasajeros con 48 horas de anticipación.',
+    proposalNoteEn: 'Top-tier luxury experience. Requires passenger weight confirmation 48 hours in advance.',
+    languages: ['ES', 'EN'],
+    groupType: ['parejas', 'grupos'],
+    minPeople: 2,
+    maxPeople: 4,
+    images: [
+      ...["/assets/destinations/santa_ana_1_santa_ana_volcano.usaf.c-130.1.jpg.jpg","/assets/destinations/coatepeque_1_coatepeque_-_santa_ana_by_mimamor.png.jpg"],
+      ...["/assets/destinations/el_tunco_1_atardecer_en_el_tunco.jpg.jpg"]
+    ],
+    imageCredits: [
+      ...[{"author":"Wikimedia Commons","sourceUrl":"https://commons.wikimedia.org/wiki/File:Santa_Ana_Volcano.USAF.C-130.1.jpg","license":"Public domain","licenseUrl":"https://creativecommons.org/licenses/","caption":"Santa Ana Volcano"}]
+    ],
+    includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
+      'Traslado terrestre privado en vehículo SUV de lujo desde tu hotel hasta el helipuerto',
+      'Sobrevuelo privado de 45 minutos en helicóptero ejecutivo con piloto comercial certificado',
+      'Ruta aérea panorámica sobre Volcán de San Salvador, Santa Ana, Lago de Coatepeque y litoral',
+      'Brindis privado post-vuelo con champaña y tabla de aperitivos gourmet',
+      'Seguro aeronáutico y permisos de aviación civil'
+    ],
+    includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
+      'Private luxury SUV ground transfer from your hotel to the heliport',
+      '45-minute private scenic helicopter flight with certified commercial pilot',
+      'Panoramic flight path over San Salvador volcano, Santa Ana caldera, Coatepeque, and coast',
+      'Post-flight private champagne toast with artisan appetizer board',
+      'Full aviation insurance and civil aviation flight permits'
+    ],
+    notIncludedEs: [
+      'Hospedaje',
+      'Fotografía aérea especializada adicional'
+    ],
+    notIncludedEn: [
+      'Lodging',
+      'Dedicated photography crew'
+    ],
+    requirementsEs: [
+      'Documento de identidad o pasaporte vigente para registro ante la autoridad aeronáutica'
+    ],
+    requirementsEn: [
+      'Valid passport or government ID for civil aviation flight manifest'
+    ],
+    itinerary: [
+      {
+        time: '09:00',
+        titleEs: 'Pick-up VIP en hotel y traslado al helipuerto',
+        titleEn: 'VIP hotel pickup & transfer to executive heliport',
+        descriptionEs: 'Traslado privado con chofer y bienvenida en sala de espera ejecutiva.',
+        descriptionEn: 'Private chauffeur transfer and greeting in VIP lounge.'
+      },
+      {
+        time: '09:45',
+        titleEs: 'Briefing de seguridad y abordaje',
+        titleEn: 'Flight safety briefing & boarding',
+        descriptionEs: 'Instrucciones del capitán y colocación de auriculares con cancelación de ruido.',
+        descriptionEn: 'Pilot introduction and fitted Bose noise-canceling flight headsets.'
+      },
+      {
+        time: '10:00',
+        titleEs: 'Despegue: Sobrevuelo de Volcanes y Lago de Coatepeque',
+        titleEn: 'Takeoff: Volcanoes and Lake Coatepeque flyover',
+        descriptionEs: 'Vistas aéreas del cráter humeante de Santa Ana y aguas turquesas del lago.',
+        descriptionEn: 'Hovering perspective over steaming crater lake and emerald caldera waters.'
+      },
+      {
+        time: '10:45',
+        titleEs: 'Aterrizaje y Brindis con Champaña',
+        titleEn: 'Smooth landing & private champagne celebration',
+        descriptionEs: 'Celebración privada con copas de champaña y tabla gourmet.',
+        descriptionEn: 'Celebratory champagne toast and artisan snacks on scenic terrace.'
+      },
+      {
+        time: '11:30',
+        titleEs: 'Retorno confortable a tu hotel',
+        titleEn: 'Comfortable return drive to your hotel',
+        descriptionEs: 'Traslado de regreso en vehículo SUV de lujo.',
+        descriptionEn: 'Luxury SUV drop-off at your hotel.'
+      }
+    ],
+    featured: false,
+    active: true,
+    demoRating: 5.0,
+    demoReviewsCount: 12
+  },
+
+  // ==========================================
+  // TURISMO COMUNITARIO: PESCA & TORTUGAS JIQUILISCO
+  // ==========================================
+  {
+    id: 'exp-comunitario-pesca-jiquilisco',
+    slug: 'vivencia-comunitaria-pescadores-y-tortugas-bahia-jiquilisco',
+    titleEs: 'Vivencia Comunitaria con Pescadores Artesanales y Protección de Tortugas en Bahía de Jiquilisco',
+    titleEn: 'Community Life with Artisanal Fishermen & Sea Turtle Conservation in Jiquilisco Bay',
+    shortDescriptionEs: 'Acompaña a las familias de pescadores en sus faenas tradicionales en manglares, aprende extracción de moluscos y apoya la conservación marina.',
+    shortDescriptionEn: 'Join local fishing families in traditional mangrove waterways, learn sustainable mollusk harvesting, and support sea turtle nurseries.',
+    descriptionEs: 'Una auténtica experiencia de turismo comunitario en la mayor reserva de biosfera de El Salvador. Compartirás una jornada completa con la cooperativa de pescadores artesanales de Puerto El Triunfo y las islas de la Bahía de Jiquilisco. Conocerás de primera mano las artes ancestrales de pesca con atarraya, la recolección responsable de curiles en las raíces del manglar y visitarás el corral de incubación donde la comunidad protege miles de huevos de tortugas marinas en peligro de extinción.',
+    descriptionEn: 'A true grassroots community tourism immersion in El Salvador’s largest UNESCO Biosphere reserve. Spend the day with the artisanal fishermen cooperative of Puerto El Triunfo and Jiquilisco Bay islands. Learn traditional net-casting, sustainable mangrove root cockle harvesting, and visit the volunteer turtle incubation nursery protecting critically endangered hawksbill sea turtles.',
+    category: 'comunitario',
+    region: 'Oriente',
+    location: 'Bahía de Jiquilisco y Puerto El Triunfo, Usulután',
+    department: 'Usulután',
+    coordinates: { lat: 13.2500, lng: -88.5500 },
+    meetingPointEs: 'Recogida directa en tu hotel / alojamiento en San Salvador, Santa Ana o La Libertad (o punto coordinado: Muelle de Puerto El Triunfo, Usulután (o pick-up coordinado en San Salvador))',
+    meetingPointEn: 'Puerto El Triunfo Pier, Usulután (or coordinated San Salvador pickup)',
+    price: 58,
+    currency: 'USD',
+    priceRange: 'medio',
+    duration: '7 horas',
+    durationHours: 7,
+    durationType: 'full_day',
+    packageDurationTier: '1_dia',
+    durationBadgeEs: '1 Día Comunitario',
+    durationBadgeEn: '1 Day Community',
+    travelerProfiles: ['familias', 'aventura', 'individual', 'gastronomia'],
+    comfortLevel: 'economico',
+    destinationsCovered: ['Puerto El Triunfo', 'Canales de Manglar de Jiquilisco', 'Santuario Comunitario de Tortugas'],
+    accommodationDetails: {
+      typeEs: 'Sin alojamiento incluido (Opción de pernoctar en posada comunitaria bajo solicitud)',
+      typeEn: 'No lodging included (Overnight community homestay available upon request)',
+      detailsEs: 'Tour de día completo con impacto directo en el sustento de 12 familias de la cooperativa.',
+      detailsEn: 'Full-day tour with direct revenue supporting 12 cooperative fishing families.',
+      comfortTier: 'economico'
+    },
+    transportDetails: {
+      modeEs: 'Lancha comunitaria con motor ecológico y chalecos salvavidas durante el recorrido acuático',
+      modeEn: 'Community boat with eco outboard and certified life vests for the waterways',
+      airportTransfer: false,
+      pickupNotesEs: 'Punto de encuentro en el muelle pesquero a las 08:30 AM',
+      pickupNotesEn: 'Meeting at the fishing pier at 08:30 AM'
+    },
+    mealPlan: {
+      summaryEs: 'Almuerzo tradicional de pescado fresco a las brasas o mariscos preparado por cocineras locales',
+      summaryEn: 'Traditional grilled catch-of-the-day fish or seafood lunch prepared by village cooks',
+      breakfastCount: 0,
+      lunchCount: 1,
+      dinnerCount: 0
+    },
+    customizationOptions: [
+      {
+        id: 'opt-liberacion-tortugas',
+        labelEs: 'Aporte y participación en la liberación de crías de tortugas al atardecer (según temporada)',
+        labelEn: 'Support and participation in sunset baby turtle hatchling release (seasonal)',
+        descriptionEs: 'Ayuda a las pequeñas tortuguitas recién nacidas a alcanzar el mar de forma segura.',
+        descriptionEn: 'Help newborn baby sea turtles safely reach the open ocean under sunset glow.',
+        priceDiff: 15,
+        category: 'actividad'
+      }
+    ],
+    availabilityStatus: 'disponible_inmediato',
+    difficulty: 'facil',
+    isPackage: true,
+    packageDays: 1,
+    packageNights: 0,
+    packageServices: {
+      transportIncluded: true,
+      accommodationIncluded: false,
+      mealsIncluded: true,
+      guidesIncluded: true,
+      ticketsIncluded: true,
+      communityVisit: true
+    },
+    proposalNoteEs: 'El 80% del valor de esta experiencia va directamente a los pescadores y al proyecto de conservación de tortugas.',
+    proposalNoteEn: '80% of booking proceeds directly benefit the cooperative families and sea turtle nursery.',
+    languages: ['ES', 'EN'],
+    groupType: ['individual', 'parejas', 'familias', 'grupos'],
+    minPeople: 2,
+    maxPeople: 12,
+    images: [
+      ...["/assets/destinations/suchitoto_2_calles_de_suchitoto_agosto..jpg.jpg"],
+      ...["/assets/destinations/el_tunco_1_atardecer_en_el_tunco.jpg.jpg"]
+    ],
+    imageCredits: [
+      ...[{"author":"Silvia Villalta","sourceUrl":"https://commons.wikimedia.org/wiki/File:ATARDECER_EN_EL_TUNCO.jpg","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0","caption":"Bahía de Jiquilisco"}]
+    ],
+    includedEs: [
+      'Transporte privado climatizado ida y vuelta con chofer profesional (recogida y retorno en hotel)',
+      'Recorrido en lancha comunitaria con chalecos salvavidas por canales de manglares',
+      'Acompañamiento de pescadores artesanales y biólogo local',
+      'Taller práctico de lanzamiento de atarraya y saberes del manglar',
+      'Visita al vivero comunitario de protección de tortugas marinas',
+      'Almuerzo tradicional de pescado fresco cocinado en leña con tortillas y ensalada'
+    ],
+    includedEn: [
+      'Round-trip private air-conditioned transport with professional driver (hotel pickup and drop-off)',
+      'Community boat cruise with fitted life jackets through mangrove channels',
+      'Local artisanal fishermen and marine biologist guides',
+      'Hands-on net-casting lesson and traditional mangrove lore',
+      'Visit to community sea turtle incubation nursery',
+      'Wood-fired catch-of-the-day fish lunch with fresh tortillas and salad'
+    ],
+    notIncludedEs: [
+      'Alojamiento'
+    ],
+    notIncludedEn: [
+      'Ground transit to Puerto El Triunfo (optional transfer available)',
+      'Lodging'
+    ],
+    requirementsEs: [
+      'Ropa ligera que se pueda mojar, repelente de insectos y calzado que no resbale'
+    ],
+    requirementsEn: [
+      'Light quick-dry clothing, insect repellent, and non-slip sandals or water shoes'
+    ],
+    itinerary: [
+      {
+        time: '08:30',
+        titleEs: 'Encuentro en el Muelle de Puerto El Triunfo y bienvenida',
+        titleEn: 'Meet at Puerto El Triunfo pier & community welcome',
+        descriptionEs: 'Bienvenida por parte de los líderes de la cooperativa de pescadores.',
+        descriptionEn: 'Welcome by cooperative fishing leaders and boat safety briefing.'
+      },
+      {
+        time: '09:15',
+        titleEs: 'Navegación por canales de manglar y avistamiento de aves',
+        titleEn: 'Mangrove channel navigation & coastal birding',
+        descriptionEs: 'Paseo en lancha entre raíces de mangle rojo y avistamiento de espátulas y garzas.',
+        descriptionEn: 'Boat cruise through red mangrove roots spotting roseate spoonbills and herons.'
+      },
+      {
+        time: '10:45',
+        titleEs: 'Taller de pesca tradicional con atarraya',
+        titleEn: 'Traditional net casting masterclass',
+        descriptionEs: 'Aprende de los pescadores el arte de lanzar la red con movimiento circular.',
+        descriptionEn: 'Learn the circular wrist snap needed to cast traditional circular nets.'
+      },
+      {
+        time: '12:00',
+        titleEs: 'Visita al Santuario Comunitario de Tortugas Marinas',
+        titleEn: 'Sea Turtle Community Conservation Nursery visit',
+        descriptionEs: 'Conoce cómo los pobladores protegen los nidos de tortuga carey y golfina.',
+        descriptionEn: 'Learn how villagers protect hawksbill and olive ridley sea turtle nests.'
+      },
+      {
+        time: '13:30',
+        titleEs: 'Almuerzo comunitario a la leña en isla de la bahía',
+        titleEn: 'Wood-fired island community lunch',
+        descriptionEs: 'Pescado fresco del día con tortillas hechas a mano frente a la brisa marina.',
+        descriptionEn: 'Fresh grilled fish catch with handmade tortillas cooled by sea breezes.'
+      },
+      {
+        time: '15:30',
+        titleEs: 'Retorno al muelle de Puerto El Triunfo y despedida',
+        titleEn: 'Return to pier & community farewell',
+        descriptionEs: 'Despedida con los anfitriones y cierre de la jornada.',
+        descriptionEn: 'Return cruise to pier and heartfelt farewell with hosts.'
+      }
+    ],
+    featured: false,
+    active: true,
+    demoRating: 5.0,
+    demoReviewsCount: 22
   }
 ];
+
+export const experiences: Experience[] = DEMO_EXPERIENCES;

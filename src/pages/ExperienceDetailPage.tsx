@@ -7,6 +7,7 @@ import { MapPlaceholder } from '../components/common/MapPlaceholder';
 import { Interactive360Viewer } from '../components/common/Interactive360Viewer';
 import { VirtualTour360 } from '../components/common/VirtualTour360';
 import { Breadcrumbs } from '../components/common/Breadcrumbs';
+import { QuoteRequestModal } from '../components/booking/QuoteRequestModal';
 import { useRouter } from '../context/RouterContext';
 import { useLanguage } from '../context/LanguageContext';
 import { trackEvent } from '../services/analytics';
@@ -28,14 +29,22 @@ import {
   Compass,
   Move,
   Camera,
+  Hotel,
+  Car,
+  Utensils,
+  Route,
+  Layers,
+  Calendar,
+  Send,
 } from 'lucide-react';
 
 export const ExperienceDetailPage: React.FC = () => {
   const { slug, navigate } = useRouter();
-  const { language, t } = useLanguage();
+  const { language, t, loc } = useLanguage();
   const [copiedLink, setCopiedLink] = useState(false);
   const [mobileBookingOpen, setMobileBookingOpen] = useState(false);
   const [tour360Open, setTour360Open] = useState(false);
+  const [quoteModalOpen, setQuoteModalOpen] = useState(false);
 
   const experience = DEMO_EXPERIENCES.find(exp => exp.slug === slug) || DEMO_EXPERIENCES[0];
 
@@ -226,6 +235,85 @@ export const ExperienceDetailPage: React.FC = () => {
                 </div>
               </div>
 
+              {/* Transport Included Guarantee Banner */}
+              <div className="flex items-center gap-3 p-3.5 bg-gradient-to-r from-teal-50 via-sky-50 to-emerald-50 rounded-2xl border border-teal-200/90 text-xs shadow-2xs">
+                <div className="w-9 h-9 rounded-xl bg-[#00A6A6] text-white flex items-center justify-center shrink-0 shadow-xs">
+                  <Car className="w-4.5 h-4.5" />
+                </div>
+                <div className="space-y-0.5">
+                  <p className="font-bold text-[#063A5B] flex items-center gap-1.5">
+                    <span>{loc('Transporte privado ida y vuelta 100% incluido', '100% Round-trip private transport included')}</span>
+                    <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300">
+                      {loc('En todos los tours', 'On all tours')}
+                    </span>
+                  </p>
+                  <p className="text-[11px] text-neutral-600 leading-relaxed">
+                    {loc(
+                      'Recogida y retorno cómodo en tu hotel o alojamiento con chofer profesional y aire acondicionado. Sin costos ocultos.',
+                      'Comfortable pickup and drop-off at your hotel or lodging with professional driver and A/C. No hidden costs.'
+                    )}
+                  </p>
+                </div>
+              </div>
+
+              {/* Traveler Profiles & Duration Tier Badges */}
+              <div className="flex flex-wrap items-center gap-1.5 pt-1">
+                {experience.durationBadgeEs && (
+                  <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#063A5B] text-white text-xs font-bold font-mono">
+                    <Clock className="w-3.5 h-3.5 text-[#FDBA2D]" />
+                    <span>{loc(experience.durationBadgeEs, experience.durationBadgeEn || experience.durationBadgeEs)}</span>
+                  </span>
+                )}
+                {experience.comfortLevel && (
+                  <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-teal-50 text-teal-800 border border-teal-200 text-xs font-semibold capitalize">
+                    <Hotel className="w-3.5 h-3.5 text-teal-600" />
+                    <span>Nivel {experience.comfortLevel}</span>
+                  </span>
+                )}
+                {experience.travelerProfiles && experience.travelerProfiles.map((p) => {
+                  const labels: Record<string, { es: string; en: string }> = {
+                    individual: { es: 'Solo Traveler', en: 'Solo Traveler' },
+                    parejas: { es: 'Ideal Parejas', en: 'Couples / Romance' },
+                    familias: { es: 'Familiar con Niños', en: 'Family Friendly' },
+                    grupos: { es: 'Grupos de Amigos', en: 'Friends Groups' },
+                    adultos_mayores: { es: 'Slow Travel / Accesible', en: 'Slow Travel / Seniors' },
+                    aventura: { es: 'Aventureros', en: 'Adventurers' },
+                    gastronomia: { es: 'Gastronomía & Cultura', en: 'Culinary & Culture' },
+                    premium: { es: 'Viajeros Premium', en: 'Premium Luxury' },
+                  };
+                  return (
+                    <span
+                      key={p}
+                      className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-neutral-100 text-neutral-700 text-[11px] font-medium"
+                    >
+                      {labels[p] ? loc(labels[p].es, labels[p].en) : p}
+                    </span>
+                  );
+                })}
+              </div>
+
+              {/* Destinations Sequence Ribbon */}
+              {experience.destinationsCovered && experience.destinationsCovered.length > 0 && (
+                <div className="p-4 bg-gradient-to-r from-teal-50/60 to-sky-50/40 rounded-2xl border border-teal-200/80 space-y-2">
+                  <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#063A5B] flex items-center gap-1.5">
+                    <Route className="w-4 h-4 text-[#00A6A6]" />
+                    <span>{loc('Ruta Geográfica y Destinos Visitados:', 'Geographic Route & Destinations:')}</span>
+                  </span>
+                  <div className="flex flex-wrap items-center gap-2 pt-0.5">
+                    {experience.destinationsCovered.map((dest, i) => (
+                      <React.Fragment key={i}>
+                        <span className="px-2.5 py-1 bg-white rounded-lg border border-teal-200 text-xs font-semibold text-teal-950 shadow-2xs">
+                          {dest}
+                        </span>
+                        {i < experience.destinationsCovered!.length - 1 && (
+                          <span className="text-teal-400 font-bold text-xs">→</span>
+                        )}
+                      </React.Fragment>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* If isPackage: Package Services Breakdown */}
               {experience.isPackage && experience.packageServices && (
                 <div className="pt-3 border-t border-neutral-100">
@@ -366,6 +454,137 @@ export const ExperienceDetailPage: React.FC = () => {
               </h2>
               <ItineraryTimeline items={experience.itinerary} />
             </section>
+
+            {/* Lodging & Comfort Details (if available) */}
+            {experience.accommodationDetails && (
+              <section className="space-y-4 pt-4 border-t border-neutral-100">
+                <div className="flex items-center justify-between flex-wrap gap-2">
+                  <h3 className="text-lg font-bold text-[#063A5B] font-display flex items-center gap-2">
+                    <Hotel className="w-5 h-5 text-[#00A6A6]" />
+                    <span>{loc('Alojamiento & Nivel de Confort', 'Lodging & Comfort Tier')}</span>
+                  </h3>
+                  {experience.accommodationDetails.comfortTier && (
+                    <span className="text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-teal-50 text-teal-800 border border-teal-200">
+                      Nivel {experience.accommodationDetails.comfortTier}
+                    </span>
+                  )}
+                </div>
+                <div className="p-5 bg-gradient-to-br from-neutral-50 to-teal-50/20 rounded-2xl border border-neutral-200 space-y-2">
+                  <h4 className="text-sm font-bold text-neutral-900">
+                    {loc(experience.accommodationDetails.typeEs, experience.accommodationDetails.typeEn)}
+                  </h4>
+                  <p className="text-xs text-neutral-600 leading-relaxed">
+                    {loc(experience.accommodationDetails.detailsEs, experience.accommodationDetails.detailsEn)}
+                  </p>
+                </div>
+              </section>
+            )}
+
+            {/* Transport & Transfers Logistics (if available) */}
+            {experience.transportDetails && (
+              <section className="space-y-4 pt-4 border-t border-neutral-100">
+                <div className="flex items-center justify-between flex-wrap gap-2">
+                  <h3 className="text-lg font-bold text-[#063A5B] font-display flex items-center gap-2">
+                    <Car className="w-5 h-5 text-[#00A6A6]" />
+                    <span>{loc('Transporte & Logística de Traslados', 'Transportation & Transfer Logistics')}</span>
+                  </h3>
+                  {experience.transportDetails.airportTransfer && (
+                    <span className="text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 flex items-center gap-1">
+                      <Check className="w-3 h-3" />
+                      <span>{loc('Traslado Aeropuerto Incluido', 'Airport Transfer Included')}</span>
+                    </span>
+                  )}
+                </div>
+                <div className="p-5 bg-gradient-to-br from-neutral-50 to-sky-50/20 rounded-2xl border border-neutral-200 space-y-2">
+                  <h4 className="text-sm font-bold text-neutral-900">
+                    {loc(experience.transportDetails.modeEs, experience.transportDetails.modeEn)}
+                  </h4>
+                  {experience.transportDetails.pickupNotesEs && (
+                    <p className="text-xs text-neutral-600 leading-relaxed">
+                      <strong className="text-neutral-800">{loc('Punto de recogida: ', 'Pickup point: ')}</strong>
+                      {loc(experience.transportDetails.pickupNotesEs, experience.transportDetails.pickupNotesEn || experience.transportDetails.pickupNotesEs)}
+                    </p>
+                  )}
+                </div>
+              </section>
+            )}
+
+            {/* Meal Plan Details (if available) */}
+            {experience.mealPlan && (
+              <section className="space-y-4 pt-4 border-t border-neutral-100">
+                <h3 className="text-lg font-bold text-[#063A5B] font-display flex items-center gap-2">
+                  <Utensils className="w-5 h-5 text-[#00A6A6]" />
+                  <span>{loc('Plan de Alimentación Incluido', 'Included Meal Plan')}</span>
+                </h3>
+                <div className="p-5 bg-gradient-to-br from-neutral-50 to-amber-50/20 rounded-2xl border border-neutral-200 space-y-3">
+                  <p className="text-xs text-neutral-700 leading-relaxed font-medium">
+                    {loc(experience.mealPlan.summaryEs, experience.mealPlan.summaryEn)}
+                  </p>
+                  <div className="grid grid-cols-3 gap-2 pt-1 border-t border-neutral-200/60 text-center">
+                    <div className="p-2 bg-white rounded-xl border border-neutral-200/80">
+                      <span className="text-[10px] text-neutral-400 block">{loc('Desayunos', 'Breakfasts')}</span>
+                      <span className="font-mono text-sm font-bold text-neutral-800">{experience.mealPlan.breakfastCount}</span>
+                    </div>
+                    <div className="p-2 bg-white rounded-xl border border-neutral-200/80">
+                      <span className="text-[10px] text-neutral-400 block">{loc('Almuerzos', 'Lunches')}</span>
+                      <span className="font-mono text-sm font-bold text-neutral-800">{experience.mealPlan.lunchCount}</span>
+                    </div>
+                    <div className="p-2 bg-white rounded-xl border border-neutral-200/80">
+                      <span className="text-[10px] text-neutral-400 block">{loc('Cenas', 'Dinners')}</span>
+                      <span className="font-mono text-sm font-bold text-neutral-800">{experience.mealPlan.dinnerCount}</span>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            )}
+
+            {/* Customization Options & Add-ons (if available) */}
+            {experience.customizationOptions && experience.customizationOptions.length > 0 && (
+              <section className="space-y-4 pt-4 border-t border-neutral-100">
+                <div className="flex items-center justify-between flex-wrap gap-2">
+                  <h3 className="text-lg font-bold text-[#063A5B] font-display flex items-center gap-2">
+                    <Sparkles className="w-5 h-5 text-[#FDBA2D]" />
+                    <span>{loc('Opciones de Personalización & Extras', 'Customization Add-ons & Upgrades')}</span>
+                  </h3>
+                  <button
+                    type="button"
+                    onClick={() => setQuoteModalOpen(true)}
+                    className="text-xs text-[#00A6A6] hover:text-[#063A5B] font-bold flex items-center gap-1 cursor-pointer"
+                  >
+                    <span>{loc('Solicitar en cotización', 'Request in quote')}</span>
+                    <span>→</span>
+                  </button>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {experience.customizationOptions.map((addon) => (
+                    <div
+                      key={addon.id}
+                      className="p-4 rounded-2xl bg-white border border-neutral-200 hover:border-[#00A6A6] transition-all space-y-1.5 shadow-2xs"
+                    >
+                      <div className="flex items-start justify-between gap-2">
+                        <h4 className="text-xs font-bold text-neutral-900 leading-snug">
+                          {loc(addon.labelEs, addon.labelEn)}
+                        </h4>
+                        {addon.priceDiff ? (
+                          <span className="font-mono text-xs font-extrabold text-[#00A6A6] shrink-0">
+                            +${addon.priceDiff} USD
+                          </span>
+                        ) : (
+                          <span className="text-[10px] text-neutral-400 font-semibold shrink-0">
+                            {loc('A cotizar', 'Custom')}
+                          </span>
+                        )}
+                      </div>
+                      {addon.descriptionEs && (
+                        <p className="text-[11px] text-neutral-500 leading-relaxed">
+                          {loc(addon.descriptionEs, addon.descriptionEn || addon.descriptionEs)}
+                        </p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
 
             {/* 3. Included & Not Included */}
             <section className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4 border-t border-neutral-100">
@@ -519,6 +738,13 @@ export const ExperienceDetailPage: React.FC = () => {
         title={title}
         locationName={experience.location}
         imageSrc={experience.images[0]}
+      />
+
+      {/* QuoteRequestModal instance */}
+      <QuoteRequestModal
+        isOpen={quoteModalOpen}
+        onClose={() => setQuoteModalOpen(false)}
+        experience={experience}
       />
     </div>
   );

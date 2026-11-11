@@ -145,12 +145,12 @@ export const ReferralsPage: React.FC = () => {
       reservationCount: 'Reservas activas con tu correo',
       viewReservations: 'Ver historial de reservas',
       localNote: 'Tus credenciales y datos se guardan de forma privada en el almacenamiento seguro de tu navegador.',
-      lockedTitle: 'Tu código de recomendación se activará con tu primera reserva',
+      lockedTitle: 'Tu código GIA Premia se activará con tu primera reserva',
       lockedText:
-        'Crea tus reservaciones con este mismo correo. En cuanto se confirme tu primera experiencia, se activará tu código personal de Comparte GIA con el que ganarás créditos para futuros tours.',
+        'Crea tus reservaciones con este mismo correo. En cuanto se confirme tu primera experiencia, se activará tu código personal de GIA Premia (Viaja, comparte y gana) para disfrutar de 10% de descuento en tu 2ª experiencia y ganar créditos por amigos recomendados.',
       bookNow: 'Explorar experiencias y reservar',
-      program: 'Programa Comparte GIA',
-      credits: 'Créditos y descuentos acumulados',
+      program: 'GIA Premia',
+      credits: 'Crédito y recompensas acumuladas',
     },
     en: {
       eyebrow: 'My GIA Account',
@@ -187,16 +187,16 @@ export const ReferralsPage: React.FC = () => {
       reservationCount: 'Bookings linked to your email',
       viewReservations: 'View booking history',
       localNote: 'Your credentials and data are stored privately in your secure browser storage.',
-      lockedTitle: 'Your referral code unlocks after your first booking',
+      lockedTitle: 'Your GIA Premia code unlocks after your first booking',
       lockedText:
-        'Book your trips using this same email address. Once your first experience is confirmed, your personal Share GIA referral code will activate with travel credits.',
+        'Book your trips using this same email address. Once your first experience is confirmed, your personal GIA Premia code will activate with a 10% discount on your 2nd trip and travel credits for friends referred.',
       bookNow: 'Explore experiences & book',
-      program: 'Share GIA Program',
-      credits: 'Earned credits and discounts',
+      program: 'GIA Premia',
+      credits: 'Earned credits and rewards',
     },
     pt: {
       eyebrow: 'Minha Conta GIA',
-      title: profile ? `Olá, ${profile.firstName}!` : 'Seu Portal de Viajante GIA',
+      title: profile ? `Olá, ${profile.firstName}!` : 'Seu portal de viajante GIA',
       subtitle: profile
         ? 'Gerencie seus dados, foto de perfil, reservas e benefícios de viagem.'
         : 'Crie sua conta ou faça login para gerenciar suas reservas, personalizar seu perfil e acessar benefícios.',
@@ -211,7 +211,7 @@ export const ReferralsPage: React.FC = () => {
       avatarLabel: 'Foto de perfil (opcional)',
       createBtn: 'Criar minha conta',
       loginBtn: 'Entrar',
-      logoutBtn: 'Sair da conta',
+      logoutBtn: 'Sair',
       deleteBtn: 'Excluir minha conta',
       editBtn: 'Editar perfil',
       saveBtn: 'Salvar alterações',
@@ -221,22 +221,59 @@ export const ReferralsPage: React.FC = () => {
       clickToLogin: 'Clique para selecionar:',
       noAccountYet: 'Ainda não tem uma conta?',
       alreadyHaveAccount: 'Já tem uma conta cadastrada?',
-      deleteConfirmTitle: 'Excluir sua conta definitivamente?',
+      deleteConfirmTitle: 'Excluir definitivamente sua conta?',
       deleteConfirmText:
-        'Esta ação removerá permanentemente seu perfil, foto de perfil e sessão ativa deste navegador. Você poderá criar uma nova conta quando desejar.',
-      deleteConfirmBtn: 'Sim, excluir minha conta definitivamente',
+        'Esta ação excluirá permanentemente seus dados de perfil, foto e sessão ativa deste navegador. Você poderá criar uma nova conta quando desejar.',
+      deleteConfirmBtn: 'Sim, excluir minha conta permanentemente',
       reservations: 'Minhas reservas',
-      reservationCount: 'Reservas ativas com seu e-mail',
+      reservationCount: 'Reservas vinculadas ao seu e-mail',
       viewReservations: 'Ver histórico de reservas',
-      localNote: 'Suas credenciais e dados são salvos de forma privada no armazenamento seguro do seu navegador.',
-      lockedTitle: 'Seu código de indicação será ativado com sua primeira reserva',
+      localNote: 'Suas credenciais e dados são armazenados com segurança no navegador.',
+      lockedTitle: 'Seu código GIA Premia será desbloqueado após sua primeira reserva',
       lockedText:
-        'Crie suas reservas com este mesmo e-mail. Assim que sua primeira experiência for confirmada, seu código pessoal Compartilhe GIA será ativado para você ganhar créditos em futuros passeios.',
+        'Reserve suas viagens usando este mesmo e-mail. Quando sua primeira experiência for confirmada, seu código pessoal será ativado com 10% de desconto na 2ª viagem.',
       bookNow: 'Explorar experiências e reservar',
-      program: 'Programa Compartilhe GIA',
-      credits: 'Créditos e descontos acumulados',
+      program: 'GIA Premia',
+      credits: 'Créditos e recompensas acumuladas',
     },
-  }[language];
+  }[language] || {
+    eyebrow: 'Mi Cuenta GIA',
+    title: 'Portal de viajero GIA',
+    subtitle: 'Administra tus reservas y beneficios.',
+    tabRegister: 'Crear cuenta',
+    tabLogin: 'Iniciar sesión',
+    firstName: 'Nombre',
+    lastName: 'Apellido',
+    email: 'Correo electrónico',
+    password: 'Contraseña',
+    phone: 'Teléfono',
+    country: 'País',
+    avatarLabel: 'Foto de perfil',
+    createBtn: 'Crear cuenta',
+    loginBtn: 'Iniciar sesión',
+    logoutBtn: 'Cerrar sesión',
+    deleteBtn: 'Eliminar cuenta',
+    editBtn: 'Editar perfil',
+    saveBtn: 'Guardar',
+    cancelBtn: 'Cancelar',
+    changePhoto: 'Cambiar foto',
+    registeredOnDevice: 'Cuentas:',
+    clickToLogin: 'Seleccionar:',
+    noAccountYet: '¿No tienes cuenta?',
+    alreadyHaveAccount: '¿Ya tienes cuenta?',
+    deleteConfirmTitle: '¿Eliminar cuenta?',
+    deleteConfirmText: 'Confirmar eliminación.',
+    deleteConfirmBtn: 'Eliminar',
+    reservations: 'Reservas',
+    reservationCount: 'Reservas',
+    viewReservations: 'Ver reservas',
+    localNote: 'Datos almacenados localmente.',
+    lockedTitle: 'GIA Premia bloqueado',
+    lockedText: 'Desbloquea con tu primera reserva.',
+    bookNow: 'Reservar ahora',
+    program: 'GIA Premia',
+    credits: 'Créditos',
+  };
 
   // Handle Account Registration
   const handleRegister = (e: React.FormEvent) => {
@@ -874,6 +911,7 @@ export const ReferralsPage: React.FC = () => {
                 <ReferralCard state={referralState} />
                 <GiaCreditsCard
                   balance={referralState.creditsBalance}
+                  pendingBalance={referralState.pendingCredits}
                   transactions={referralState.transactions}
                 />
               </div>

@@ -83,6 +83,14 @@ export const plannerEngine = {
       status: 'PLANNED',
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
+      inspirationIntent: preferences.inspirationIntent,
+      childrenCount: preferences.childrenCount,
+      childrenAges: preferences.childrenAges,
+      servicesIncluded: preferences.servicesIncluded,
+      specialNeeds: preferences.specialNeeds,
+      customerName: preferences.customerName,
+      customerPhone: preferences.customerPhone,
+      customerEmail: preferences.customerEmail,
     };
   },
 

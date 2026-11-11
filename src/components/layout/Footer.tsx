@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-white text-neutral-600 border-t border-neutral-200/90">
+    <footer className="bg-[#FFFDF8] text-neutral-600 border-t border-amber-100/90">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           {/* Brand Block (4 cols) */}
@@ -44,16 +44,16 @@ export const Footer: React.FC = () => {
               {l('Plataforma para descubrir, diseñar y vivir experiencias únicas en El Salvador. Turismo auténtico conectado con personas, cultura y naturaleza.', 'A platform to discover, design, and experience unique journeys in El Salvador. Authentic tourism connected with people, culture, and nature.', 'Plataforma para descobrir, planejar e viver experiências únicas em El Salvador. Turismo autêntico conectado com pessoas, cultura e natureza.')}
             </p>
             <div className="space-y-1.5 pt-1">
-              <div className="flex items-center gap-1.5 text-xs text-[#00A6A6] font-semibold">
+              <div className="flex items-center gap-1.5 text-xs text-[#00B8C8] font-semibold">
                 <MapPin className="w-3.5 h-3.5 shrink-0" />
                 <span>{l('El Salvador, Centroamérica · El Salvador diseñado para ti', 'El Salvador, Central America · El Salvador, designed for you', 'El Salvador, América Central · El Salvador desenhado para você')}</span>
               </div>
               <a
                 href={`mailto:${contactEmail}`}
-                className="flex items-center gap-1.5 text-xs text-neutral-600 hover:text-[#00A6A6] transition-colors font-medium group"
+                className="flex items-center gap-1.5 text-xs text-neutral-600 hover:text-[#00B8C8] transition-colors font-medium group"
                 title={l('Escribir correo a GIA Experiences', 'Email GIA Experiences', 'Enviar e-mail para GIA Experiences')}
               >
-                <Mail className="w-3.5 h-3.5 text-[#00A6A6] shrink-0" />
+                <Mail className="w-3.5 h-3.5 text-[#00B8C8] shrink-0" />
                 <span className="group-hover:underline">{contactEmail}</span>
               </a>
             </div>
@@ -63,7 +63,7 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-8 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8">
             {/* Col 1: Explorar */}
             <div className="space-y-3">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-[#063A5B] font-mono">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-[#173B59] font-mono">
                 {l('Explorar', 'Explore', 'Explorar')}
               </h4>
               <ul className="space-y-2.5 text-xs">
@@ -182,6 +182,15 @@ export const Footer: React.FC = () => {
                     className="hover:text-[#00A6A6] transition-colors cursor-pointer text-neutral-600"
                   >
                     {l('Ayuda', 'Help', 'Ajuda')}
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => navigate('/admin')}
+                    className="hover:text-[#00B8C8] transition-colors cursor-pointer text-neutral-500 font-mono text-[11px]"
+                  >
+                    ⚙️ {l('Panel de Operador', 'Operator Panel', 'Painel do Operador')}
                   </button>
                 </li>
               </ul>

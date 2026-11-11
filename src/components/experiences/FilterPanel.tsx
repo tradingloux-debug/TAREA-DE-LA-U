@@ -54,12 +54,14 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
         <div className="flex flex-col gap-1.5">
           {[
             { id: 'all', label: language === 'es' ? 'Todas las categorías' : 'All categories' },
-            { id: 'naturaleza', label: language === 'es' ? 'Naturaleza' : 'Nature' },
-            { id: 'playa', label: language === 'es' ? 'Playas & Costa' : 'Beaches & Coast' },
-            { id: 'aventura', label: language === 'es' ? 'Aventura' : 'Adventure' },
+            { id: 'naturaleza', label: language === 'es' ? 'Naturaleza y Ecoturismo' : 'Nature & Ecotourism' },
             { id: 'cultura', label: language === 'es' ? 'Cultura e Historia' : 'Culture & Heritage' },
             { id: 'gastronomia', label: language === 'es' ? 'Gastronomía' : 'Gastronomy' },
-            { id: 'paquetes', label: language === 'es' ? 'Paquetes Completos' : 'Complete Packages' },
+            { id: 'aventura', label: language === 'es' ? 'Aventura' : 'Adventure' },
+            { id: 'playa', label: language === 'es' ? 'Playas y Descanso' : 'Beaches & Relaxation' },
+            { id: 'comunitario', label: language === 'es' ? 'Turismo Comunitario' : 'Community Roots' },
+            { id: 'especial', label: language === 'es' ? 'Experiencias Especiales' : 'Special Experiences' },
+            { id: 'paquetes', label: language === 'es' ? 'Paquetes y Circuitos' : 'Complete Packages' },
           ].map((item) => {
             const isActive = filters.category === item.id && !filters.onlyLocal;
             return (
@@ -67,7 +69,7 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
                 key={item.id}
                 type="button"
                 onClick={() => onChange({ category: item.id as Category | 'all', onlyLocal: false })}
-                className={`px-3 py-2 text-xs font-semibold rounded-xl text-left transition-all cursor-pointer border ${
+                className={`px-3 py-1.5 text-xs font-semibold rounded-xl text-left transition-all cursor-pointer border ${
                   isActive
                     ? 'bg-[#063A5B] text-white border-[#063A5B] shadow-2xs'
                     : 'bg-neutral-50/70 text-neutral-700 border-neutral-200/90 hover:border-neutral-300 hover:bg-neutral-100'
@@ -77,25 +79,92 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
               </button>
             );
           })}
+        </div>
+      </div>
 
-          {/* Experiencias Locales button inside Category */}
-          <button
-            type="button"
-            onClick={() => onChange({ onlyLocal: !filters.onlyLocal })}
-            className={`px-3 py-2 text-xs font-semibold rounded-xl text-left transition-all cursor-pointer border flex items-center justify-between ${
-              filters.onlyLocal
-                ? 'bg-[#55A94B] text-white border-[#55A94B] shadow-2xs'
-                : 'bg-emerald-50/50 text-emerald-800 border-emerald-200 hover:bg-emerald-50'
-            }`}
-          >
-            <span className="flex items-center gap-1.5">
-              <Users className="w-3.5 h-3.5" />
-              <span>{language === 'es' ? 'Experiencias locales' : 'Local community'}</span>
-            </span>
-            <span className="text-[10px] font-bold font-mono">
-              {language === 'es' ? 'Comunidad' : 'Roots'}
-            </span>
-          </button>
+      {/* 2. DURACIÓN DEL PAQUETE */}
+      <div className="space-y-2">
+        <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#063A5B] block">
+          {language === 'es' ? 'Duración de la ruta' : 'Route duration'}
+        </span>
+        <div className="flex flex-col gap-1.5">
+          {[
+            { id: 'all', label: language === 'es' ? 'Cualquier duración' : 'Any duration' },
+            { id: '1_dia', label: language === 'es' ? 'Tours de 1 día (Sin hotel)' : '1-Day Tours (No hotel)' },
+            { id: '2d_1n', label: language === 'es' ? 'Escapadas 2 Días / 1 Noche' : '2 Days / 1 Night' },
+            { id: '3d_2n', label: language === 'es' ? 'Circuitos 3 Días / 2 Noches' : '3 Days / 2 Nights' },
+            { id: '5d_4n', label: language === 'es' ? 'Gran Tour 5 Días / 4 Noches' : '5 Days / 4 Nights' },
+            { id: '7d_6n', label: language === 'es' ? 'Gran Circuito 7 Días / 6 Noches' : '7 Days / 6 Nights' },
+          ].map((item) => {
+            const isActive = (filters.packageDurationTier || 'all') === item.id;
+            return (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => onChange({ packageDurationTier: item.id as any })}
+                className={`px-3 py-1.5 text-xs font-semibold rounded-xl text-left transition-all cursor-pointer border ${
+                  isActive
+                    ? 'bg-[#00A6A6] text-white border-[#00A6A6] shadow-2xs'
+                    : 'bg-neutral-50/70 text-neutral-700 border-neutral-200/90 hover:border-neutral-300'
+                }`}
+              >
+                {item.label}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* 3. TIPO DE VIAJERO */}
+      <div className="space-y-2">
+        <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#063A5B] block">
+          {language === 'es' ? 'Tipo de viajero' : 'Traveler profile'}
+        </span>
+        <select
+          value={filters.travelerProfile || 'all'}
+          onChange={(e) => onChange({ travelerProfile: e.target.value as any })}
+          className="w-full text-xs bg-neutral-50/70 border border-neutral-200/90 rounded-xl px-3 py-2 text-neutral-800 font-medium focus:outline-hidden focus:ring-2 focus:ring-[#00A6A6] cursor-pointer"
+        >
+          <option value="all">{language === 'es' ? 'Todos los viajeros' : 'All traveler profiles'}</option>
+          <option value="individual">{language === 'es' ? 'Viajero individual / Solo' : 'Solo traveler'}</option>
+          <option value="parejas">{language === 'es' ? 'Parejas / Romántico' : 'Couples & romance'}</option>
+          <option value="familias">{language === 'es' ? 'Familias con niños' : 'Families with children'}</option>
+          <option value="grupos">{language === 'es' ? 'Grupos de amigos' : 'Friend groups'}</option>
+          <option value="adultos_mayores">{language === 'es' ? 'Adultos mayores / Slow travel' : 'Seniors / Slow travel'}</option>
+          <option value="aventura">{language === 'es' ? 'Aventureros' : 'Adventure lovers'}</option>
+          <option value="gastronomia">{language === 'es' ? 'Gastronomía & Cultura' : 'Culinary & Culture'}</option>
+          <option value="premium">{language === 'es' ? 'Viajeros Premium / Lujo' : 'Premium / Luxury'}</option>
+        </select>
+      </div>
+
+      {/* 4. NIVEL DE CONFORT */}
+      <div className="space-y-2">
+        <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#063A5B] block">
+          {language === 'es' ? 'Nivel de confort' : 'Comfort level'}
+        </span>
+        <div className="grid grid-cols-3 gap-1.5">
+          {[
+            { id: 'all', label: language === 'es' ? 'Todos' : 'All' },
+            { id: 'economico', label: language === 'es' ? 'Económico' : 'Budget' },
+            { id: 'estandar', label: language === 'es' ? 'Estándar' : 'Standard' },
+            { id: 'premium', label: language === 'es' ? 'Premium' : 'Luxe' },
+          ].map((item) => {
+            const isActive = (filters.comfortLevel || 'all') === item.id;
+            return (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => onChange({ comfortLevel: item.id as any })}
+                className={`py-1.5 px-1 text-center rounded-xl text-xs font-semibold transition-all cursor-pointer border ${
+                  isActive
+                    ? 'bg-[#063A5B] text-white border-[#063A5B] shadow-2xs'
+                    : 'bg-neutral-50/70 text-neutral-700 border-neutral-200/90 hover:border-neutral-300'
+                }`}
+              >
+                {item.label}
+              </button>
+            );
+          })}
         </div>
       </div>
 

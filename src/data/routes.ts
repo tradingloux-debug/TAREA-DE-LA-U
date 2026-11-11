@@ -9,6 +9,396 @@ import panoSuchitoto from '../assets/images/pano360_suchitoto_v2.jpg';
 import panoCoatepeque from '../assets/images/pano360_coatepeque_v2.jpg';
 
 export const DEMO_ROUTES: TourRoute[] = [
+  // =========================================================================
+  // RUTA ESTRELLA REQUERIDA: SURF CITY 1 + SURF CITY 2 (5 DÍAS)
+  // =========================================================================
+  {
+    id: 'route-surf-city-5d',
+    slug: 'surf-city-experience-5-dias',
+    titleEs: 'Surf City Experience: descubre las dos costas del surf salvadoreño (5 Días)',
+    titleEn: 'Surf City Experience: Discover Both Salvadoran Surf Coasts (5 Days)',
+    descriptionEs: 'El tour definitivo que conecta Surf City 1 (La Libertad) con Surf City 2 (Oriente). Recorre la Carretera del Litoral desde los míticos point breaks de El Tunco, El Zonte y Punta Roca, hasta las olas perfectas de Playa Las Flores y Punta Mango, integrando gastronomía marinera, paisajes costeros y cultura local.',
+    descriptionEn: 'The definitive expedition linking Surf City 1 (La Libertad) with Surf City 2 (Eastern Coast). Journey along the scenic Coastal Highway from legendary point breaks at El Tunco, El Zonte, and Punta Roca to the pristine point waves of Las Flores and Punta Mango.',
+    days: 5,
+    destinations: ['Playa El Tunco', 'Playa El Zonte', 'Punta Roca', 'Bahía de Jiquilisco', 'Playa Las Flores', 'Punta Mango', 'El Cuco'],
+    departments: ['La Libertad', 'Usulután', 'San Miguel'],
+    experiences: ['exp-3', 'exp-9', 'exp-13'],
+    images: [routeCostaVolcanes, routeEsencial],
+    has360: true,
+    virtualTour360Url: panoSurfTunco,
+    price: 490,
+    currency: 'USD',
+    category: 'playa',
+    isSurfCityCombined: true,
+    pricingStatus: 'on_quote',
+    pricingNoteEs: 'Tarifa base referencial desde $490 USD. Precio final a cotizar según la modalidad de viaje y nivel de hospedaje seleccionado.',
+    pricingNoteEn: 'Base reference rate from $490 USD. Final price quoted based on selected travel modality and lodging tier.',
+    modalities: [
+      {
+        id: 'surf-aventura',
+        nameEs: 'Surf y aventura',
+        nameEn: 'Surf & Adventure',
+        namePt: 'Surf e Aventura',
+        descEs: 'Clases técnicas con instructores certificados ISA, guía de olas en El Sunzal, Punta Roca, Las Flores y lancha a Punta Mango.',
+        descEn: 'Technical surf clinics with certified coaches, boat transfer to Punta Mango, and guided sessions in Las Flores & Sunzal.',
+      },
+      {
+        id: 'playas-relax',
+        nameEs: 'Playas y relajación',
+        nameEn: 'Beaches & Relaxation',
+        namePt: 'Praias e Relaxamento',
+        descEs: 'Ritmo suave, yoga matutino frente al mar, piscinas de roca natural en El Zonte y atardeceres contemplativos en El Cuco.',
+        descEn: 'Gentle pace, oceanfront morning yoga, sea cliff pools in El Zonte, and golden hour sunsets in El Cuco.',
+      },
+      {
+        id: 'playas-gastronomia',
+        nameEs: 'Playas y gastronomía',
+        nameEn: 'Coastal Gastronomy',
+        namePt: 'Praias e Gastronomia',
+        descEs: 'Ruta culinaria costera con mariscadas frescas, ceviche negro de curiles en manglares y cocina fusión salvadoreña.',
+        descEn: 'Coastal culinary trail with artisanal black clams ceviche, fresh ocean catches, and seafood tastings.',
+      },
+      {
+        id: 'combinada',
+        nameEs: 'Experiencia combinada',
+        nameEn: 'Combined Experience',
+        namePt: 'Experiência Combinada',
+        descEs: 'La combinación perfecta entre surf guiado, relajación en resorts costeros, cultura pesquera y exploración panorámica.',
+        descEn: 'The perfect blend of surf sessions, coastal boutique stays, artisanal fishing culture, and scenic exploration.',
+      },
+      {
+        id: 'familiar',
+        nameEs: 'Versión familiar',
+        nameEn: 'Family Edition',
+        namePt: 'Versão Familiar',
+        descEs: 'Actividades adaptadas para niños y adolescentes: Sunset Park La Libertad, playas de oleaje calmo en El Cuco y paseos en lancha seguros.',
+        descEn: 'Family-friendly highlights: Sunset Park amusement pier, gentle swimming beaches in El Cuco, and calm boat tours.',
+      },
+    ],
+    includedEs: [
+      'Transporte privado climatizado intercostero con conductor profesional durante los 5 días (La Libertad ⇄ Oriente)',
+      '4 noches de alojamiento costero (2 noches en Surf City 1 + 2 noches en Surf City 2)',
+      'Sesión de surf con tabla y guía local (o actividad alternativa según modalidad seleccionada)',
+      'Traslado en lancha coordinado en la costa oriental (Las Flores / Punta Mango)',
+      'Desayunos costeros diarios y acompañamiento de anfitrión local GIA',
+      'Parada panorámica y almuerzo coordinado en el recorrido por la Carretera del Litoral'
+    ],
+    includedEn: [
+      'Private air-conditioned inter-coastal transport with professional driver for all 5 days (La Libertad ⇄ East Coast)',
+      '4 nights coastal accommodation (2 nights in Surf City 1 + 2 nights in Surf City 2)',
+      'Surf coaching session with board (or alternative relaxation/culinary experience per chosen modality)',
+      'Coordinated boat transfer along the Eastern coast (Las Flores / Punta Mango)',
+      'Daily coastal breakfasts and local GIA travel host assistance',
+      'Scenic stop along Coastal Highway CA-2 with fresh local seafood'
+    ],
+    notIncludedEs: [
+      'Vuelos internacionales',
+      'Alquiler de tablas de gama alta (disponible bajo solicitud)',
+      'Almuerzos y cenas no especificados',
+      'Propinas voluntarias a guías e instructores'
+    ],
+    notIncludedEn: [
+      'International airfare',
+      'High-performance board rentals (available upon request)',
+      'Unspecified meals',
+      'Voluntary gratuities'
+    ],
+    recommendedForEs: ['Surfistas', 'Parejas', 'Amantes de la playa y el sol', 'Viajeros que buscan contrastes'],
+    recommendedForEn: ['Surfers', 'Couples', 'Beach and ocean enthusiasts', 'Explorers'],
+    itinerary: [
+      {
+        day: 1,
+        destination: 'Surf City 1 — Playa El Tunco y El Sunzal',
+        department: 'La Libertad',
+        coordinates: { lat: 13.4939, lng: -89.3842 },
+        titleEs: 'Día 1: Bienvenida en Surf City 1 y Atardecer en El Sunzal',
+        titleEn: 'Day 1: Surf City 1 Welcome & Sunset at El Sunzal',
+        descriptionEs: 'Llegada y check-in en hotel boutique costero. Caminata por las calles de arena negra de El Tunco, clase introductoria de surf o relajación frente a las olas con cena de mariscos frescos.',
+        descriptionEn: 'Arrival and check-in at coastal boutique hotel. Stroll through the volcanic alleys of El Tunco, surf briefing, and dinner with ocean views.',
+        experienceIds: ['exp-3']
+      },
+      {
+        day: 2,
+        destination: 'Surf City 1 — El Zonte y Punta Roca',
+        department: 'La Libertad',
+        coordinates: { lat: 13.4967, lng: -89.4319 },
+        titleEs: 'Día 2: Cuevas Marinas de El Zonte y Clases Técnicas',
+        titleEn: 'Day 2: El Zonte Sea Caves & Technical Coaching',
+        descriptionEs: 'Sesión matutina en el point break de El Zonte, exploración de las cuevas marinas en marea baja y visita al mirador de Punta Roca.',
+        descriptionEn: 'Morning session at El Zonte point break, explore tidal caves, and panoramic viewpoints overlooking world-famous Punta Roca.',
+        experienceIds: ['exp-3']
+      },
+      {
+        day: 3,
+        destination: 'Travesía Litoral hacia Surf City 2 (Oriente)',
+        department: 'Usulután',
+        coordinates: { lat: 13.2167, lng: -88.5500 },
+        titleEs: 'Día 3: Recorrido Panorámico por la Carretera del Litoral',
+        titleEn: 'Day 3: Scenic Coastal Highway Journey to Eastern Coast',
+        descriptionEs: 'Traslado privado de 2.5 horas bordeando el océano Pacífico por túneles y miradores costeros. Parada en la Bahía de Jiquilisco para degustación gastronómica y arribo vespertino a Playa Las Flores.',
+        descriptionEn: 'Comfortable 2.5-hour private transfer following the Pacific coastline. Culinary stop at Jiquilisco Bay and afternoon check-in at Playa Las Flores.',
+        experienceIds: ['exp-9']
+      },
+      {
+        day: 4,
+        destination: 'Surf City 2 — Playa Las Flores y El Cuco',
+        department: 'San Miguel',
+        coordinates: { lat: 13.1667, lng: -88.0833 },
+        titleEs: 'Día 4: Olas Legendarias de Las Flores y Arenas Doradas de El Cuco',
+        titleEn: 'Day 4: Legendary Right-Hand Waves & Golden Shores of El Cuco',
+        descriptionEs: 'Día completo en Oriente: sesión de surf o paseo en lancha en una de las rompientes de derechas más codiciadas de América. Tarde de relajación en las extensas arenas de El Cuco.',
+        descriptionEn: 'Full day in Surf City 2: world-class right-hand point break session or scenic coastal boating, followed by leisurely relaxation on El Cuco beach.',
+        experienceIds: ['exp-13']
+      },
+      {
+        day: 5,
+        destination: 'Surf City 2 — Punta Mango y Regreso Coordinado',
+        department: 'Usulután / San Miguel',
+        coordinates: { lat: 13.1500, lng: -88.1667 },
+        titleEs: 'Día 5: Expedición a Punta Mango y Retorno Coordinado',
+        titleEn: 'Day 5: Punta Mango Exploration & Coordinated Return',
+        descriptionEs: 'Salida matutina en lancha hacia la bahía virgen de Punta Mango. Almuerzo de despedida frente al mar y traslado privado seguro hacia el Aeropuerto Internacional o San Salvador.',
+        descriptionEn: 'Early morning boat excursion to the untouched bay of Punta Mango. Farewell lunch and coordinated private return to Airport or San Salvador.',
+        experienceIds: ['exp-13']
+      }
+    ],
+    active: true,
+    featured: true
+  },
+
+  // =========================================================================
+  // SURF CITY EXPRESS: LAS DOS COSTAS EN 3 DÍAS
+  // =========================================================================
+  {
+    id: 'route-surf-city-3d',
+    slug: 'surf-city-express-3-dias',
+    titleEs: 'Surf City Express: De La Libertad a Oriente (3 Días)',
+    titleEn: 'Surf City Express: From La Libertad to the East Coast (3 Days)',
+    descriptionEs: 'La opción ideal de 3 días para conectar lo mejor de Surf City 1 y Surf City 2 en una escapada condensada con traslados privados, clases de surf y descanso en las dos costas.',
+    descriptionEn: 'A streamlined 3-day itinerary connecting the premier highlights of Surf City 1 and Surf City 2 with private transfers, surf coaching, and coastal relaxation.',
+    days: 3,
+    destinations: ['Playa El Tunco', 'Playa Las Flores', 'El Cuco'],
+    departments: ['La Libertad', 'San Miguel'],
+    experiences: ['exp-3', 'exp-13'],
+    images: [routeCostaVolcanes, routeEsencial],
+    has360: true,
+    virtualTour360Url: panoSurfTunco,
+    price: 320,
+    currency: 'USD',
+    category: 'playa',
+    isSurfCityCombined: true,
+    pricingStatus: 'on_quote',
+    pricingNoteEs: 'Tarifa base estimada. Disponible con opciones de clases de surf y tours en lancha bajo solicitud.',
+    pricingNoteEn: 'Base estimated rate. Surf coaching and boat charter upgrades available upon request.',
+    modalities: [
+      {
+        id: 'surf-aventura',
+        nameEs: 'Surf y aventura',
+        nameEn: 'Surf & Adventure',
+        namePt: 'Surf e Aventura',
+        descEs: 'Olas en El Sunzal el día 1 y Las Flores el día 2 con equipo y guía.',
+        descEn: 'Sunzal waves on day 1 and Las Flores on day 2 with gear and coach.',
+      },
+      {
+        id: 'playas-relax',
+        nameEs: 'Playas y relajación',
+        nameEn: 'Beaches & Relaxation',
+        namePt: 'Praias e Relaxamento',
+        descEs: 'Tiempo libre, atardeceres y posadas con vista al mar en ambas costas.',
+        descEn: 'Leisurely pace, golden sunsets, and oceanfront boutique stays.',
+      },
+    ],
+    includedEs: [
+      'Transporte privado climatizado entre La Libertad y Oriente con conductor certificado',
+      '2 noches de hospedaje costero (1 noche en La Libertad + 1 noche en Oriente)',
+      '1 sesión guiada de surf con instructor y tabla',
+      'Desayunos diarios frente al mar'
+    ],
+    includedEn: [
+      'Private air-conditioned transit between La Libertad and East Coast with certified driver',
+      '2 nights coastal lodging (1 night La Libertad + 1 night East Coast)',
+      '1 coached surf session with board',
+      'Daily oceanfront breakfasts'
+    ],
+    notIncludedEs: ['Vuelos internacionales', 'Almuerzos y cenas no especificados'],
+    notIncludedEn: ['International flights', 'Unspecified lunches and dinners'],
+    recommendedForEs: ['Parejas', 'Amigos', 'Surfistas en escapada corta'],
+    recommendedForEn: ['Couples', 'Friends', 'Short layover surf enthusiasts'],
+    itinerary: [
+      {
+        day: 1,
+        destination: 'Surf City 1 — El Tunco',
+        department: 'La Libertad',
+        coordinates: { lat: 13.4939, lng: -89.3842 },
+        titleEs: 'Día 1: Olas y Atardecer en La Libertad',
+        titleEn: 'Day 1: Waves & Sunset in La Libertad',
+        descriptionEs: 'Sesión de surf en El Sunzal y cena en el pueblo costero.',
+        descriptionEn: 'Surf session in El Sunzal and seaside village dinner.',
+        experienceIds: ['exp-3']
+      },
+      {
+        day: 2,
+        destination: 'Surf City 2 — Playa Las Flores',
+        department: 'San Miguel',
+        coordinates: { lat: 13.1667, lng: -88.0833 },
+        titleEs: 'Día 2: Traslado Costero y Olas en Las Flores',
+        titleEn: 'Day 2: Coastal Transfer & Las Flores Point Break',
+        descriptionEs: 'Viaje panorámico por la Carretera del Litoral hacia Oriente y tarde en la bahía de Las Flores.',
+        descriptionEn: 'Scenic drive along the Coastal Highway to the Eastern shore and sunset at Las Flores.',
+        experienceIds: ['exp-13']
+      },
+      {
+        day: 3,
+        destination: 'Surf City 2 — El Cuco y Retorno',
+        department: 'San Miguel',
+        coordinates: { lat: 13.1700, lng: -88.1000 },
+        titleEs: 'Día 3: Mañana Marina y Regreso',
+        titleEn: 'Day 3: Coastal Morning & Departure',
+        descriptionEs: 'Paseo en lancha y regreso coordinado hacia San Salvador o aeropuerto.',
+        descriptionEn: 'Coastal boat ride and private transfer back to capital or airport.',
+        experienceIds: ['exp-13']
+      }
+    ],
+    active: true,
+    featured: true
+  },
+
+  // =========================================================================
+  // RUTA DE 1 DÍA REQUERIDA EN FILTROS
+  // =========================================================================
+  {
+    id: 'route-esencial-1d',
+    slug: 'el-salvador-en-1-dia-volcan-cultura-surf',
+    titleEs: 'El Salvador en 1 Día: Volcán, Centro Histórico y Surf City Sunset',
+    titleEn: 'El Salvador in 1 Day: Volcano, Historic Center & Surf City Sunset',
+    descriptionEs: 'Diseñado para viajeros con escala o estancia corta: asciende por la mañana al cráter del Volcán de San Salvador (El Boquerón), camina por el revitalizado Centro Histórico y termina la tarde con mariscos y olas en Surf City La Libertad.',
+    descriptionEn: 'Engineered for layovers and short visits: morning crater views at San Salvador Volcano, lunchtime walking tour in the historic core, and sunset seafood on Surf City beach.',
+    days: 1,
+    destinations: ['Volcán El Boquerón', 'Centro Histórico de San Salvador', 'Surf City La Libertad'],
+    departments: ['San Salvador', 'La Libertad'],
+    experiences: ['exp-7', 'exp-3'],
+    images: [routeEsencial, routeCostaVolcanes],
+    has360: true,
+    virtualTour360Url: panoSantaAna,
+    price: 85,
+    currency: 'USD',
+    category: 'combinada',
+    pricingStatus: 'confirmed',
+    includedEs: [
+      'Transporte privado con conductor profesional y aire acondicionado para todo el día',
+      'Entradas al Parque Nacional El Boquerón',
+      'Recorrido a pie guiado por el Centro Histórico (Iglesia El Rosario, plazas y café)',
+      'Acompañamiento a la playa en Surf City para presenciar el atardecer',
+      'Punto de recogida y retorno en hotel o Aeropuerto Internacional'
+    ],
+    includedEn: [
+      'Private air-conditioned transport with dedicated driver for the full day',
+      'El Boquerón National Park tickets',
+      'Guided architectural walking tour in Downtown San Salvador',
+      'Sunset escort to Surf City coastal pier and beach',
+      'Hotel or International Airport pickup and drop-off'
+    ],
+    notIncludedEs: ['Almuerzo y bebidas personales'],
+    notIncludedEn: ['Personal meals and drinks'],
+    recommendedForEs: ['Viajeros en escala', 'Negocios', 'Primera visita rápida'],
+    recommendedForEn: ['Layover travelers', 'Business visitors', 'Short stay explorers'],
+    itinerary: [
+      {
+        day: 1,
+        destination: 'Volcán de San Salvador, Centro Histórico y Surf City',
+        department: 'San Salvador / La Libertad',
+        coordinates: { lat: 13.7333, lng: -89.2833 },
+        titleEs: 'Día Completo: De la Cumbre Volcánica al Atardecer en el Mar',
+        titleEn: 'Full Day: From Volcanic Caldera to Ocean Sunset',
+        descriptionEs: '08:30 Mirador del cráter El Boquerón · 11:30 Catedral, Palacio Nacional y café de especialidad · 15:30 Llegada a Surf City La Libertad para atardecer y gastronomía marina.',
+        descriptionEn: '08:30 Crater rim of El Boquerón · 11:30 Downtown history and specialty coffee · 15:30 Surf City La Libertad for ocean waves and sunset.',
+        experienceIds: ['exp-7', 'exp-3']
+      }
+    ],
+    active: true,
+    featured: true
+  },
+
+  // =========================================================================
+  // RUTA FAMILIAR REQUERIDA: GIA EN FAMILIA (3 DÍAS)
+  // =========================================================================
+  {
+    id: 'route-familiar-3d',
+    slug: 'gia-en-familia-naturaleza-parques-playas-3-dias',
+    titleEs: 'GIA en Familia: Parques, Naturaleza y Playas Calmas (3 Días)',
+    titleEn: 'GIA Family Journey: Nature Parks, Lake & Calm Beaches (3 Days)',
+    descriptionEs: 'Un itinerario diseñado pensando en viajar con niños y adolescentes: diversión segura en Sunset Park, paseo en lancha en Lago de Coatepeque, taller interactivo de pupusas y playas de oleaje suave.',
+    descriptionEn: 'A balanced family journey catering to both kids and adults: safe seaside fun at Sunset Park, boat cruise on Lake Coatepeque, hands-on cooking, and calm beaches.',
+    days: 3,
+    destinations: ['Sunset Park La Libertad', 'Lago de Coatepeque', 'Ruta de las Flores (Apaneca)'],
+    departments: ['La Libertad', 'Santa Ana', 'Ahuachapán'],
+    experiences: ['exp-3', 'exp-8', 'exp-2'],
+    images: [routeSabores, routeEsencial],
+    has360: true,
+    virtualTour360Url: panoCoatepeque,
+    price: 260,
+    currency: 'USD',
+    category: 'familiar',
+    pricingStatus: 'confirmed',
+    includedEs: [
+      'Transporte familiar seguro con aire acondicionado y sillita infantil disponible sin costo',
+      '2 noches en eco-lodges familiares con piscina y áreas verdes',
+      'Entradas y brazaletes a Sunset Park La Libertad',
+      'Paseo privado en lancha techada en Lago de Coatepeque con chalecos salvavidas para todas las edades',
+      'Taller participativo de pupusas para niños y adultos',
+      'Desayunos diarios completos'
+    ],
+    includedEn: [
+      'Safe family transport with air-conditioning and complimentary child safety seat',
+      '2 nights in vetted family-friendly lodges with pools and gardens',
+      'Admission passes to Sunset Park seaside amusement pier',
+      'Private shaded boat charter on Lake Coatepeque with life jackets for all ages',
+      'Interactive pupusa-making masterclass for kids and adults',
+      'Daily complete family breakfasts'
+    ],
+    notIncludedEs: ['Gastos personales y compras en parques'],
+    notIncludedEn: ['Personal shopping and arcade tokens'],
+    recommendedForEs: ['Familias con niños', 'Familias con adolescentes', 'Abuelos y nietos'],
+    recommendedForEn: ['Families with young kids', 'Families with teens', 'Multi-generation trips'],
+    itinerary: [
+      {
+        day: 1,
+        destination: 'Sunset Park y Muelle de La Libertad',
+        department: 'La Libertad',
+        coordinates: { lat: 13.4889, lng: -89.3222 },
+        titleEs: 'Día 1: Juegos Mecánicos Frente al Mar y Paseo por el Muelle',
+        titleEn: 'Day 1: Seaside Amusement Rides & Historic Fishing Pier',
+        descriptionEs: 'Tarde de atracciones en Sunset Park (rueda de Chicago con vista al mar, carrusel y montaña rusa suave) con cena en el complejo gastronómico.',
+        descriptionEn: 'Afternoon amusement park fun overlooking the Pacific, followed by fresh family dinner at the port boardwalk.',
+        experienceIds: ['exp-3']
+      },
+      {
+        day: 2,
+        destination: 'Lago de Coatepeque',
+        department: 'Santa Ana',
+        coordinates: { lat: 13.8667, lng: -89.5500 },
+        titleEs: 'Día 2: Paseo en Lancha y Almuerzo con Vista a los Volcanes',
+        titleEn: 'Day 2: Scenic Lake Boat Cruise & Lakeside Dining',
+        descriptionEs: 'Navegación segura por las aguas calmas del lago de origen volcánico con tiempo para nadar en zonas protegidas.',
+        descriptionEn: 'Gentle boat cruise on calm turquoise waters with supervised swimming spots and lakeside lunch.',
+        experienceIds: ['exp-8']
+      },
+      {
+        day: 3,
+        destination: 'Apaneca — Laberinto de Cipreses y Taller Gastronómico',
+        department: 'Ahuachapán',
+        coordinates: { lat: 13.8617, lng: -89.8039 },
+        titleEs: 'Día 3: Laberinto de Apaneca y Taller Familiar de Pupusas',
+        titleEn: 'Day 3: Mountain Cypress Labyrinth & Family Pupusa Class',
+        descriptionEs: 'Aventura en el laberinto natural más grande de Centroamérica en Cafe Albania y elaboración de pupusas caseras.',
+        descriptionEn: 'Explore Central America’s famous cypress hedge maze in Apaneca and enjoy a family pupusa workshop.',
+        experienceIds: ['exp-2']
+      }
+    ],
+    active: true,
+    featured: true
+  },
+
   {
     id: 'route-1',
     slug: 'el-salvador-esencial-5-dias',
@@ -17,6 +407,7 @@ export const DEMO_ROUTES: TourRoute[] = [
     descriptionEs: 'La travesía definitiva de 5 días para conocer los contrastes de El Salvador. Desde la cumbre esmeralda del volcán Santa Ana y las calles coloniales de Suchitoto, hasta los cafetales de altura en Apaneca y el atardecer en las playas de Surf City.',
     descriptionEn: 'The definitive 5-day itinerary balancing El Salvador’s vibrant contrasts. Ascend the emerald volcanic caldera of Santa Ana, stroll colonial Suchitoto, sip Pacamara coffee in mountain towns, and unwind on Pacific surf breaks.',
     days: 5,
+    category: 'combinada',
     destinations: ['San Salvador', 'Santa Ana', 'Apaneca', 'Suchitoto', 'El Tunco'],
     departments: ['San Salvador', 'Santa Ana', 'Ahuachapán', 'Cuscatlán', 'La Libertad'],
     experiences: ['exp-1', 'exp-2', 'exp-3', 'exp-4', 'exp-7'],
@@ -119,6 +510,7 @@ export const DEMO_ROUTES: TourRoute[] = [
     descriptionEs: 'Una semana completa recorriendo la riqueza arqueológica de Joya de Cerén, los cráteres volcánicos, los esteros de manglares y las rompientes marinas más famosas de Centroamérica.',
     descriptionEn: 'A full immersive 7-day circuit taking you from UNESCO archaeological ruins to volcano ridges, mangrove estuaries, and Pacific surf.',
     days: 7,
+    category: 'cultural',
     destinations: ['San Salvador', 'Joya de Cerén', 'Santa Ana', 'Juayúa', 'El Tunco', 'Jiquilisco'],
     departments: ['San Salvador', 'La Libertad', 'Santa Ana', 'Sonsonate', 'Usulután'],
     experiences: ['exp-1', 'exp-2', 'exp-3', 'exp-5', 'exp-9', 'exp-10'],
@@ -233,6 +625,7 @@ export const DEMO_ROUTES: TourRoute[] = [
     descriptionEs: 'Una escapada gastronómica diseñada para los paladares curiosos: café de exportación, maíz nixtamalizado criollo, mariscos en bahías protegidas y cocina de mercado.',
     descriptionEn: 'A weekend culinary escape celebrating El Salvador’s terroir: specialty Pacamara coffee, heirloom pupusas, coastal black clams, and market gastronomy.',
     days: 3,
+    category: 'gastronomica',
     destinations: ['Apaneca', 'Juayúa', 'Bahía de Jiquilisco'],
     departments: ['Ahuachapán', 'Sonsonate', 'Usulután'],
     experiences: ['exp-2', 'exp-5', 'exp-9'],
@@ -303,6 +696,7 @@ export const DEMO_ROUTES: TourRoute[] = [
     descriptionEs: 'Una escapada intensa de fin de semana para conquistar el cráter turquesa de Santa Ana el sábado y cabalgar olas en El Tunco el domingo con hospedaje frente al mar.',
     descriptionEn: 'An action-packed 2-day getaway conquering Santa Ana volcano crater lake on Saturday and riding Pacific breaks at El Tunco on Sunday.',
     days: 2,
+    category: 'aventura',
     destinations: ['Santa Ana', 'El Tunco'],
     departments: ['Santa Ana', 'La Libertad'],
     experiences: ['exp-1', 'exp-3'],
@@ -364,6 +758,7 @@ export const DEMO_ROUTES: TourRoute[] = [
     descriptionEs: 'El viaje definitivo de inmersión por El Salvador. De este a oeste: la capital histórica, las calderas volcánicas, los cafetales de altura, la herencia colonial de Suchitoto, los manglares vírgenes de Jiquilisco y las olas legendarias de Oriente y Surf City.',
     descriptionEn: 'The ultimate 10-day expedition across El Salvador from East to West, spanning volcanic peaks, coffee plantations, colonial towns, mangrove canals, and world-class surf.',
     days: 10,
+    category: 'combinada',
     destinations: ['San Salvador', 'Santa Ana', 'Apaneca', 'Juayúa', 'Suchitoto', 'Jiquilisco', 'El Cuco', 'El Tunco'],
     departments: ['San Salvador', 'Santa Ana', 'Ahuachapán', 'Sonsonate', 'Cuscatlán', 'Usulután', 'San Miguel', 'La Libertad'],
     experiences: ['exp-1', 'exp-2', 'exp-3', 'exp-4', 'exp-5', 'exp-7', 'exp-9', 'exp-10'],

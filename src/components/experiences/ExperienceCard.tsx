@@ -14,6 +14,7 @@ import {
   Images,
   CheckCircle2,
   Calendar,
+  Car,
 } from 'lucide-react';
 import { VirtualTour360 } from '../common/VirtualTour360';
 import { localizeDuration } from '../../utils/localize';
@@ -61,9 +62,13 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
       case 'aventura':
         return t.categories.adventure;
       case 'playa':
-        return loc('Playas & Costa', 'Beaches & Coast', 'Praias e Costa');
+        return loc('Playas & Costa', 'Beaches & Coast');
+      case 'comunitario':
+        return loc('Comunitario', 'Community');
+      case 'especial':
+        return loc('Especial & VIP', 'Special & VIP');
       case 'paquetes':
-        return loc('Paquete Completo', 'Complete Package', 'Pacote Completo');
+        return loc('Paquete Completo', 'Complete Package');
       default:
         return experience.category;
     }
@@ -71,9 +76,24 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
 
   const has360 = Boolean(experience.has360 || experience.virtualTour360Url);
   const currentImage = experience.images?.[activeImageIdx] || experience.images?.[0];
+  const durationBadge = experience.durationBadgeEs
+    ? loc(experience.durationBadgeEs, experience.durationBadgeEn || experience.durationBadgeEs)
+    : undefined;
 
   // Price formatting
-  const formattedPrice = experience.price && experience.price > 0 ? (
+  const formattedPrice = experience.isPriceOnQuote ? (
+    <div className="flex flex-col">
+      <div className="flex items-baseline gap-1">
+        <span className="text-[11px] font-semibold text-neutral-500">{t.card.from}</span>
+        <span className="text-xl font-black font-mono text-[#063A5B] tracking-tight">
+          ${experience.price}
+        </span>
+      </div>
+      <span className="text-[10px] text-amber-700 font-bold bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200/80 -mt-0.5 inline-block w-fit">
+        {loc('Cotización a medida', 'Custom quote')}
+      </span>
+    </div>
+  ) : experience.price && experience.price > 0 ? (
     <div className="flex flex-col">
       <div className="flex items-baseline gap-1">
         <span className="text-xs font-semibold text-neutral-500">{t.card.from}</span>
@@ -137,12 +157,17 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
             <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-[#063A5B]/90 backdrop-blur-md text-white text-[10.5px] font-bold">
               {getCategoryLabel()}
             </span>
-            {experience.isPackage && (
+            {durationBadge ? (
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-teal-600/95 backdrop-blur-md text-white text-[10px] font-bold shadow-xs">
+                <Calendar className="w-3 h-3" />
+                {durationBadge}
+              </span>
+            ) : experience.isPackage ? (
               <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-teal-600/90 backdrop-blur-md text-white text-[10px] font-bold">
                 <Calendar className="w-3 h-3" />
                 {experience.packageDays}D
               </span>
-            )}
+            ) : null}
           </div>
 
           {/* Favorite button */}
@@ -276,6 +301,12 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
             <p className="text-xs sm:text-sm text-neutral-600 line-clamp-2 leading-relaxed">
               {shortDesc}
             </p>
+
+            {/* Badge de transporte incluido */}
+            <div className="flex items-center gap-1.5 text-[11px] font-bold text-teal-800 bg-teal-50 px-2.5 py-1 rounded-lg border border-teal-200/80 w-fit">
+              <Car className="w-3.5 h-3.5 text-[#00A6A6] shrink-0" />
+              <span>{loc('Transporte privado incluido (ida y vuelta)', 'Round-trip private transport included')}</span>
+            </div>
           </div>
 
           {/* Footer: Precio y CTA */}
@@ -329,22 +360,48 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
 
         {/* Badges superiores */}
         <div className="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10 max-w-[80%]">
+          {experience.pillarCategory === 'imperdibles' && (
+            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-500 text-white text-[10px] font-black shadow-xs">
+              🏛️ {loc('Imperdible', 'Must-See', 'Imperdível')}
+            </span>
+          )}
+          {experience.pillarCategory === 'en_tendencia' && (
+            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-500 text-white text-[10px] font-black shadow-xs">
+              🔥 {loc('En Tendencia', 'Trending', 'Em Alta')}
+            </span>
+          )}
+          {experience.pillarCategory === 'poco_conocido' && (
+            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-600 text-white text-[10px] font-black shadow-xs">
+              🌿 {loc('Ruta Secreta', 'Hidden Gem', 'Roteiro Secreto')}
+            </span>
+          )}
+          {experience.pillarCategory === 'familiar' && (
+            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-sky-600 text-white text-[10px] font-black shadow-xs">
+              👨‍👩‍👧‍👦 {loc('En Familia', 'Family', 'Em Família')}
+            </span>
+          )}
+
           {experience.featured && (
-            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-[#FDBA2D] text-slate-950 text-[10.5px] font-extrabold shadow-2xs">
+            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-[#FFC857] text-[#173B59] text-[10.5px] font-extrabold shadow-xs">
               {t.card.recommended}
             </span>
           )}
 
-          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-[#063A5B]/90 backdrop-blur-md text-white text-[10.5px] font-bold">
+          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-[#173B59]/90 backdrop-blur-md text-white text-[10.5px] font-bold">
             {getCategoryLabel()}
           </span>
 
-          {experience.isPackage && (
-            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-teal-600/90 backdrop-blur-md text-white text-[10px] font-bold">
+          {durationBadge ? (
+            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#00B8C8]/95 backdrop-blur-md text-white text-[10px] font-bold shadow-xs">
+              <Calendar className="w-3 h-3" />
+              {durationBadge}
+            </span>
+          ) : experience.isPackage ? (
+            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#00B8C8]/90 backdrop-blur-md text-white text-[10px] font-bold">
               <Calendar className="w-3 h-3" />
               {experience.packageDays}D
             </span>
-          )}
+          ) : null}
         </div>
 
         {/* Favoritos */}
@@ -439,7 +496,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
           </div>
 
           {/* Título */}
-          <h3 className="text-base sm:text-lg font-bold text-[#063A5B] group-hover:text-[#00A6A6] transition-colors font-display line-clamp-2 leading-snug">
+          <h3 className="text-base sm:text-lg font-bold text-[#173B59] group-hover:text-[#00B8C8] transition-colors font-display line-clamp-2 leading-snug">
             {title}
           </h3>
 
@@ -458,14 +515,14 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
             {experience.availabilityStatus === 'disponible_inmediato' ? (
               <>
                 <span className="text-neutral-300">·</span>
-                <span className="text-emerald-700 font-semibold">
+                <span className="text-[#39B98A] font-bold">
                   {loc('Directa', 'Instant', 'Direta')}
                 </span>
               </>
             ) : (
               <>
                 <span className="text-neutral-300">·</span>
-                <span className="text-amber-700 font-semibold">
+                <span className="text-[#FFC857] font-bold">
                   {loc('Propuesta', 'Package', 'Proposta')}
                 </span>
               </>
@@ -476,10 +533,28 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
           <p className="text-xs text-neutral-500 line-clamp-2 leading-relaxed pt-0.5">
             {shortDesc}
           </p>
+
+          {experience.trendingReasonEs && (
+            <p className="text-[11px] text-rose-700 bg-rose-50 px-2 py-1 rounded-lg border border-rose-200/80 font-medium">
+              🔥 {loc(experience.trendingReasonEs, experience.trendingReasonEn || experience.trendingReasonEs, experience.trendingReasonPt)}
+            </p>
+          )}
+
+          {experience.recommendedAgesEs && (
+            <p className="text-[11px] text-sky-800 bg-sky-50 px-2 py-1 rounded-lg border border-sky-200/80 font-medium">
+              👨‍👩‍👧‍👦 {loc(experience.recommendedAgesEs, experience.recommendedAgesEn || experience.recommendedAgesEs, experience.recommendedAgesPt)}
+            </p>
+          )}
+
+          {/* Badge de transporte incluido */}
+          <div className="flex items-center gap-1.5 text-[10.5px] font-bold text-[#1B6D4C] bg-[#39B98A]/15 px-2.5 py-1 rounded-lg border border-[#39B98A]/30 w-fit">
+            <Car className="w-3.5 h-3.5 text-[#39B98A] shrink-0" />
+            <span>{loc('Transporte incluido', 'Transport included', 'Transporte incluído')}</span>
+          </div>
         </div>
 
         {/* PRECIO Y CTA */}
-        <div className="pt-4 border-t border-neutral-100 flex items-end justify-between gap-3">
+        <div className="pt-4 border-t border-amber-100/80 flex items-end justify-between gap-3">
           {formattedPrice}
 
           <button
@@ -488,7 +563,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
               e.stopPropagation();
               handleCardClick();
             }}
-            className="px-4 py-2.5 bg-[#00A6A6] hover:bg-[#009191] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-md group-hover:shadow-lg flex items-center gap-1 cursor-pointer shrink-0"
+            className="px-4 py-2.5 bg-[#FF6B57] hover:bg-[#E85541] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all shadow-md shadow-[#FF6B57]/20 group-hover:shadow-lg flex items-center gap-1 cursor-pointer shrink-0"
           >
             <span>{t.card.viewDetails}</span>
             <ArrowRight className="w-3.5 h-3.5" />

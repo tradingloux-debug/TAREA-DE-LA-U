@@ -45,4 +45,19 @@ export interface TourRoute {
   mobilityEn?: string;
   mealsEs?: string;
   mealsEn?: string;
+  category?: 'cultural' | 'naturaleza' | 'aventura' | 'gastronomica' | 'playa' | 'familiar' | 'combinada';
+  isSurfCityCombined?: boolean;
+  pricingStatus?: 'confirmed' | 'on_quote' | 'availability_to_confirm';
+  pricingNoteEs?: string;
+  pricingNoteEn?: string;
+  pricingNotePt?: string;
+  modalities?: {
+    id: string;
+    nameEs: string;
+    nameEn: string;
+    namePt?: string;
+    descEs: string;
+    descEn: string;
+    descPt?: string;
+  }[];
 }

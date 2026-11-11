@@ -54,8 +54,8 @@ export const RouteCard: React.FC<RouteCardProps> = ({ route, onCustomize }) => {
 
         {/* Top Badges */}
         <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-amber-300 text-xs font-bold font-mono border border-amber-300/20 shadow-xs">
-            <Calendar className="w-3.5 h-3.5 text-amber-400" />
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#173B59]/85 backdrop-blur-md text-[#FFC857] text-xs font-bold font-mono border border-[#FFC857]/30 shadow-xs">
+            <Calendar className="w-3.5 h-3.5 text-[#FFC857]" />
             {route.days} {l('Días', 'Days', 'Dias')}
           </span>
 
@@ -67,14 +67,14 @@ export const RouteCard: React.FC<RouteCardProps> = ({ route, onCustomize }) => {
                   event.stopPropagation();
                   setTour360Open(true);
                 }}
-                className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-slate-950/80 backdrop-blur-md text-amber-300 text-[11px] font-bold border border-amber-400/30 hover:bg-slate-900 transition-colors cursor-pointer"
+                className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#173B59]/85 backdrop-blur-md text-[#FFC857] text-[11px] font-bold border border-[#FFC857]/40 hover:bg-[#173B59] transition-colors cursor-pointer"
                 title={l('Abrir imagen 360° interactiva', 'Open interactive 360° image', 'Abrir imagem 360° interativa')}
               >
-                <Compass className="w-3 h-3 text-amber-400" />
+                <Compass className="w-3 h-3 text-[#FFC857]" />
                 <span>{l('Explorar 360°', 'Explore 360°', 'Explorar 360°')}</span>
               </button>
             )}
-            <span className="px-2.5 py-0.5 rounded-full bg-teal-500 text-slate-950 text-[11px] font-bold">
+            <span className="px-2.5 py-0.5 rounded-full bg-[#00B8C8] text-white text-[11px] font-bold shadow-xs">
               {l('Tour completo', 'Complete tour', 'Tour completo')}
             </span>
           </div>
@@ -82,7 +82,7 @@ export const RouteCard: React.FC<RouteCardProps> = ({ route, onCustomize }) => {
 
         {/* Bottom Destination line */}
         <div className="absolute bottom-3 left-3 right-3 text-white">
-          <p className="text-[11px] font-mono font-medium text-teal-300 flex items-center gap-1 truncate">
+          <p className="text-[11px] font-mono font-medium text-[#00B8C8] flex items-center gap-1 truncate">
             <MapPin className="w-3.5 h-3.5 shrink-0" />
             <span className="truncate">{route.destinations.join(' → ')}</span>
           </p>
@@ -92,47 +92,60 @@ export const RouteCard: React.FC<RouteCardProps> = ({ route, onCustomize }) => {
       {/* Content */}
       <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
         <div className="space-y-2">
-          {packageStyle && <p className="text-[10px] font-black uppercase tracking-[0.14em] text-teal-700">{packageStyle}</p>}
-          <h3 className="text-lg font-bold text-slate-900 group-hover:text-teal-700 transition-colors font-display line-clamp-2 leading-snug">
+          {packageStyle && <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#00B8C8]">{packageStyle}</p>}
+          <h3 className="text-lg font-bold text-[#173B59] group-hover:text-[#00B8C8] transition-colors font-display line-clamp-2 leading-snug">
             {title}
           </h3>
           <p className="text-xs text-neutral-600 line-clamp-3 leading-relaxed">
             {description}
           </p>
           <div className="grid grid-cols-3 gap-1.5 pt-2">
-            <span className="min-w-0 px-2 py-2 rounded-xl bg-neutral-50 border border-neutral-100 text-[10px] font-semibold text-slate-700 flex flex-col items-center gap-1 text-center"><BedDouble className="w-3.5 h-3.5 text-teal-700" />{route.days - 1} {l('noches', 'nights', 'noites')}</span>
-            <span className="min-w-0 px-2 py-2 rounded-xl bg-neutral-50 border border-neutral-100 text-[10px] font-semibold text-slate-700 flex flex-col items-center gap-1 text-center"><CarFront className="w-3.5 h-3.5 text-teal-700" />{l('Movilidad', 'Transport', 'Mobilidade')}</span>
-            <span className="min-w-0 px-2 py-2 rounded-xl bg-neutral-50 border border-neutral-100 text-[10px] font-semibold text-slate-700 flex flex-col items-center gap-1 text-center"><TicketCheck className="w-3.5 h-3.5 text-teal-700" />{l('Actividades', 'Activities', 'Atividades')}</span>
+            <span className="min-w-0 px-2 py-2 rounded-xl bg-amber-50/50 border border-amber-100 text-[10px] font-semibold text-[#173B59] flex flex-col items-center gap-1 text-center"><BedDouble className="w-3.5 h-3.5 text-[#00B8C8]" />{route.days - 1} {l('noches', 'nights', 'noites')}</span>
+            <span className="min-w-0 px-2 py-2 rounded-xl bg-amber-50/50 border border-amber-100 text-[10px] font-semibold text-[#173B59] flex flex-col items-center gap-1 text-center"><CarFront className="w-3.5 h-3.5 text-[#39B98A]" />{l('Movilidad', 'Transport', 'Mobilidade')}</span>
+            <span className="min-w-0 px-2 py-2 rounded-xl bg-amber-50/50 border border-amber-100 text-[10px] font-semibold text-[#173B59] flex flex-col items-center gap-1 text-center"><TicketCheck className="w-3.5 h-3.5 text-[#FF6B57]" />{l('Actividades', 'Activities', 'Atividades')}</span>
           </div>
         </div>
 
         {/* Highlights & Price */}
-        <div className="pt-4 border-t border-neutral-100 flex items-center justify-between">
+        <div className="pt-4 border-t border-amber-100/80 flex items-end justify-between">
           <div>
-            <span className="text-[11px] text-neutral-400 block">{l('Precio estimado desde', 'Estimated price from', 'Preço estimado a partir de')}</span>
-            <div className="flex items-baseline gap-1">
-              <span className="text-xl font-black font-mono text-slate-900">
-                ${route.price}
-              </span>
-              <span className="text-xs text-neutral-500">USD / {l('persona', 'person', 'pessoa')}</span>
-            </div>
+            {route.pricingStatus === 'on_quote' || route.pricingStatus === 'availability_to_confirm' ? (
+              <div>
+                <span className="inline-block px-2.5 py-0.5 rounded-md bg-amber-50 text-amber-800 text-[11px] font-bold border border-amber-200">
+                  {route.pricingNoteEs ? l(route.pricingNoteEs, route.pricingNoteEn || route.pricingNoteEs, route.pricingNotePt) : l('Por cotizar', 'Custom quote', 'Sob consulta')}
+                </span>
+                <span className="text-[10px] text-neutral-400 block mt-0.5">
+                  {l('Disponibilidad por confirmar', 'Availability to confirm', 'Disponibilidade a confirmar')}
+                </span>
+              </div>
+            ) : (
+              <div>
+                <span className="text-[11px] text-neutral-400 block">{l('Precio estimado desde', 'Estimated price from', 'Preço estimado a partir de')}</span>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-xl font-black font-mono text-[#173B59]">
+                    ${route.price}
+                  </span>
+                  <span className="text-xs text-neutral-500">USD / {l('persona', 'person', 'pessoa')}</span>
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="flex items-center gap-2">
             <button
               type="button"
               onClick={handleCustomize}
-              className="px-3 py-2 bg-amber-50 hover:bg-amber-100 text-amber-900 text-xs font-bold rounded-xl border border-amber-200 transition-colors flex items-center gap-1"
+              className="px-3 py-2 bg-[#FFC857]/20 hover:bg-[#FFC857]/30 text-[#173B59] text-xs font-bold rounded-xl border border-[#FFC857]/50 transition-colors flex items-center gap-1 cursor-pointer"
               title={l('Personalizar esta ruta con GIA', 'Customize this route with GIA', 'Personalizar esta rota com a GIA')}
             >
-              <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+              <Sparkles className="w-3.5 h-3.5 text-[#B87C00]" />
               <span>{l('Personalizar', 'Customize', 'Personalizar')}</span>
             </button>
 
             <button
               type="button"
               onClick={handleViewRoute}
-              className="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold rounded-xl transition-colors flex items-center gap-1 shadow-2xs"
+              className="px-4 py-2 bg-[#00B8C8] hover:bg-[#009FAE] text-white text-xs font-bold rounded-xl transition-all flex items-center gap-1 shadow-md shadow-[#00B8C8]/20 cursor-pointer"
             >
               <span>{l('Ver tour', 'View tour', 'Ver tour')}</span>
               <ArrowRight className="w-3.5 h-3.5" />

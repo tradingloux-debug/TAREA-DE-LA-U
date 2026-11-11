@@ -63,9 +63,9 @@ export const ContactPage: React.FC = () => {
   const emailOfficial = 'guiaexperiencessv@gmail.com';
 
   return (
-    <div className="bg-neutral-50/70 min-h-screen pb-20">
+    <div className="bg-[#FFFDF8] min-h-screen pb-20">
       {/* Breadcrumb Header */}
-      <div className="bg-white border-b border-neutral-200/80">
+      <div className="bg-white border-b border-amber-100/90">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
           <Breadcrumbs
             items={[
@@ -82,11 +82,11 @@ export const ContactPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 space-y-12">
         {/* Main Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-[#00A6A6] text-xs font-bold font-mono uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#00B8C8]/10 border border-[#00B8C8]/30 text-[#00B8C8] text-xs font-bold font-mono uppercase tracking-wider">
+            <Sparkles className="w-3.5 h-3.5 text-[#FFC857]" />
             <span>GIA Experiences · Tour Operadora</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-black text-[#063A5B] font-display tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-black text-[#173B59] font-display tracking-tight">
             {language === 'es' ? 'Estamos para ayudarte' : "We're here to help"}
           </h1>
           <p className="text-sm sm:text-base text-neutral-600 leading-relaxed max-w-2xl mx-auto">
@@ -99,16 +99,16 @@ export const ContactPage: React.FC = () => {
         {/* 3 Direct Contact Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Card 1: Teléfono & Llamada */}
-          <div className="bg-white rounded-3xl border border-neutral-200/90 p-7 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-6">
+          <div className="bg-white rounded-3xl border border-amber-100/90 p-7 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-6">
             <div className="space-y-3">
-              <div className="w-12 h-12 rounded-2xl bg-teal-50 text-[#00A6A6] flex items-center justify-center">
+              <div className="w-12 h-12 rounded-2xl bg-[#00B8C8]/10 text-[#00B8C8] flex items-center justify-center">
                 <Phone className="w-6 h-6" />
               </div>
               <div>
                 <span className="text-[11px] font-mono font-bold text-neutral-400 uppercase tracking-wider block">
                   {language === 'es' ? 'Atención Telefónica' : 'Telephone Support'}
                 </span>
-                <h3 className="text-xl font-bold text-[#063A5B] font-display">
+                <h3 className="text-xl font-bold text-[#173B59] font-display">
                   {phoneDisplay}
                 </h3>
                 <p className="text-xs text-neutral-500 mt-1">
@@ -123,16 +123,16 @@ export const ContactPage: React.FC = () => {
             <div className="pt-2">
               <a
                 href={phoneTel}
-                className="w-full py-3 bg-[#063A5B] hover:bg-[#04283f] text-white text-xs font-bold rounded-xl transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-xs"
+                className="w-full py-3 bg-[#173B59] hover:bg-[#122e47] text-white text-xs font-bold rounded-xl transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-xs"
               >
-                <Phone className="w-3.5 h-3.5" />
+                <Phone className="w-3.5 h-3.5 text-[#FFC857]" />
                 <span>{language === 'es' ? 'Llamar' : 'Call now'}</span>
               </a>
             </div>
           </div>
 
           {/* Card 2: WhatsApp Oficial */}
-          <div className="bg-white rounded-3xl border border-neutral-200/90 p-7 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-6">
+          <div className="bg-white rounded-3xl border border-amber-100/90 p-7 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-6">
             <div className="space-y-3">
               <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-[#25D366] flex items-center justify-center">
                 <MessageCircle className="w-6 h-6 fill-[#25D366]" />
@@ -141,7 +141,7 @@ export const ContactPage: React.FC = () => {
                 <span className="text-[11px] font-mono font-bold text-neutral-400 uppercase tracking-wider block">
                   {language === 'es' ? 'Mensajería Rápida' : 'Direct Messaging'}
                 </span>
-                <h3 className="text-xl font-bold text-[#063A5B] font-display">
+                <h3 className="text-xl font-bold text-[#173B59] font-display">
                   WhatsApp Oficial
                 </h3>
                 <p className="text-xs text-neutral-500 mt-1">
@@ -169,16 +169,16 @@ export const ContactPage: React.FC = () => {
           </div>
 
           {/* Card 3: Correo Electrónico */}
-          <div className="bg-white rounded-3xl border border-neutral-200/90 p-7 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-6">
+          <div className="bg-white rounded-3xl border border-amber-100/90 p-7 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-6">
             <div className="space-y-3">
-              <div className="w-12 h-12 rounded-2xl bg-amber-50 text-[#F47B3A] flex items-center justify-center">
+              <div className="w-12 h-12 rounded-2xl bg-[#FF6B57]/10 text-[#FF6B57] flex items-center justify-center">
                 <Mail className="w-6 h-6" />
               </div>
               <div>
                 <span className="text-[11px] font-mono font-bold text-neutral-400 uppercase tracking-wider block">
                   {language === 'es' ? 'Correo Electrónico' : 'Official Email'}
                 </span>
-                <h3 className="text-base sm:text-lg font-bold text-[#063A5B] font-display break-all">
+                <h3 className="text-base sm:text-lg font-bold text-[#173B59] font-display break-all">
                   {emailOfficial}
                 </h3>
                 <p className="text-xs text-neutral-500 mt-1">
@@ -195,7 +195,7 @@ export const ContactPage: React.FC = () => {
             <div className="pt-2">
               <a
                 href={`mailto:${emailOfficial}`}
-                className="w-full py-3 bg-[#00A6A6] hover:bg-[#009191] text-white text-xs font-bold rounded-xl transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-xs"
+                className="w-full py-3 bg-[#00B8C8] hover:bg-[#009FAE] text-white text-xs font-bold rounded-xl transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-xs"
               >
                 <Mail className="w-3.5 h-3.5" />
                 <span>{language === 'es' ? 'Escribir correo' : 'Send email'}</span>
@@ -342,9 +342,9 @@ export const ContactPage: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="w-full py-3.5 bg-[#063A5B] hover:bg-[#04283f] text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition-all shadow-xs flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full py-3.5 bg-[#FF6B57] hover:bg-[#E85541] text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer hover:shadow-lg"
                 >
-                  <Send className="w-4 h-4" />
+                  <Send className="w-4 h-4 text-[#FFC857]" />
                   <span>{language === 'es' ? 'Enviar mensaje' : 'Submit message'}</span>
                 </button>
               </form>
@@ -353,12 +353,12 @@ export const ContactPage: React.FC = () => {
 
           {/* Location & Google Maps Space (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-white rounded-3xl border border-neutral-200/90 p-6 sm:p-7 shadow-xs space-y-4">
-              <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#00A6A6] uppercase tracking-wider">
+            <div className="bg-white rounded-3xl border border-amber-100/90 p-6 sm:p-7 shadow-xs space-y-4">
+              <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#00B8C8] uppercase tracking-wider">
                 <MapPin className="w-4 h-4" />
                 <span>{language === 'es' ? 'Ubicación y Operación' : 'Location & Operations'}</span>
               </div>
-              <h3 className="text-xl font-bold text-[#063A5B] font-display">
+              <h3 className="text-xl font-bold text-[#173B59] font-display">
                 El Salvador, Centroamérica
               </h3>
               <p className="text-xs text-neutral-600 leading-relaxed">
@@ -369,7 +369,7 @@ export const ContactPage: React.FC = () => {
 
               {/* Prepared Google Map embed of El Salvador */}
               <div className="pt-2">
-                <div className="rounded-2xl overflow-hidden border border-neutral-200/80 h-56 sm:h-64 relative bg-slate-900 shadow-inner">
+                <div className="rounded-2xl overflow-hidden border border-amber-200/80 h-56 sm:h-64 relative bg-slate-900 shadow-inner">
                   <iframe
                     title="Google Maps El Salvador"
                     src="https://maps.google.com/maps?q=El+Salvador&hl=es&z=8&output=embed"
@@ -379,22 +379,22 @@ export const ContactPage: React.FC = () => {
                     loading="lazy"
                     className="w-full h-full"
                   />
-                  <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl border border-neutral-200 shadow-md text-[11px] font-bold text-[#063A5B] flex items-center gap-1.5 pointer-events-none">
-                    <MapPin className="w-3.5 h-3.5 text-[#00A6A6]" />
+                  <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl border border-amber-200 shadow-md text-[11px] font-bold text-[#173B59] flex items-center gap-1.5 pointer-events-none">
+                    <MapPin className="w-3.5 h-3.5 text-[#00B8C8]" />
                     <span>El Salvador diseñado para ti</span>
                   </div>
                 </div>
               </div>
 
               {/* Quick links */}
-              <div className="pt-3 border-t border-neutral-100 flex items-center justify-between text-xs">
-                <span className="text-neutral-500">¿Deseas planear con IA?</span>
+              <div className="pt-3 border-t border-amber-50 flex items-center justify-between text-xs">
+                <span className="text-neutral-500">¿Deseas planear tu viaje a medida?</span>
                 <button
                   type="button"
                   onClick={() => navigate('/planea-con-gia')}
-                  className="font-bold text-[#00A6A6] hover:underline cursor-pointer"
+                  className="font-bold text-[#00B8C8] hover:text-[#173B59] hover:underline cursor-pointer transition-colors"
                 >
-                  Planea con GIA →
+                  Crea con GIA →
                 </button>
               </div>
             </div>

@@ -7,6 +7,7 @@ import { storageService } from '../services/storage';
 import { referralService } from '../services/referralService';
 import { trackEvent } from '../services/analytics';
 import { Booking } from '../types/booking';
+import { DEMO_EXPERIENCES } from '../data/experiences';
 import {
   Calendar,
   Users,
@@ -103,7 +104,26 @@ export const CheckoutPage: React.FC = () => {
     setPromoMessage(null);
     if (!promoCodeInput.trim()) return;
 
-    const result = referralService.validateCode(promoCodeInput, referralState.currentCode?.code, language);
+    const userEmail = (formData.email || profile?.email || '').trim().toLowerCase();
+    const matchingExp = DEMO_EXPERIENCES.find((e) => e.id === draft.experienceId);
+    const expDuration = matchingExp?.packageDurationTier === '7d_6n'
+      ? 7
+      : matchingExp?.packageDurationTier === '5d_4n'
+      ? 5
+      : matchingExp?.packageDurationTier === '3d_2n'
+      ? 3
+      : matchingExp?.packageDurationTier === '2d_1n' || matchingExp?.durationType === 'multi_day'
+      ? 2
+      : 1;
+
+    const result = referralService.validateCode(
+      promoCodeInput,
+      referralState.currentCode?.code,
+      userEmail,
+      draft.experienceId,
+      expDuration,
+      language
+    );
     if (result.valid && result.discountType && result.discountValue) {
       setAppliedPromo({
         code: promoCodeInput.trim().toUpperCase(),
@@ -192,6 +212,33 @@ export const CheckoutPage: React.FC = () => {
 
     try {
       await storageService.saveBooking(newBooking);
+
+      // Handle GIA Premia discount usage / referral reward recording
+      if (appliedPromo) {
+        if (appliedPromo.discountType === 'percentage' && appliedPromo.discountValue === 10) {
+          referralService.markSecondTripDiscountUsed();
+        } else if (appliedPromo.code.startsWith('GIA-')) {
+          const matchingExp = DEMO_EXPERIENCES.find((e) => e.id === draft.experienceId);
+          const expDuration = matchingExp?.packageDurationTier === '7d_6n'
+            ? 7
+            : matchingExp?.packageDurationTier === '5d_4n'
+            ? 5
+            : matchingExp?.packageDurationTier === '3d_2n'
+            ? 3
+            : matchingExp?.packageDurationTier === '2d_1n' || matchingExp?.durationType === 'multi_day'
+            ? 2
+            : 1;
+          referralService.registerReferredBooking(
+            appliedPromo.code,
+            `${newBooking.customerFirstName} ${newBooking.customerLastName}`.trim(),
+            newBooking.email,
+            newBooking.id,
+            draft.experienceTitle,
+            expDuration
+          );
+        }
+      }
+
       if (profile && profile.email.trim().toLowerCase() === newBooking.email.trim().toLowerCase()) {
         const bookings = await storageService.listRecentBookings();
         referralService.unlockAfterFirstBooking(profile, bookings);
